@@ -1,0 +1,2355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28C587ABEF255E9F54CB3F26 /* Pods_BestFares365App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F059B3C459F30A8BF175100 /* Pods_BestFares365App.framework */; };
+		37D53971D481313496AFB1DE /* Pods_BestFares365App_BestFares365AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ED2FFA69DEB0E2A7F3528E /* Pods_BestFares365App_BestFares365AppUITests.framework */; };
+		652410E0290A6DB800BB0A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652410DF290A6DB800BB0A97 /* AppDelegate.swift */; };
+		652410E2290A6DB800BB0A97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652410E1290A6DB800BB0A97 /* SceneDelegate.swift */; };
+		652410E4290A6DB800BB0A97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652410E3290A6DB800BB0A97 /* ViewController.swift */; };
+		652410E7290A6DB800BB0A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652410E5290A6DB800BB0A97 /* Main.storyboard */; };
+		652410E9290A6DBA00BB0A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652410E8290A6DBA00BB0A97 /* Assets.xcassets */; };
+		652410EC290A6DBA00BB0A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652410EA290A6DBA00BB0A97 /* LaunchScreen.storyboard */; };
+		652410F7290A6DBA00BB0A97 /* BestFares365AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652410F6290A6DBA00BB0A97 /* BestFares365AppTests.swift */; };
+		65241101290A6DBA00BB0A97 /* BestFares365AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241100290A6DBA00BB0A97 /* BestFares365AppUITests.swift */; };
+		65241103290A6DBA00BB0A97 /* BestFares365AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241102290A6DBA00BB0A97 /* BestFares365AppUITestsLaunchTests.swift */; };
+		65241437290A6DFC00BB0A97 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412C8290A6DFA00BB0A97 /* BaseVC.swift */; };
+		65241438290A6DFC00BB0A97 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412C9290A6DFA00BB0A97 /* TableViewCell.swift */; };
+		65241439290A6DFC00BB0A97 /* BaseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412CA290A6DFA00BB0A97 /* BaseTableVC.swift */; };
+		6524143A290A6DFC00BB0A97 /* UIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412CB290A6DFA00BB0A97 /* UIModels.swift */; };
+		6524143B290A6DFC00BB0A97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412CE290A6DFA00BB0A97 /* Constants.swift */; };
+		6524143C290A6DFC00BB0A97 /* DefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412CF290A6DFA00BB0A97 /* DefaultsExtension.swift */; };
+		6524143D290A6DFC00BB0A97 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412D0290A6DFA00BB0A97 /* SessionManager.swift */; };
+		6524143E290A6DFC00BB0A97 /* CountryCodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412D2290A6DFA00BB0A97 /* CountryCodesList.swift */; };
+		6524143F290A6DFC00BB0A97 /* NavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652412D5290A6DFA00BB0A97 /* NavBar.xib */; };
+		65241440290A6DFC00BB0A97 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412D6290A6DFA00BB0A97 /* NavBar.swift */; };
+		65241441290A6DFC00BB0A97 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412D8290A6DFA00BB0A97 /* TableViewHelper.swift */; };
+		65241442290A6DFC00BB0A97 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412D9290A6DFA00BB0A97 /* UITextViewExtension.swift */; };
+		65241443290A6DFC00BB0A97 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412DA290A6DFA00BB0A97 /* UIViewControllerExtension.swift */; };
+		65241444290A6DFC00BB0A97 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412DB290A6DFA00BB0A97 /* ButtonExtension.swift */; };
+		65241445290A6DFC00BB0A97 /* UIKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412DC290A6DFA00BB0A97 /* UIKitHelper.swift */; };
+		65241446290A6DFC00BB0A97 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412DD290A6DFA00BB0A97 /* TableViewExtensions.swift */; };
+		65241447290A6DFC00BB0A97 /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412DE290A6DFA00BB0A97 /* UITapGestureRecognizerExtension.swift */; };
+		65241448290A6DFC00BB0A97 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412DF290A6DFA00BB0A97 /* StringExtension.swift */; };
+		65241449290A6DFC00BB0A97 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412E0290A6DFA00BB0A97 /* TextFieldExtension.swift */; };
+		6524144A290A6DFC00BB0A97 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412E1290A6DFA00BB0A97 /* DateExtension.swift */; };
+		6524144B290A6DFC00BB0A97 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412E3290A6DFA00BB0A97 /* FontManager.swift */; };
+		6524144C290A6DFC00BB0A97 /* UIColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412E4290A6DFA00BB0A97 /* UIColorManager.swift */; };
+		6524144D290A6DFC00BB0A97 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412E6290A6DFA00BB0A97 /* Oswald-Bold.ttf */; };
+		6524144E290A6DFC00BB0A97 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412E7290A6DFA00BB0A97 /* Oswald-SemiBold.ttf */; };
+		6524144F290A6DFC00BB0A97 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412E8290A6DFA00BB0A97 /* Lato-Regular.ttf */; };
+		65241450290A6DFC00BB0A97 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412E9290A6DFA00BB0A97 /* Lato-Semibold.ttf */; };
+		65241451290A6DFC00BB0A97 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412EA290A6DFA00BB0A97 /* Oswald-Regular.ttf */; };
+		65241452290A6DFC00BB0A97 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412EB290A6DFA00BB0A97 /* Lato-Light.ttf */; };
+		65241453290A6DFC00BB0A97 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412EC290A6DFA00BB0A97 /* Lato-Medium.ttf */; };
+		65241454290A6DFC00BB0A97 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412EE290A6DFA00BB0A97 /* Roboto-Medium.ttf */; };
+		65241455290A6DFC00BB0A97 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412EF290A6DFA00BB0A97 /* Poppins-Light.ttf */; };
+		65241456290A6DFC00BB0A97 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F0290A6DFA00BB0A97 /* Poppins-Medium.ttf */; };
+		65241457290A6DFC00BB0A97 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F1290A6DFA00BB0A97 /* Oswald-Medium.ttf */; };
+		65241458290A6DFC00BB0A97 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F2290A6DFA00BB0A97 /* Poppins-ExtraBold.ttf */; };
+		65241459290A6DFC00BB0A97 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F3290A6DFA00BB0A97 /* Poppins-Regular.ttf */; };
+		6524145A290A6DFC00BB0A97 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F4290A6DFA00BB0A97 /* OpenSans-Medium.ttf */; };
+		6524145B290A6DFC00BB0A97 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F5290A6DFA00BB0A97 /* Poppins-Bold.ttf */; };
+		6524145C290A6DFC00BB0A97 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F6290A6DFA00BB0A97 /* Poppins-Black.ttf */; };
+		6524145D290A6DFC00BB0A97 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F7290A6DFA00BB0A97 /* Poppins-SemiBold.ttf */; };
+		6524145E290A6DFC00BB0A97 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412F9290A6DFA00BB0A97 /* OpenSans-Semibold.ttf */; };
+		6524145F290A6DFC00BB0A97 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412FA290A6DFA00BB0A97 /* OpenSans-Light.ttf */; };
+		65241460290A6DFC00BB0A97 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412FB290A6DFA00BB0A97 /* OpenSans-Bold.ttf */; };
+		65241461290A6DFC00BB0A97 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652412FC290A6DFA00BB0A97 /* OpenSans-Regular.ttf */; };
+		65241462290A6DFC00BB0A97 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412FD290A6DFA00BB0A97 /* ColorManager.swift */; };
+		65241463290A6DFC00BB0A97 /* DeviceName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652412FF290A6DFA00BB0A97 /* DeviceName.swift */; };
+		65241464290A6DFC00BB0A97 /* NSObject+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241300290A6DFA00BB0A97 /* NSObject+Helper.swift */; };
+		65241465290A6DFC00BB0A97 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241301290A6DFA00BB0A97 /* Decodable.swift */; };
+		65241466290A6DFC00BB0A97 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241302290A6DFA00BB0A97 /* Loader.swift */; };
+		65241467290A6DFC00BB0A97 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241303290A6DFA00BB0A97 /* BaseViewModelProtocol.swift */; };
+		65241468290A6DFC00BB0A97 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241304290A6DFA00BB0A97 /* ProgressHUD.swift */; };
+		65241469290A6DFC00BB0A97 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241305290A6DFA00BB0A97 /* StoryboardExtension.swift */; };
+		6524146B290A6DFC00BB0A97 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241308290A6DFA00BB0A97 /* ServiceManager.swift */; };
+		6524147E290A858C00BB0A97 /* sigvar bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65241476290A858C00BB0A97 /* sigvar bold.ttf */; };
+		6524147F290A858C00BB0A97 /* sigvar bold italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65241477290A858C00BB0A97 /* sigvar bold italic.ttf */; };
+		65241481290A858C00BB0A97 /* SigvarItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65241479290A858C00BB0A97 /* SigvarItalic.ttf */; };
+		65241482290A858C00BB0A97 /* SigvarBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6524147A290A858C00BB0A97 /* SigvarBoldItalic.ttf */; };
+		65241483290A858C00BB0A97 /* SigvarBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6524147B290A858C00BB0A97 /* SigvarBold.ttf */; };
+		65241484290A858C00BB0A97 /* sigvar italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6524147C290A858C00BB0A97 /* sigvar italic.ttf */; };
+		65241488290A8A2C00BB0A97 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65241487290A8A2C00BB0A97 /* HomeVC.swift */; };
+		65241492290A8E6C00BB0A97 /* Proxima Nova Alt Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6524148A290A8E6C00BB0A97 /* Proxima Nova Alt Thin.otf */; };
+		65241493290A8E6C00BB0A97 /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6524148B290A8E6C00BB0A97 /* Proxima Nova Alt Bold.otf */; };
+		65241494290A8E6C00BB0A97 /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6524148C290A8E6C00BB0A97 /* Proxima Nova Extrabold.otf */; };
+		65241495290A8E6C00BB0A97 /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6524148D290A8E6C00BB0A97 /* Proxima Nova Alt Light.otf */; };
+		65241496290A8E6C00BB0A97 /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6524148E290A8E6C00BB0A97 /* Proxima Nova Black.otf */; };
+		65241497290A8E6C00BB0A97 /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6524148F290A8E6C00BB0A97 /* Proxima Nova Bold.otf */; };
+		65241498290A8E6C00BB0A97 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65241490290A8E6C00BB0A97 /* ProximaNova-Regular.otf */; };
+		65241499290A8E6C00BB0A97 /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65241491290A8E6C00BB0A97 /* Proxima Nova Thin.otf */; };
+		6524149C290A910200BB0A97 /* SigvarRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65241478290A858C00BB0A97 /* SigvarRegular.ttf */; };
+		652414A4290A949000BB0A97 /* SelectModuleCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652414A2290A949000BB0A97 /* SelectModuleCVCell.swift */; };
+		652414A5290A949000BB0A97 /* SelectModuleCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652414A3290A949000BB0A97 /* SelectModuleCVCell.xib */; };
+		652414A9290A9A5B00BB0A97 /* EmptyTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652414A7290A9A5B00BB0A97 /* EmptyTVCell.swift */; };
+		652414AA290A9A5B00BB0A97 /* EmptyTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652414A8290A9A5B00BB0A97 /* EmptyTVCell.xib */; };
+		652414AE290A9A6D00BB0A97 /* ButtonTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652414AC290A9A6D00BB0A97 /* ButtonTVCell.xib */; };
+		652414AF290A9A6D00BB0A97 /* ButtonTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652414AD290A9A6D00BB0A97 /* ButtonTVCell.swift */; };
+		652414B3290AA41400BB0A97 /* FromViewTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652414B1290AA41400BB0A97 /* FromViewTVCell.swift */; };
+		652414B4290AA41400BB0A97 /* FromViewTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652414B2290AA41400BB0A97 /* FromViewTVCell.xib */; };
+		652414B8290AB39F00BB0A97 /* DepartDateViewTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652414B6290AB39F00BB0A97 /* DepartDateViewTVCell.swift */; };
+		652414B9290AB39F00BB0A97 /* DepartDateViewTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652414B7290AB39F00BB0A97 /* DepartDateViewTVCell.xib */; };
+		652C9960291229B2003F3110 /* MulticityFromTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C995E291229B2003F3110 /* MulticityFromTVCell.swift */; };
+		652C9961291229B2003F3110 /* MulticityFromTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C995F291229B2003F3110 /* MulticityFromTVCell.xib */; };
+		652C99652912302F003F3110 /* MulticityTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99632912302F003F3110 /* MulticityTVCell.swift */; };
+		652C99662912302F003F3110 /* MulticityTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99642912302F003F3110 /* MulticityTVCell.xib */; };
+		652C996A291247A8003F3110 /* RoundTripTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C9968291247A8003F3110 /* RoundTripTVCell.swift */; };
+		652C996B291247A8003F3110 /* RoundTripTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C9969291247A8003F3110 /* RoundTripTVCell.xib */; };
+		652C996F2912493B003F3110 /* RoundTripDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C996D2912493B003F3110 /* RoundTripDetailsTVCell.swift */; };
+		652C99702912493B003F3110 /* RoundTripDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C996E2912493B003F3110 /* RoundTripDetailsTVCell.xib */; };
+		652C99732912539B003F3110 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652C99722912539B003F3110 /* Login.storyboard */; };
+		652C997A291253DE003F3110 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C9979291253DE003F3110 /* SideMenuVC.swift */; };
+		652C997E291253EB003F3110 /* MenuBGTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C997C291253EB003F3110 /* MenuBGTVCell.xib */; };
+		652C997F291253EB003F3110 /* MenuBGTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C997D291253EB003F3110 /* MenuBGTVCell.swift */; };
+		652C9981291254A0003F3110 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99802912549F003F3110 /* LoginVC.swift */; };
+		652C9985291255ED003F3110 /* LoignOrSignupBtnsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C9983291255ED003F3110 /* LoignOrSignupBtnsTVCell.swift */; };
+		652C9986291255ED003F3110 /* LoignOrSignupBtnsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C9984291255ED003F3110 /* LoignOrSignupBtnsTVCell.xib */; };
+		652C998A29125642003F3110 /* TextfieldTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C998829125642003F3110 /* TextfieldTVCell.swift */; };
+		652C998B29125642003F3110 /* TextfieldTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C998929125642003F3110 /* TextfieldTVCell.xib */; };
+		652C998F29125698003F3110 /* UnderLineTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C998D29125698003F3110 /* UnderLineTVCell.xib */; };
+		652C999029125698003F3110 /* UnderLineTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C998E29125698003F3110 /* UnderLineTVCell.swift */; };
+		652C999429125826003F3110 /* SignUpWithTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C999229125826003F3110 /* SignUpWithTVCell.swift */; };
+		652C999529125826003F3110 /* SignUpWithTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C999329125826003F3110 /* SignUpWithTVCell.xib */; };
+		652C999929127130003F3110 /* MenuTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C999729127130003F3110 /* MenuTVCell.swift */; };
+		652C999A29127130003F3110 /* MenuTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C999829127130003F3110 /* MenuTVCell.xib */; };
+		652C999C29127BEA003F3110 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C999B29127BE9003F3110 /* ResetPasswordVC.swift */; };
+		652C999E29127C0D003F3110 /* CreateNewPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C999D29127C0D003F3110 /* CreateNewPasswordVC.swift */; };
+		652C99A02912826F003F3110 /* SelectLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C999F2912826F003F3110 /* SelectLanguageVC.swift */; };
+		652C99A42912841F003F3110 /* SelectLanguageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99A22912841F003F3110 /* SelectLanguageTVCell.xib */; };
+		652C99A52912841F003F3110 /* SelectLanguageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99A32912841F003F3110 /* SelectLanguageTVCell.swift */; };
+		652C99A7291286F7003F3110 /* AddTravellerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99A6291286F6003F3110 /* AddTravellerDetailsVC.swift */; };
+		652C99AB29128727003F3110 /* SelectGenderTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99A929128727003F3110 /* SelectGenderTVCell.xib */; };
+		652C99AC29128727003F3110 /* SelectGenderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99AA29128727003F3110 /* SelectGenderTVCell.swift */; };
+		652C99B0291287E8003F3110 /* DropDownTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99AE291287E8003F3110 /* DropDownTVCell.swift */; };
+		652C99B1291287E8003F3110 /* DropDownTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99AF291287E8003F3110 /* DropDownTVCell.xib */; };
+		652C99B329129C99003F3110 /* BookingConfirmedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99B229129C99003F3110 /* BookingConfirmedVC.swift */; };
+		652C99B829129CC3003F3110 /* BookingConfirmedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99B629129CC3003F3110 /* BookingConfirmedTVCell.swift */; };
+		652C99B929129CC3003F3110 /* BookingConfirmedTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99B729129CC3003F3110 /* BookingConfirmedTVCell.xib */; };
+		652C99BD29129DBE003F3110 /* BookedTravelDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99BB29129DBE003F3110 /* BookedTravelDetailsTVCell.swift */; };
+		652C99BE29129DBE003F3110 /* BookedTravelDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99BC29129DBE003F3110 /* BookedTravelDetailsTVCell.xib */; };
+		652C99C229129E12003F3110 /* BookedAdultDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C99C029129E12003F3110 /* BookedAdultDetailsTVCell.xib */; };
+		652C99C329129E12003F3110 /* BookedAdultDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99C129129E12003F3110 /* BookedAdultDetailsTVCell.swift */; };
+		652C99D42912A389003F3110 /* B2c_PriceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99C52912A389003F3110 /* B2c_PriceDetails.swift */; };
+		652C99D62912A389003F3110 /* AirlineDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99C72912A389003F3110 /* AirlineDetails.swift */; };
+		652C99DB2912A389003F3110 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99CC2912A389003F3110 /* Flights.swift */; };
+		652C99DC2912A389003F3110 /* DestinationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99CD2912A389003F3110 /* DestinationDetails.swift */; };
+		652C99DD2912A389003F3110 /* Raw_flight_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99CE2912A389003F3110 /* Raw_flight_list.swift */; };
+		652C99DE2912A389003F3110 /* FareDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99CF2912A389003F3110 /* FareDetails.swift */; };
+		652C99DF2912A389003F3110 /* OriginDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99D02912A389003F3110 /* OriginDetails.swift */; };
+		652C99E02912A389003F3110 /* SegmentSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99D12912A389003F3110 /* SegmentSummary.swift */; };
+		652C99E12912A389003F3110 /* ADT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99D22912A389003F3110 /* ADT.swift */; };
+		652C99E22912A389003F3110 /* PassengerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99D32912A389003F3110 /* PassengerConfig.swift */; };
+		652C99E42912A3EC003F3110 /* OneWayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C99E32912A3EC003F3110 /* OneWayModel.swift */; };
+		657A33A22913753F00E3FA70 /* OnewayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33A12913753F00E3FA70 /* OnewayViewModel.swift */; };
+		657A33A4291398A200E3FA70 /* SegmentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33A3291398A200E3FA70 /* SegmentDetails.swift */; };
+		657A33A72913D60700E3FA70 /* BestFares365App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 657A33A52913D60700E3FA70 /* BestFares365App.xcdatamodeld */; };
+		657A33B02913F24100E3FA70 /* FDAirlineDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33A92913F24100E3FA70 /* FDAirlineDetails.swift */; };
+		657A33B12913F24100E3FA70 /* FDOriginDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33AA2913F24100E3FA70 /* FDOriginDetails.swift */; };
+		657A33B22913F24100E3FA70 /* FDDestinationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33AB2913F24100E3FA70 /* FDDestinationDetails.swift */; };
+		657A33B32913F24100E3FA70 /* FDData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33AC2913F24100E3FA70 /* FDData.swift */; };
+		657A33B42913F24100E3FA70 /* Flight_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33AD2913F24100E3FA70 /* Flight_details.swift */; };
+		657A33B52913F24100E3FA70 /* FDFare_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33AE2913F24100E3FA70 /* FDFare_details.swift */; };
+		657A33B62913F24100E3FA70 /* FlightDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A33AF2913F24100E3FA70 /* FlightDetailsModel.swift */; };
+		65848AF6290ADA4F00F5D030 /* TravellersViewTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65848AF4290ADA4F00F5D030 /* TravellersViewTVCell.swift */; };
+		65848AF7290ADA4F00F5D030 /* TravellersViewTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65848AF5290ADA4F00F5D030 /* TravellersViewTVCell.xib */; };
+		65DC18F4290E58B100BEDA92 /* PriceFilterTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC18F2290E58B100BEDA92 /* PriceFilterTVCell.swift */; };
+		65DC18F5290E58B100BEDA92 /* PriceFilterTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC18F3290E58B100BEDA92 /* PriceFilterTVCell.xib */; };
+		65DC1901290EAA2D00BEDA92 /* AirlinesFilterTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC18FF290EAA2D00BEDA92 /* AirlinesFilterTVCell.swift */; };
+		65DC1902290EAA2D00BEDA92 /* AirlinesFilterTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC1900290EAA2D00BEDA92 /* AirlinesFilterTVCell.xib */; };
+		65DC1906290EAFA800BEDA92 /* AirlinesNameTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC1904290EAFA800BEDA92 /* AirlinesNameTVCell.swift */; };
+		65DC1907290EAFA800BEDA92 /* AirlinesNameTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC1905290EAFA800BEDA92 /* AirlinesNameTVCell.xib */; };
+		65DC190B290EC67A00BEDA92 /* DepartureTimeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC1909290EC67A00BEDA92 /* DepartureTimeTVCell.swift */; };
+		65DC190C290EC67A00BEDA92 /* DepartureTimeTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC190A290EC67A00BEDA92 /* DepartureTimeTVCell.xib */; };
+		65DC1910290EC94600BEDA92 /* DepartureTimeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC190E290EC94600BEDA92 /* DepartureTimeCVCell.swift */; };
+		65DC1911290EC94600BEDA92 /* DepartureTimeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DC190F290EC94600BEDA92 /* DepartureTimeCVCell.xib */; };
+		65E48132290B8E7F008366E6 /* SelectFromCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48131290B8E7F008366E6 /* SelectFromCityVC.swift */; };
+		65E48134290B8F0E008366E6 /* SelectCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48133290B8F0E008366E6 /* SelectCityModel.swift */; };
+		65E48138290B8F2B008366E6 /* FromCityTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48136290B8F2B008366E6 /* FromCityTVCell.swift */; };
+		65E48139290B8F2B008366E6 /* FromCityTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E48137290B8F2B008366E6 /* FromCityTVCell.xib */; };
+		65E4813B290B8F66008366E6 /* SelectCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E4813A290B8F66008366E6 /* SelectCityViewModel.swift */; };
+		65E4813D290B97F6008366E6 /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E4813C290B97F6008366E6 /* CalenderVC.swift */; };
+		65E48141290B99BA008366E6 /* calendarCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E4813F290B99BA008366E6 /* calendarCVCell.xib */; };
+		65E48142290B99BA008366E6 /* calendarCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48140290B99BA008366E6 /* calendarCVCell.swift */; };
+		65E48151290B9B08008366E6 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E48144290B9B08008366E6 /* Inter-VariableFont_slnt,wght.ttf */; };
+		65E48152290B9B08008366E6 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E48146290B9B08008366E6 /* Inter-Medium.ttf */; };
+		65E48153290B9B08008366E6 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E48147290B9B08008366E6 /* Inter-Light.ttf */; };
+		65E48154290B9B08008366E6 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E48148290B9B08008366E6 /* Inter-Thin.ttf */; };
+		65E48155290B9B08008366E6 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E48149290B9B08008366E6 /* Inter-Bold.ttf */; };
+		65E48156290B9B08008366E6 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E4814A290B9B08008366E6 /* Inter-Regular.ttf */; };
+		65E48157290B9B08008366E6 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E4814B290B9B08008366E6 /* Inter-ExtraBold.ttf */; };
+		65E48158290B9B08008366E6 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E4814C290B9B08008366E6 /* Inter-ExtraLight.ttf */; };
+		65E48159290B9B08008366E6 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E4814D290B9B08008366E6 /* Inter-Black.ttf */; };
+		65E4815A290B9B08008366E6 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E4814E290B9B08008366E6 /* Inter-SemiBold.ttf */; };
+		65E4815E290BB26F008366E6 /* ChoosePassengerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E4815D290BB26F008366E6 /* ChoosePassengerVC.swift */; };
+		65E48163290BB558008366E6 /* AddAdultsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48161290BB558008366E6 /* AddAdultsTVCell.swift */; };
+		65E48164290BB558008366E6 /* AddAdultsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E48162290BB558008366E6 /* AddAdultsTVCell.xib */; };
+		65E48169290BD4A3008366E6 /* SelectCabinClassTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48167290BD4A3008366E6 /* SelectCabinClassTVCell.swift */; };
+		65E4816A290BD4A3008366E6 /* SelectCabinClassTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E48168290BD4A3008366E6 /* SelectCabinClassTVCell.xib */; };
+		65E48172290BD701008366E6 /* SelectClassCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48170290BD701008366E6 /* SelectClassCVCell.swift */; };
+		65E48173290BD701008366E6 /* SelectClassCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E48171290BD701008366E6 /* SelectClassCVCell.xib */; };
+		65E48177290BE7C3008366E6 /* LabelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E48175290BE7C3008366E6 /* LabelTVCell.swift */; };
+		65E48178290BE7C3008366E6 /* LabelTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E48176290BE7C3008366E6 /* LabelTVCell.xib */; };
+		65E4817D290BF09A008366E6 /* FlightResultTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E4817B290BF09A008366E6 /* FlightResultTVCell.swift */; };
+		65E4817E290BF09A008366E6 /* FlightResultTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E4817C290BF09A008366E6 /* FlightResultTVCell.xib */; };
+		65E48180290C02C3008366E6 /* FlightsResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E4817F290C02C3008366E6 /* FlightsResultVC.swift */; };
+		65F869012910F99E005987FF /* FareSummaryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F868FF2910F99E005987FF /* FareSummaryTVCell.swift */; };
+		65F869022910F99E005987FF /* FareSummaryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F869002910F99E005987FF /* FareSummaryTVCell.xib */; };
+		65F869062910FD5F005987FF /* BarefareTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F869042910FD5F005987FF /* BarefareTVCell.swift */; };
+		65F869072910FD5F005987FF /* BarefareTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F869052910FD5F005987FF /* BarefareTVCell.xib */; };
+		65F9ADA2290F888200085901 /* ShowFlightDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADA1290F888200085901 /* ShowFlightDetailsVC.swift */; };
+		65F9ADA6290F8D9E00085901 /* BottomBookNowTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADA4290F8D9E00085901 /* BottomBookNowTVCell.swift */; };
+		65F9ADA7290F8D9E00085901 /* BottomBookNowTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADA5290F8D9E00085901 /* BottomBookNowTVCell.xib */; };
+		65F9ADAB290F92DA00085901 /* FareRulesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADA9290F92DA00085901 /* FareRulesTVCell.swift */; };
+		65F9ADAC290F92DA00085901 /* FareRulesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADAA290F92DA00085901 /* FareRulesTVCell.xib */; };
+		65F9ADB0290F997F00085901 /* BaggageInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADAE290F997F00085901 /* BaggageInfoTVCell.swift */; };
+		65F9ADB1290F997F00085901 /* BaggageInfoTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADAF290F997F00085901 /* BaggageInfoTVCell.xib */; };
+		65F9ADB5290FA32600085901 /* BaggageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADB3290FA32600085901 /* BaggageTVCell.swift */; };
+		65F9ADB6290FA32600085901 /* BaggageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADB4290FA32600085901 /* BaggageTVCell.xib */; };
+		65F9ADBA290FA79100085901 /* FlightDetailTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADB8290FA79100085901 /* FlightDetailTVCell.swift */; };
+		65F9ADBB290FA79100085901 /* FlightDetailTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADB9290FA79100085901 /* FlightDetailTVCell.xib */; };
+		65F9ADBD290FB7A100085901 /* ContinueToPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADBC290FB7A100085901 /* ContinueToPaymentVC.swift */; };
+		65F9ADC1290FC6B900085901 /* TDetailsLoginTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADBF290FC6B900085901 /* TDetailsLoginTVCell.swift */; };
+		65F9ADC2290FC6B900085901 /* TDetailsLoginTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADC0290FC6B900085901 /* TDetailsLoginTVCell.xib */; };
+		65F9ADC6290FCB1200085901 /* CheckinBaggageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADC4290FCB1200085901 /* CheckinBaggageTVCell.swift */; };
+		65F9ADC7290FCB1200085901 /* CheckinBaggageTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADC5290FCB1200085901 /* CheckinBaggageTVCell.xib */; };
+		65F9ADCB290FD1CF00085901 /* ExtraBaggagesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADC9290FD1CF00085901 /* ExtraBaggagesTVCell.swift */; };
+		65F9ADCC290FD1CF00085901 /* ExtraBaggagesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADCA290FD1CF00085901 /* ExtraBaggagesTVCell.xib */; };
+		65F9ADD0290FDDA000085901 /* PassengerDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADCE290FDDA000085901 /* PassengerDetailsTVCell.swift */; };
+		65F9ADD1290FDDA000085901 /* PassengerDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADCF290FDDA000085901 /* PassengerDetailsTVCell.xib */; };
+		65F9ADD5290FE29900085901 /* AdultDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADD3290FE29900085901 /* AdultDetailsTVCell.swift */; };
+		65F9ADD6290FE29900085901 /* AdultDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADD4290FE29900085901 /* AdultDetailsTVCell.xib */; };
+		65F9ADDA290FE7C200085901 /* ContactDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9ADD8290FE7C200085901 /* ContactDetailsTVCell.swift */; };
+		65F9ADDB290FE7C200085901 /* ContactDetailsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F9ADD9290FE7C200085901 /* ContactDetailsTVCell.xib */; };
+		65FEE0E7290D1CD90038EC23 /* AirlinesListCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE0E5290D1CD90038EC23 /* AirlinesListCVCell.swift */; };
+		65FEE0E8290D1CD90038EC23 /* AirlinesListCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FEE0E6290D1CD90038EC23 /* AirlinesListCVCell.xib */; };
+		65FEE0EC290D22F90038EC23 /* BottomFilterTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE0EA290D22F90038EC23 /* BottomFilterTVCell.swift */; };
+		65FEE0ED290D22F90038EC23 /* BottomFilterTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FEE0EB290D22F90038EC23 /* BottomFilterTVCell.xib */; };
+		65FEE0EF290D38730038EC23 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE0EE290D38730038EC23 /* FilterVC.swift */; };
+		65FEE0F3290D38C60038EC23 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FEE0F2290D38C60038EC23 /* Filter.storyboard */; };
+		9D267C2E2A402BF9FA684214 /* Pods_BestFares365AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8800DC40A35F8B977176004 /* Pods_BestFares365AppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		652410F3290A6DBA00BB0A97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652410D4290A6DB800BB0A97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652410DB290A6DB800BB0A97;
+			remoteInfo = BestFares365App;
+		};
+		652410FD290A6DBA00BB0A97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652410D4290A6DB800BB0A97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652410DB290A6DB800BB0A97;
+			remoteInfo = BestFares365App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A9E43DCCEDB80BA7782B015 /* Pods-BestFares365AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestFares365AppTests.debug.xcconfig"; path = "Target Support Files/Pods-BestFares365AppTests/Pods-BestFares365AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		20CE48F5C8FA081495DE28B6 /* Pods-BestFares365App-BestFares365AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestFares365App-BestFares365AppUITests.release.xcconfig"; path = "Target Support Files/Pods-BestFares365App-BestFares365AppUITests/Pods-BestFares365App-BestFares365AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4F059B3C459F30A8BF175100 /* Pods_BestFares365App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestFares365App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		652410DC290A6DB800BB0A97 /* BestFares365App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestFares365App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		652410DF290A6DB800BB0A97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		652410E1290A6DB800BB0A97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		652410E3290A6DB800BB0A97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		652410E6290A6DB800BB0A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		652410E8290A6DBA00BB0A97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		652410EB290A6DBA00BB0A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		652410ED290A6DBA00BB0A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652410F2290A6DBA00BB0A97 /* BestFares365AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BestFares365AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		652410F6290A6DBA00BB0A97 /* BestFares365AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFares365AppTests.swift; sourceTree = "<group>"; };
+		652410FC290A6DBA00BB0A97 /* BestFares365AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BestFares365AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65241100290A6DBA00BB0A97 /* BestFares365AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFares365AppUITests.swift; sourceTree = "<group>"; };
+		65241102290A6DBA00BB0A97 /* BestFares365AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFares365AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		652412C8290A6DFA00BB0A97 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		652412C9290A6DFA00BB0A97 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		652412CA290A6DFA00BB0A97 /* BaseTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableVC.swift; sourceTree = "<group>"; };
+		652412CB290A6DFA00BB0A97 /* UIModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIModels.swift; sourceTree = "<group>"; };
+		652412CE290A6DFA00BB0A97 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		652412CF290A6DFA00BB0A97 /* DefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsExtension.swift; sourceTree = "<group>"; };
+		652412D0290A6DFA00BB0A97 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		652412D2290A6DFA00BB0A97 /* CountryCodesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCodesList.swift; sourceTree = "<group>"; };
+		652412D5290A6DFA00BB0A97 /* NavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBar.xib; sourceTree = "<group>"; };
+		652412D6290A6DFA00BB0A97 /* NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		652412D8290A6DFA00BB0A97 /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
+		652412D9290A6DFA00BB0A97 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		652412DA290A6DFA00BB0A97 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		652412DB290A6DFA00BB0A97 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		652412DC290A6DFA00BB0A97 /* UIKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitHelper.swift; sourceTree = "<group>"; };
+		652412DD290A6DFA00BB0A97 /* TableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
+		652412DE290A6DFA00BB0A97 /* UITapGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizerExtension.swift; sourceTree = "<group>"; };
+		652412DF290A6DFA00BB0A97 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		652412E0290A6DFA00BB0A97 /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		652412E1290A6DFA00BB0A97 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		652412E3290A6DFA00BB0A97 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		652412E4290A6DFA00BB0A97 /* UIColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorManager.swift; sourceTree = "<group>"; };
+		652412E6290A6DFA00BB0A97 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		652412E7290A6DFA00BB0A97 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		652412E8290A6DFA00BB0A97 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		652412E9290A6DFA00BB0A97 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		652412EA290A6DFA00BB0A97 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		652412EB290A6DFA00BB0A97 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		652412EC290A6DFA00BB0A97 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		652412EE290A6DFA00BB0A97 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		652412EF290A6DFA00BB0A97 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		652412F0290A6DFA00BB0A97 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		652412F1290A6DFA00BB0A97 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		652412F2290A6DFA00BB0A97 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		652412F3290A6DFA00BB0A97 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		652412F4290A6DFA00BB0A97 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		652412F5290A6DFA00BB0A97 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		652412F6290A6DFA00BB0A97 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		652412F7290A6DFA00BB0A97 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		652412F9290A6DFA00BB0A97 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		652412FA290A6DFA00BB0A97 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		652412FB290A6DFA00BB0A97 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		652412FC290A6DFA00BB0A97 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		652412FD290A6DFA00BB0A97 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		652412FF290A6DFA00BB0A97 /* DeviceName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceName.swift; sourceTree = "<group>"; };
+		65241300290A6DFA00BB0A97 /* NSObject+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Helper.swift"; sourceTree = "<group>"; };
+		65241301290A6DFA00BB0A97 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		65241302290A6DFA00BB0A97 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		65241303290A6DFA00BB0A97 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		65241304290A6DFA00BB0A97 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		65241305290A6DFA00BB0A97 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		65241308290A6DFA00BB0A97 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		65241476290A858C00BB0A97 /* sigvar bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sigvar bold.ttf"; sourceTree = "<group>"; };
+		65241477290A858C00BB0A97 /* sigvar bold italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sigvar bold italic.ttf"; sourceTree = "<group>"; };
+		65241478290A858C00BB0A97 /* SigvarRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SigvarRegular.ttf; sourceTree = "<group>"; };
+		65241479290A858C00BB0A97 /* SigvarItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SigvarItalic.ttf; sourceTree = "<group>"; };
+		6524147A290A858C00BB0A97 /* SigvarBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SigvarBoldItalic.ttf; sourceTree = "<group>"; };
+		6524147B290A858C00BB0A97 /* SigvarBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SigvarBold.ttf; sourceTree = "<group>"; };
+		6524147C290A858C00BB0A97 /* sigvar italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sigvar italic.ttf"; sourceTree = "<group>"; };
+		65241487290A8A2C00BB0A97 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		6524148A290A8E6C00BB0A97 /* Proxima Nova Alt Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Thin.otf"; sourceTree = "<group>"; };
+		6524148B290A8E6C00BB0A97 /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
+		6524148C290A8E6C00BB0A97 /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		6524148D290A8E6C00BB0A97 /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
+		6524148E290A8E6C00BB0A97 /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		6524148F290A8E6C00BB0A97 /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		65241490290A8E6C00BB0A97 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		65241491290A8E6C00BB0A97 /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		652414A2290A949000BB0A97 /* SelectModuleCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModuleCVCell.swift; sourceTree = "<group>"; };
+		652414A3290A949000BB0A97 /* SelectModuleCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectModuleCVCell.xib; sourceTree = "<group>"; };
+		652414A7290A9A5B00BB0A97 /* EmptyTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTVCell.swift; sourceTree = "<group>"; };
+		652414A8290A9A5B00BB0A97 /* EmptyTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTVCell.xib; sourceTree = "<group>"; };
+		652414AC290A9A6D00BB0A97 /* ButtonTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTVCell.xib; sourceTree = "<group>"; };
+		652414AD290A9A6D00BB0A97 /* ButtonTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTVCell.swift; sourceTree = "<group>"; };
+		652414B1290AA41400BB0A97 /* FromViewTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromViewTVCell.swift; sourceTree = "<group>"; };
+		652414B2290AA41400BB0A97 /* FromViewTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FromViewTVCell.xib; sourceTree = "<group>"; };
+		652414B6290AB39F00BB0A97 /* DepartDateViewTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartDateViewTVCell.swift; sourceTree = "<group>"; };
+		652414B7290AB39F00BB0A97 /* DepartDateViewTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartDateViewTVCell.xib; sourceTree = "<group>"; };
+		652C995E291229B2003F3110 /* MulticityFromTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticityFromTVCell.swift; sourceTree = "<group>"; };
+		652C995F291229B2003F3110 /* MulticityFromTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MulticityFromTVCell.xib; sourceTree = "<group>"; };
+		652C99632912302F003F3110 /* MulticityTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticityTVCell.swift; sourceTree = "<group>"; };
+		652C99642912302F003F3110 /* MulticityTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MulticityTVCell.xib; sourceTree = "<group>"; };
+		652C9968291247A8003F3110 /* RoundTripTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTripTVCell.swift; sourceTree = "<group>"; };
+		652C9969291247A8003F3110 /* RoundTripTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundTripTVCell.xib; sourceTree = "<group>"; };
+		652C996D2912493B003F3110 /* RoundTripDetailsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTripDetailsTVCell.swift; sourceTree = "<group>"; };
+		652C996E2912493B003F3110 /* RoundTripDetailsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundTripDetailsTVCell.xib; sourceTree = "<group>"; };
+		652C99722912539B003F3110 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		652C9979291253DE003F3110 /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		652C997C291253EB003F3110 /* MenuBGTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuBGTVCell.xib; sourceTree = "<group>"; };
+		652C997D291253EB003F3110 /* MenuBGTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBGTVCell.swift; sourceTree = "<group>"; };
+		652C99802912549F003F3110 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		652C9983291255ED003F3110 /* LoignOrSignupBtnsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoignOrSignupBtnsTVCell.swift; sourceTree = "<group>"; };
+		652C9984291255ED003F3110 /* LoignOrSignupBtnsTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoignOrSignupBtnsTVCell.xib; sourceTree = "<group>"; };
+		652C998829125642003F3110 /* TextfieldTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldTVCell.swift; sourceTree = "<group>"; };
+		652C998929125642003F3110 /* TextfieldTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextfieldTVCell.xib; sourceTree = "<group>"; };
+		652C998D29125698003F3110 /* UnderLineTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnderLineTVCell.xib; sourceTree = "<group>"; };
+		652C998E29125698003F3110 /* UnderLineTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderLineTVCell.swift; sourceTree = "<group>"; };
+		652C999229125826003F3110 /* SignUpWithTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWithTVCell.swift; sourceTree = "<group>"; };
+		652C999329125826003F3110 /* SignUpWithTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpWithTVCell.xib; sourceTree = "<group>"; };
+		652C999729127130003F3110 /* MenuTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCell.swift; sourceTree = "<group>"; };
+		652C999829127130003F3110 /* MenuTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTVCell.xib; sourceTree = "<group>"; };
+		652C999B29127BE9003F3110 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		652C999D29127C0D003F3110 /* CreateNewPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordVC.swift; sourceTree = "<group>"; };
+		652C999F2912826F003F3110 /* SelectLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLanguageVC.swift; sourceTree = "<group>"; };
+		652C99A22912841F003F3110 /* SelectLanguageTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectLanguageTVCell.xib; sourceTree = "<group>"; };
+		652C99A32912841F003F3110 /* SelectLanguageTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLanguageTVCell.swift; sourceTree = "<group>"; };
+		652C99A6291286F6003F3110 /* AddTravellerDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTravellerDetailsVC.swift; sourceTree = "<group>"; };
+		652C99A929128727003F3110 /* SelectGenderTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectGenderTVCell.xib; sourceTree = "<group>"; };
+		652C99AA29128727003F3110 /* SelectGenderTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGenderTVCell.swift; sourceTree = "<group>"; };
+		652C99AE291287E8003F3110 /* DropDownTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownTVCell.swift; sourceTree = "<group>"; };
+		652C99AF291287E8003F3110 /* DropDownTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownTVCell.xib; sourceTree = "<group>"; };
+		652C99B229129C99003F3110 /* BookingConfirmedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmedVC.swift; sourceTree = "<group>"; };
+		652C99B629129CC3003F3110 /* BookingConfirmedTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmedTVCell.swift; sourceTree = "<group>"; };
+		652C99B729129CC3003F3110 /* BookingConfirmedTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingConfirmedTVCell.xib; sourceTree = "<group>"; };
+		652C99BB29129DBE003F3110 /* BookedTravelDetailsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedTravelDetailsTVCell.swift; sourceTree = "<group>"; };
+		652C99BC29129DBE003F3110 /* BookedTravelDetailsTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookedTravelDetailsTVCell.xib; sourceTree = "<group>"; };
+		652C99C029129E12003F3110 /* BookedAdultDetailsTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookedAdultDetailsTVCell.xib; sourceTree = "<group>"; };
+		652C99C129129E12003F3110 /* BookedAdultDetailsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedAdultDetailsTVCell.swift; sourceTree = "<group>"; };
+		652C99C52912A389003F3110 /* B2c_PriceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B2c_PriceDetails.swift; sourceTree = "<group>"; };
+		652C99C72912A389003F3110 /* AirlineDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlineDetails.swift; sourceTree = "<group>"; };
+		652C99CC2912A389003F3110 /* Flights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
+		652C99CD2912A389003F3110 /* DestinationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationDetails.swift; sourceTree = "<group>"; };
+		652C99CE2912A389003F3110 /* Raw_flight_list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raw_flight_list.swift; sourceTree = "<group>"; };
+		652C99CF2912A389003F3110 /* FareDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FareDetails.swift; sourceTree = "<group>"; };
+		652C99D02912A389003F3110 /* OriginDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginDetails.swift; sourceTree = "<group>"; };
+		652C99D12912A389003F3110 /* SegmentSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentSummary.swift; sourceTree = "<group>"; };
+		652C99D22912A389003F3110 /* ADT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADT.swift; sourceTree = "<group>"; };
+		652C99D32912A389003F3110 /* PassengerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassengerConfig.swift; sourceTree = "<group>"; };
+		652C99E32912A3EC003F3110 /* OneWayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayModel.swift; sourceTree = "<group>"; };
+		657A33A12913753F00E3FA70 /* OnewayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnewayViewModel.swift; sourceTree = "<group>"; };
+		657A33A3291398A200E3FA70 /* SegmentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentDetails.swift; sourceTree = "<group>"; };
+		657A33A62913D60700E3FA70 /* BestFares365App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BestFares365App.xcdatamodel; sourceTree = "<group>"; };
+		657A33A92913F24100E3FA70 /* FDAirlineDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDAirlineDetails.swift; sourceTree = "<group>"; };
+		657A33AA2913F24100E3FA70 /* FDOriginDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDOriginDetails.swift; sourceTree = "<group>"; };
+		657A33AB2913F24100E3FA70 /* FDDestinationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDDestinationDetails.swift; sourceTree = "<group>"; };
+		657A33AC2913F24100E3FA70 /* FDData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDData.swift; sourceTree = "<group>"; };
+		657A33AD2913F24100E3FA70 /* Flight_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight_details.swift; sourceTree = "<group>"; };
+		657A33AE2913F24100E3FA70 /* FDFare_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDFare_details.swift; sourceTree = "<group>"; };
+		657A33AF2913F24100E3FA70 /* FlightDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightDetailsModel.swift; sourceTree = "<group>"; };
+		65848AF4290ADA4F00F5D030 /* TravellersViewTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellersViewTVCell.swift; sourceTree = "<group>"; };
+		65848AF5290ADA4F00F5D030 /* TravellersViewTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravellersViewTVCell.xib; sourceTree = "<group>"; };
+		65DC18F2290E58B100BEDA92 /* PriceFilterTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFilterTVCell.swift; sourceTree = "<group>"; };
+		65DC18F3290E58B100BEDA92 /* PriceFilterTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceFilterTVCell.xib; sourceTree = "<group>"; };
+		65DC18FF290EAA2D00BEDA92 /* AirlinesFilterTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesFilterTVCell.swift; sourceTree = "<group>"; };
+		65DC1900290EAA2D00BEDA92 /* AirlinesFilterTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirlinesFilterTVCell.xib; sourceTree = "<group>"; };
+		65DC1904290EAFA800BEDA92 /* AirlinesNameTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesNameTVCell.swift; sourceTree = "<group>"; };
+		65DC1905290EAFA800BEDA92 /* AirlinesNameTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirlinesNameTVCell.xib; sourceTree = "<group>"; };
+		65DC1909290EC67A00BEDA92 /* DepartureTimeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureTimeTVCell.swift; sourceTree = "<group>"; };
+		65DC190A290EC67A00BEDA92 /* DepartureTimeTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartureTimeTVCell.xib; sourceTree = "<group>"; };
+		65DC190E290EC94600BEDA92 /* DepartureTimeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureTimeCVCell.swift; sourceTree = "<group>"; };
+		65DC190F290EC94600BEDA92 /* DepartureTimeCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartureTimeCVCell.xib; sourceTree = "<group>"; };
+		65E48131290B8E7F008366E6 /* SelectFromCityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFromCityVC.swift; sourceTree = "<group>"; };
+		65E48133290B8F0E008366E6 /* SelectCityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCityModel.swift; sourceTree = "<group>"; };
+		65E48136290B8F2B008366E6 /* FromCityTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromCityTVCell.swift; sourceTree = "<group>"; };
+		65E48137290B8F2B008366E6 /* FromCityTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FromCityTVCell.xib; sourceTree = "<group>"; };
+		65E4813A290B8F66008366E6 /* SelectCityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCityViewModel.swift; sourceTree = "<group>"; };
+		65E4813C290B97F6008366E6 /* CalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
+		65E4813F290B99BA008366E6 /* calendarCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = calendarCVCell.xib; sourceTree = "<group>"; };
+		65E48140290B99BA008366E6 /* calendarCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarCVCell.swift; sourceTree = "<group>"; };
+		65E48144290B9B08008366E6 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		65E48146290B9B08008366E6 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		65E48147290B9B08008366E6 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		65E48148290B9B08008366E6 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		65E48149290B9B08008366E6 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		65E4814A290B9B08008366E6 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		65E4814B290B9B08008366E6 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		65E4814C290B9B08008366E6 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		65E4814D290B9B08008366E6 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		65E4814E290B9B08008366E6 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		65E4815D290BB26F008366E6 /* ChoosePassengerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePassengerVC.swift; sourceTree = "<group>"; };
+		65E48161290BB558008366E6 /* AddAdultsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdultsTVCell.swift; sourceTree = "<group>"; };
+		65E48162290BB558008366E6 /* AddAdultsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAdultsTVCell.xib; sourceTree = "<group>"; };
+		65E48167290BD4A3008366E6 /* SelectCabinClassTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCabinClassTVCell.swift; sourceTree = "<group>"; };
+		65E48168290BD4A3008366E6 /* SelectCabinClassTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCabinClassTVCell.xib; sourceTree = "<group>"; };
+		65E48170290BD701008366E6 /* SelectClassCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassCVCell.swift; sourceTree = "<group>"; };
+		65E48171290BD701008366E6 /* SelectClassCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectClassCVCell.xib; sourceTree = "<group>"; };
+		65E48175290BE7C3008366E6 /* LabelTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTVCell.swift; sourceTree = "<group>"; };
+		65E48176290BE7C3008366E6 /* LabelTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTVCell.xib; sourceTree = "<group>"; };
+		65E4817B290BF09A008366E6 /* FlightResultTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightResultTVCell.swift; sourceTree = "<group>"; };
+		65E4817C290BF09A008366E6 /* FlightResultTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightResultTVCell.xib; sourceTree = "<group>"; };
+		65E4817F290C02C3008366E6 /* FlightsResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResultVC.swift; sourceTree = "<group>"; };
+		65F868FF2910F99E005987FF /* FareSummaryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareSummaryTVCell.swift; sourceTree = "<group>"; };
+		65F869002910F99E005987FF /* FareSummaryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FareSummaryTVCell.xib; sourceTree = "<group>"; };
+		65F869042910FD5F005987FF /* BarefareTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarefareTVCell.swift; sourceTree = "<group>"; };
+		65F869052910FD5F005987FF /* BarefareTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarefareTVCell.xib; sourceTree = "<group>"; };
+		65F9ADA1290F888200085901 /* ShowFlightDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFlightDetailsVC.swift; sourceTree = "<group>"; };
+		65F9ADA4290F8D9E00085901 /* BottomBookNowTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBookNowTVCell.swift; sourceTree = "<group>"; };
+		65F9ADA5290F8D9E00085901 /* BottomBookNowTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomBookNowTVCell.xib; sourceTree = "<group>"; };
+		65F9ADA9290F92DA00085901 /* FareRulesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareRulesTVCell.swift; sourceTree = "<group>"; };
+		65F9ADAA290F92DA00085901 /* FareRulesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FareRulesTVCell.xib; sourceTree = "<group>"; };
+		65F9ADAE290F997F00085901 /* BaggageInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaggageInfoTVCell.swift; sourceTree = "<group>"; };
+		65F9ADAF290F997F00085901 /* BaggageInfoTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaggageInfoTVCell.xib; sourceTree = "<group>"; };
+		65F9ADB3290FA32600085901 /* BaggageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaggageTVCell.swift; sourceTree = "<group>"; };
+		65F9ADB4290FA32600085901 /* BaggageTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaggageTVCell.xib; sourceTree = "<group>"; };
+		65F9ADB8290FA79100085901 /* FlightDetailTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailTVCell.swift; sourceTree = "<group>"; };
+		65F9ADB9290FA79100085901 /* FlightDetailTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightDetailTVCell.xib; sourceTree = "<group>"; };
+		65F9ADBC290FB7A100085901 /* ContinueToPaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueToPaymentVC.swift; sourceTree = "<group>"; };
+		65F9ADBF290FC6B900085901 /* TDetailsLoginTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDetailsLoginTVCell.swift; sourceTree = "<group>"; };
+		65F9ADC0290FC6B900085901 /* TDetailsLoginTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDetailsLoginTVCell.xib; sourceTree = "<group>"; };
+		65F9ADC4290FCB1200085901 /* CheckinBaggageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinBaggageTVCell.swift; sourceTree = "<group>"; };
+		65F9ADC5290FCB1200085901 /* CheckinBaggageTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinBaggageTVCell.xib; sourceTree = "<group>"; };
+		65F9ADC9290FD1CF00085901 /* ExtraBaggagesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraBaggagesTVCell.swift; sourceTree = "<group>"; };
+		65F9ADCA290FD1CF00085901 /* ExtraBaggagesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtraBaggagesTVCell.xib; sourceTree = "<group>"; };
+		65F9ADCE290FDDA000085901 /* PassengerDetailsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerDetailsTVCell.swift; sourceTree = "<group>"; };
+		65F9ADCF290FDDA000085901 /* PassengerDetailsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerDetailsTVCell.xib; sourceTree = "<group>"; };
+		65F9ADD3290FE29900085901 /* AdultDetailsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdultDetailsTVCell.swift; sourceTree = "<group>"; };
+		65F9ADD4290FE29900085901 /* AdultDetailsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdultDetailsTVCell.xib; sourceTree = "<group>"; };
+		65F9ADD8290FE7C200085901 /* ContactDetailsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsTVCell.swift; sourceTree = "<group>"; };
+		65F9ADD9290FE7C200085901 /* ContactDetailsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailsTVCell.xib; sourceTree = "<group>"; };
+		65FEE0E5290D1CD90038EC23 /* AirlinesListCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesListCVCell.swift; sourceTree = "<group>"; };
+		65FEE0E6290D1CD90038EC23 /* AirlinesListCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirlinesListCVCell.xib; sourceTree = "<group>"; };
+		65FEE0EA290D22F90038EC23 /* BottomFilterTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomFilterTVCell.swift; sourceTree = "<group>"; };
+		65FEE0EB290D22F90038EC23 /* BottomFilterTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomFilterTVCell.xib; sourceTree = "<group>"; };
+		65FEE0EE290D38730038EC23 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		65FEE0F2290D38C60038EC23 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		68A54CD93B18AC3AC8070924 /* Pods-BestFares365App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestFares365App.debug.xcconfig"; path = "Target Support Files/Pods-BestFares365App/Pods-BestFares365App.debug.xcconfig"; sourceTree = "<group>"; };
+		84ED2FFA69DEB0E2A7F3528E /* Pods_BestFares365App_BestFares365AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestFares365App_BestFares365AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8800DC40A35F8B977176004 /* Pods_BestFares365AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestFares365AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5AE72C9738C297B95A3DBC /* Pods-BestFares365AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestFares365AppTests.release.xcconfig"; path = "Target Support Files/Pods-BestFares365AppTests/Pods-BestFares365AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD2FE98070AC6AD8DE735DA2 /* Pods-BestFares365App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestFares365App.release.xcconfig"; path = "Target Support Files/Pods-BestFares365App/Pods-BestFares365App.release.xcconfig"; sourceTree = "<group>"; };
+		EE2B9F1A7FB018FECD2C75E1 /* Pods-BestFares365App-BestFares365AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestFares365App-BestFares365AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-BestFares365App-BestFares365AppUITests/Pods-BestFares365App-BestFares365AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		652410D9290A6DB800BB0A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C587ABEF255E9F54CB3F26 /* Pods_BestFares365App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652410EF290A6DBA00BB0A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D267C2E2A402BF9FA684214 /* Pods_BestFares365AppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652410F9290A6DBA00BB0A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D53971D481313496AFB1DE /* Pods_BestFares365App_BestFares365AppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05EEC9D87AF280C7A053DE1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F059B3C459F30A8BF175100 /* Pods_BestFares365App.framework */,
+				84ED2FFA69DEB0E2A7F3528E /* Pods_BestFares365App_BestFares365AppUITests.framework */,
+				B8800DC40A35F8B977176004 /* Pods_BestFares365AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		652410D3290A6DB800BB0A97 = {
+			isa = PBXGroup;
+			children = (
+				652410DE290A6DB800BB0A97 /* BestFares365App */,
+				652410F5290A6DBA00BB0A97 /* BestFares365AppTests */,
+				652410FF290A6DBA00BB0A97 /* BestFares365AppUITests */,
+				652410DD290A6DB800BB0A97 /* Products */,
+				BA9695C6E4773B5041E0CB40 /* Pods */,
+				05EEC9D87AF280C7A053DE1E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		652410DD290A6DB800BB0A97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				652410DC290A6DB800BB0A97 /* BestFares365App.app */,
+				652410F2290A6DBA00BB0A97 /* BestFares365AppTests.xctest */,
+				652410FC290A6DBA00BB0A97 /* BestFares365AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		652410DE290A6DB800BB0A97 /* BestFares365App */ = {
+			isa = PBXGroup;
+			children = (
+				6524110F290A6DF900BB0A97 /* APP */,
+				652410DF290A6DB800BB0A97 /* AppDelegate.swift */,
+				652410E1290A6DB800BB0A97 /* SceneDelegate.swift */,
+				652410E8290A6DBA00BB0A97 /* Assets.xcassets */,
+				652410EA290A6DBA00BB0A97 /* LaunchScreen.storyboard */,
+				652410ED290A6DBA00BB0A97 /* Info.plist */,
+				657A33A52913D60700E3FA70 /* BestFares365App.xcdatamodeld */,
+			);
+			path = BestFares365App;
+			sourceTree = "<group>";
+		};
+		652410F5290A6DBA00BB0A97 /* BestFares365AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				652410F6290A6DBA00BB0A97 /* BestFares365AppTests.swift */,
+			);
+			path = BestFares365AppTests;
+			sourceTree = "<group>";
+		};
+		652410FF290A6DBA00BB0A97 /* BestFares365AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				65241100290A6DBA00BB0A97 /* BestFares365AppUITests.swift */,
+				65241102290A6DBA00BB0A97 /* BestFares365AppUITestsLaunchTests.swift */,
+			);
+			path = BestFares365AppUITests;
+			sourceTree = "<group>";
+		};
+		6524110F290A6DF900BB0A97 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				652412C7290A6DFA00BB0A97 /* BaseVCS */,
+				65241307290A6DFA00BB0A97 /* Service Manager */,
+				652412CC290A6DFA00BB0A97 /* Config */,
+				65241113290A6DF900BB0A97 /* Scenes */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		65241113290A6DF900BB0A97 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				652C99712912538A003F3110 /* Login */,
+				6524146D290A6EE400BB0A97 /* Flights */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		652412C7290A6DFA00BB0A97 /* BaseVCS */ = {
+			isa = PBXGroup;
+			children = (
+				652412C8290A6DFA00BB0A97 /* BaseVC.swift */,
+				652412C9290A6DFA00BB0A97 /* TableViewCell.swift */,
+				652412CA290A6DFA00BB0A97 /* BaseTableVC.swift */,
+				652412CB290A6DFA00BB0A97 /* UIModels.swift */,
+			);
+			path = BaseVCS;
+			sourceTree = "<group>";
+		};
+		652412CC290A6DFA00BB0A97 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				652412E2290A6DFA00BB0A97 /* UIFonts */,
+				652412CD290A6DFA00BB0A97 /* Constants */,
+				652412D1290A6DFA00BB0A97 /* ContryCodeJson */,
+				652412D3290A6DFA00BB0A97 /* CommonMethods */,
+				652412D7290A6DFA00BB0A97 /* Extensions */,
+				652412FE290A6DFA00BB0A97 /* Helper */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		652412CD290A6DFA00BB0A97 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				652412CE290A6DFA00BB0A97 /* Constants.swift */,
+				652412CF290A6DFA00BB0A97 /* DefaultsExtension.swift */,
+				652412D0290A6DFA00BB0A97 /* SessionManager.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		652412D1290A6DFA00BB0A97 /* ContryCodeJson */ = {
+			isa = PBXGroup;
+			children = (
+				652412D2290A6DFA00BB0A97 /* CountryCodesList.swift */,
+			);
+			path = ContryCodeJson;
+			sourceTree = "<group>";
+		};
+		652412D3290A6DFA00BB0A97 /* CommonMethods */ = {
+			isa = PBXGroup;
+			children = (
+				652412D4290A6DFA00BB0A97 /* NavBar */,
+			);
+			path = CommonMethods;
+			sourceTree = "<group>";
+		};
+		652412D4290A6DFA00BB0A97 /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				652412D6290A6DFA00BB0A97 /* NavBar.swift */,
+				652412D5290A6DFA00BB0A97 /* NavBar.xib */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
+		652412D7290A6DFA00BB0A97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				652412D8290A6DFA00BB0A97 /* TableViewHelper.swift */,
+				652412D9290A6DFA00BB0A97 /* UITextViewExtension.swift */,
+				652412DA290A6DFA00BB0A97 /* UIViewControllerExtension.swift */,
+				652412DB290A6DFA00BB0A97 /* ButtonExtension.swift */,
+				652412DC290A6DFA00BB0A97 /* UIKitHelper.swift */,
+				652412DD290A6DFA00BB0A97 /* TableViewExtensions.swift */,
+				652412DE290A6DFA00BB0A97 /* UITapGestureRecognizerExtension.swift */,
+				652412DF290A6DFA00BB0A97 /* StringExtension.swift */,
+				652412E0290A6DFA00BB0A97 /* TextFieldExtension.swift */,
+				652412E1290A6DFA00BB0A97 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		652412E2290A6DFA00BB0A97 /* UIFonts */ = {
+			isa = PBXGroup;
+			children = (
+				65E48143290B9B08008366E6 /* Inter */,
+				6524149B290A90C700BB0A97 /* proximaFonts */,
+				6524149A290A90A900BB0A97 /* sigvarFonts */,
+				65241486290A85A700BB0A97 /* FondAndColorMgr */,
+				652412E5290A6DFA00BB0A97 /* Oswald */,
+				652412ED290A6DFA00BB0A97 /* Poppins */,
+				652412F8290A6DFA00BB0A97 /* OpenSans */,
+			);
+			path = UIFonts;
+			sourceTree = "<group>";
+		};
+		652412E5290A6DFA00BB0A97 /* Oswald */ = {
+			isa = PBXGroup;
+			children = (
+				652412E6290A6DFA00BB0A97 /* Oswald-Bold.ttf */,
+				652412E7290A6DFA00BB0A97 /* Oswald-SemiBold.ttf */,
+				652412E8290A6DFA00BB0A97 /* Lato-Regular.ttf */,
+				652412E9290A6DFA00BB0A97 /* Lato-Semibold.ttf */,
+				652412EA290A6DFA00BB0A97 /* Oswald-Regular.ttf */,
+				652412EB290A6DFA00BB0A97 /* Lato-Light.ttf */,
+				652412EC290A6DFA00BB0A97 /* Lato-Medium.ttf */,
+			);
+			path = Oswald;
+			sourceTree = "<group>";
+		};
+		652412ED290A6DFA00BB0A97 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				652412EE290A6DFA00BB0A97 /* Roboto-Medium.ttf */,
+				652412EF290A6DFA00BB0A97 /* Poppins-Light.ttf */,
+				652412F0290A6DFA00BB0A97 /* Poppins-Medium.ttf */,
+				652412F1290A6DFA00BB0A97 /* Oswald-Medium.ttf */,
+				652412F2290A6DFA00BB0A97 /* Poppins-ExtraBold.ttf */,
+				652412F3290A6DFA00BB0A97 /* Poppins-Regular.ttf */,
+				652412F4290A6DFA00BB0A97 /* OpenSans-Medium.ttf */,
+				652412F5290A6DFA00BB0A97 /* Poppins-Bold.ttf */,
+				652412F6290A6DFA00BB0A97 /* Poppins-Black.ttf */,
+				652412F7290A6DFA00BB0A97 /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		652412F8290A6DFA00BB0A97 /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				652412F9290A6DFA00BB0A97 /* OpenSans-Semibold.ttf */,
+				652412FA290A6DFA00BB0A97 /* OpenSans-Light.ttf */,
+				652412FB290A6DFA00BB0A97 /* OpenSans-Bold.ttf */,
+				652412FC290A6DFA00BB0A97 /* OpenSans-Regular.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
+		652412FE290A6DFA00BB0A97 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				652412FF290A6DFA00BB0A97 /* DeviceName.swift */,
+				65241300290A6DFA00BB0A97 /* NSObject+Helper.swift */,
+				65241301290A6DFA00BB0A97 /* Decodable.swift */,
+				65241302290A6DFA00BB0A97 /* Loader.swift */,
+				65241303290A6DFA00BB0A97 /* BaseViewModelProtocol.swift */,
+				65241304290A6DFA00BB0A97 /* ProgressHUD.swift */,
+				65241305290A6DFA00BB0A97 /* StoryboardExtension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		65241307290A6DFA00BB0A97 /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				65241308290A6DFA00BB0A97 /* ServiceManager.swift */,
+			);
+			path = "Service Manager";
+			sourceTree = "<group>";
+		};
+		6524146D290A6EE400BB0A97 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				652410E5290A6DB800BB0A97 /* Main.storyboard */,
+				65241473290A6F1A00BB0A97 /* Models */,
+				65241472290A6F1100BB0A97 /* ViewModels */,
+				6524146F290A6EFC00BB0A97 /* Views */,
+				6524146E290A6EEF00BB0A97 /* ViewControllers */,
+			);
+			name = Flights;
+			sourceTree = "<group>";
+		};
+		6524146E290A6EEF00BB0A97 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE0F1290D38B10038EC23 /* Filter */,
+				65FEE0F0290D389A0038EC23 /* Flights */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6524146F290A6EFC00BB0A97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65241471290A6F0900BB0A97 /* TVCells */,
+				65241470290A6F0300BB0A97 /* CVCells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		65241470290A6F0300BB0A97 /* CVCells */ = {
+			isa = PBXGroup;
+			children = (
+				65DC190D290EC92F00BEDA92 /* DepartureTimeCVCell */,
+				65FEE0E4290D1CB60038EC23 /* airlinesListCVCell */,
+				65E4816B290BD635008366E6 /* SelectClassCVCell */,
+				65E4813E290B99BA008366E6 /* CalendarCVCell */,
+				6524149D290A945300BB0A97 /* SelectModuleCVCell */,
+			);
+			name = CVCells;
+			sourceTree = "<group>";
+		};
+		65241471290A6F0900BB0A97 /* TVCells */ = {
+			isa = PBXGroup;
+			children = (
+				652C99B429129CB0003F3110 /* BookingConform */,
+				652C995C2912257C003F3110 /* Multicity */,
+				65DC18F0290E588E00BEDA92 /* Filters */,
+				65E48165290BB55E008366E6 /* FlightsTVCells */,
+			);
+			name = TVCells;
+			sourceTree = "<group>";
+		};
+		65241472290A6F1100BB0A97 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				657A33A12913753F00E3FA70 /* OnewayViewModel.swift */,
+				65E4813A290B8F66008366E6 /* SelectCityViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		65241473290A6F1A00BB0A97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				657A33B72913F24600E3FA70 /* oneway */,
+				65E48133290B8F0E008366E6 /* SelectCityModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		65241486290A85A700BB0A97 /* FondAndColorMgr */ = {
+			isa = PBXGroup;
+			children = (
+				652412E3290A6DFA00BB0A97 /* FontManager.swift */,
+				652412E4290A6DFA00BB0A97 /* UIColorManager.swift */,
+				652412FD290A6DFA00BB0A97 /* ColorManager.swift */,
+			);
+			path = FondAndColorMgr;
+			sourceTree = "<group>";
+		};
+		6524149A290A90A900BB0A97 /* sigvarFonts */ = {
+			isa = PBXGroup;
+			children = (
+				65241476290A858C00BB0A97 /* sigvar bold.ttf */,
+				65241477290A858C00BB0A97 /* sigvar bold italic.ttf */,
+				65241478290A858C00BB0A97 /* SigvarRegular.ttf */,
+				65241479290A858C00BB0A97 /* SigvarItalic.ttf */,
+				6524147A290A858C00BB0A97 /* SigvarBoldItalic.ttf */,
+				6524147B290A858C00BB0A97 /* SigvarBold.ttf */,
+				6524147C290A858C00BB0A97 /* sigvar italic.ttf */,
+			);
+			path = sigvarFonts;
+			sourceTree = "<group>";
+		};
+		6524149B290A90C700BB0A97 /* proximaFonts */ = {
+			isa = PBXGroup;
+			children = (
+				6524148A290A8E6C00BB0A97 /* Proxima Nova Alt Thin.otf */,
+				6524148B290A8E6C00BB0A97 /* Proxima Nova Alt Bold.otf */,
+				6524148C290A8E6C00BB0A97 /* Proxima Nova Extrabold.otf */,
+				6524148D290A8E6C00BB0A97 /* Proxima Nova Alt Light.otf */,
+				6524148E290A8E6C00BB0A97 /* Proxima Nova Black.otf */,
+				6524148F290A8E6C00BB0A97 /* Proxima Nova Bold.otf */,
+				65241490290A8E6C00BB0A97 /* ProximaNova-Regular.otf */,
+				65241491290A8E6C00BB0A97 /* Proxima Nova Thin.otf */,
+			);
+			path = proximaFonts;
+			sourceTree = "<group>";
+		};
+		6524149D290A945300BB0A97 /* SelectModuleCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652414A2290A949000BB0A97 /* SelectModuleCVCell.swift */,
+				652414A3290A949000BB0A97 /* SelectModuleCVCell.xib */,
+			);
+			name = SelectModuleCVCell;
+			sourceTree = "<group>";
+		};
+		652414A6290A9A5B00BB0A97 /* EmptyTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652414A7290A9A5B00BB0A97 /* EmptyTVCell.swift */,
+				652414A8290A9A5B00BB0A97 /* EmptyTVCell.xib */,
+			);
+			path = EmptyTVCell;
+			sourceTree = "<group>";
+		};
+		652414AB290A9A6D00BB0A97 /* ButtonTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652414AD290A9A6D00BB0A97 /* ButtonTVCell.swift */,
+				652414AC290A9A6D00BB0A97 /* ButtonTVCell.xib */,
+			);
+			path = ButtonTVCell;
+			sourceTree = "<group>";
+		};
+		652414B0290AA3BC00BB0A97 /* FromViewTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652414B1290AA41400BB0A97 /* FromViewTVCell.swift */,
+				652414B2290AA41400BB0A97 /* FromViewTVCell.xib */,
+			);
+			path = FromViewTVCell;
+			sourceTree = "<group>";
+		};
+		652414B5290AB37800BB0A97 /* DepartDateViewTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652414B6290AB39F00BB0A97 /* DepartDateViewTVCell.swift */,
+				652414B7290AB39F00BB0A97 /* DepartDateViewTVCell.xib */,
+			);
+			path = DepartDateViewTVCell;
+			sourceTree = "<group>";
+		};
+		652C995C2912257C003F3110 /* Multicity */ = {
+			isa = PBXGroup;
+			children = (
+				652C996229123014003F3110 /* MulticityTVCell */,
+				652C995D29122983003F3110 /* MulticityFromTVCell */,
+			);
+			path = Multicity;
+			sourceTree = "<group>";
+		};
+		652C995D29122983003F3110 /* MulticityFromTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C995E291229B2003F3110 /* MulticityFromTVCell.swift */,
+				652C995F291229B2003F3110 /* MulticityFromTVCell.xib */,
+			);
+			path = MulticityFromTVCell;
+			sourceTree = "<group>";
+		};
+		652C996229123014003F3110 /* MulticityTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99632912302F003F3110 /* MulticityTVCell.swift */,
+				652C99642912302F003F3110 /* MulticityTVCell.xib */,
+			);
+			path = MulticityTVCell;
+			sourceTree = "<group>";
+		};
+		652C996729124705003F3110 /* RoundTripTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C996C29124928003F3110 /* RoundTripDetailsTVCell */,
+				652C9968291247A8003F3110 /* RoundTripTVCell.swift */,
+				652C9969291247A8003F3110 /* RoundTripTVCell.xib */,
+			);
+			path = RoundTripTVCell;
+			sourceTree = "<group>";
+		};
+		652C996C29124928003F3110 /* RoundTripDetailsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C996D2912493B003F3110 /* RoundTripDetailsTVCell.swift */,
+				652C996E2912493B003F3110 /* RoundTripDetailsTVCell.xib */,
+			);
+			path = RoundTripDetailsTVCell;
+			sourceTree = "<group>";
+		};
+		652C99712912538A003F3110 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				652C9978291253D4003F3110 /* Models */,
+				652C9977291253CC003F3110 /* ViewModels */,
+				652C9975291253BE003F3110 /* Views */,
+				652C9974291253B2003F3110 /* ViewControllers */,
+				652C99722912539B003F3110 /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		652C9974291253B2003F3110 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				652C99802912549F003F3110 /* LoginVC.swift */,
+				652C999B29127BE9003F3110 /* ResetPasswordVC.swift */,
+				652C999D29127C0D003F3110 /* CreateNewPasswordVC.swift */,
+				652C9979291253DE003F3110 /* SideMenuVC.swift */,
+				652C999F2912826F003F3110 /* SelectLanguageVC.swift */,
+				652C99A6291286F6003F3110 /* AddTravellerDetailsVC.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		652C9975291253BE003F3110 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				652C9976291253C4003F3110 /* TVCells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		652C9976291253C4003F3110 /* TVCells */ = {
+			isa = PBXGroup;
+			children = (
+				652C99AD291287E8003F3110 /* DropDownTVCell */,
+				652C99A829128727003F3110 /* SelectGenderTVCell */,
+				652C99A12912841F003F3110 /* SelectLanguageTVCell */,
+				652C9996291270F1003F3110 /* MenuTVCell */,
+				652C999129125826003F3110 /* SignUpWithTVCell */,
+				652C998C29125698003F3110 /* UnderLineTVCell */,
+				652C998729125642003F3110 /* TextfieldTVCell */,
+				652C9982291255ED003F3110 /* LoignOrSignupBtnsTVCell */,
+				652C997B291253EB003F3110 /* MenuBGTVCell */,
+			);
+			name = TVCells;
+			sourceTree = "<group>";
+		};
+		652C9977291253CC003F3110 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		652C9978291253D4003F3110 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		652C997B291253EB003F3110 /* MenuBGTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C997D291253EB003F3110 /* MenuBGTVCell.swift */,
+				652C997C291253EB003F3110 /* MenuBGTVCell.xib */,
+			);
+			path = MenuBGTVCell;
+			sourceTree = "<group>";
+		};
+		652C9982291255ED003F3110 /* LoignOrSignupBtnsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C9983291255ED003F3110 /* LoignOrSignupBtnsTVCell.swift */,
+				652C9984291255ED003F3110 /* LoignOrSignupBtnsTVCell.xib */,
+			);
+			path = LoignOrSignupBtnsTVCell;
+			sourceTree = "<group>";
+		};
+		652C998729125642003F3110 /* TextfieldTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C998829125642003F3110 /* TextfieldTVCell.swift */,
+				652C998929125642003F3110 /* TextfieldTVCell.xib */,
+			);
+			path = TextfieldTVCell;
+			sourceTree = "<group>";
+		};
+		652C998C29125698003F3110 /* UnderLineTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C998D29125698003F3110 /* UnderLineTVCell.xib */,
+				652C998E29125698003F3110 /* UnderLineTVCell.swift */,
+			);
+			path = UnderLineTVCell;
+			sourceTree = "<group>";
+		};
+		652C999129125826003F3110 /* SignUpWithTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C999229125826003F3110 /* SignUpWithTVCell.swift */,
+				652C999329125826003F3110 /* SignUpWithTVCell.xib */,
+			);
+			path = SignUpWithTVCell;
+			sourceTree = "<group>";
+		};
+		652C9996291270F1003F3110 /* MenuTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C999729127130003F3110 /* MenuTVCell.swift */,
+				652C999829127130003F3110 /* MenuTVCell.xib */,
+			);
+			path = MenuTVCell;
+			sourceTree = "<group>";
+		};
+		652C99A12912841F003F3110 /* SelectLanguageTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99A32912841F003F3110 /* SelectLanguageTVCell.swift */,
+				652C99A22912841F003F3110 /* SelectLanguageTVCell.xib */,
+			);
+			path = SelectLanguageTVCell;
+			sourceTree = "<group>";
+		};
+		652C99A829128727003F3110 /* SelectGenderTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99AA29128727003F3110 /* SelectGenderTVCell.swift */,
+				652C99A929128727003F3110 /* SelectGenderTVCell.xib */,
+			);
+			path = SelectGenderTVCell;
+			sourceTree = "<group>";
+		};
+		652C99AD291287E8003F3110 /* DropDownTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99AE291287E8003F3110 /* DropDownTVCell.swift */,
+				652C99AF291287E8003F3110 /* DropDownTVCell.xib */,
+			);
+			path = DropDownTVCell;
+			sourceTree = "<group>";
+		};
+		652C99B429129CB0003F3110 /* BookingConform */ = {
+			isa = PBXGroup;
+			children = (
+				652C99BF29129E12003F3110 /* BookedAdultDetailsTVCell */,
+				652C99BA29129DBE003F3110 /* BookedTravelDetailsTVCell */,
+				652C99B529129CC3003F3110 /* BookingConfirmedTVCell */,
+			);
+			path = BookingConform;
+			sourceTree = "<group>";
+		};
+		652C99B529129CC3003F3110 /* BookingConfirmedTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99B629129CC3003F3110 /* BookingConfirmedTVCell.swift */,
+				652C99B729129CC3003F3110 /* BookingConfirmedTVCell.xib */,
+			);
+			path = BookingConfirmedTVCell;
+			sourceTree = "<group>";
+		};
+		652C99BA29129DBE003F3110 /* BookedTravelDetailsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99BB29129DBE003F3110 /* BookedTravelDetailsTVCell.swift */,
+				652C99BC29129DBE003F3110 /* BookedTravelDetailsTVCell.xib */,
+			);
+			path = BookedTravelDetailsTVCell;
+			sourceTree = "<group>";
+		};
+		652C99BF29129E12003F3110 /* BookedAdultDetailsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				652C99C129129E12003F3110 /* BookedAdultDetailsTVCell.swift */,
+				652C99C029129E12003F3110 /* BookedAdultDetailsTVCell.xib */,
+			);
+			path = BookedAdultDetailsTVCell;
+			sourceTree = "<group>";
+		};
+		652C99C42912A389003F3110 /* onewayModel */ = {
+			isa = PBXGroup;
+			children = (
+				652C99E32912A3EC003F3110 /* OneWayModel.swift */,
+				652C99CE2912A389003F3110 /* Raw_flight_list.swift */,
+				652C99CC2912A389003F3110 /* Flights.swift */,
+				657A33A3291398A200E3FA70 /* SegmentDetails.swift */,
+				652C99C52912A389003F3110 /* B2c_PriceDetails.swift */,
+				652C99C72912A389003F3110 /* AirlineDetails.swift */,
+				652C99CD2912A389003F3110 /* DestinationDetails.swift */,
+				652C99CF2912A389003F3110 /* FareDetails.swift */,
+				652C99D02912A389003F3110 /* OriginDetails.swift */,
+				652C99D12912A389003F3110 /* SegmentSummary.swift */,
+				652C99D22912A389003F3110 /* ADT.swift */,
+				652C99D32912A389003F3110 /* PassengerConfig.swift */,
+			);
+			path = onewayModel;
+			sourceTree = "<group>";
+		};
+		657A33A82913F24100E3FA70 /* FlightDetailsModel */ = {
+			isa = PBXGroup;
+			children = (
+				657A33A92913F24100E3FA70 /* FDAirlineDetails.swift */,
+				657A33AA2913F24100E3FA70 /* FDOriginDetails.swift */,
+				657A33AB2913F24100E3FA70 /* FDDestinationDetails.swift */,
+				657A33AC2913F24100E3FA70 /* FDData.swift */,
+				657A33AD2913F24100E3FA70 /* Flight_details.swift */,
+				657A33AE2913F24100E3FA70 /* FDFare_details.swift */,
+				657A33AF2913F24100E3FA70 /* FlightDetailsModel.swift */,
+			);
+			path = FlightDetailsModel;
+			sourceTree = "<group>";
+		};
+		657A33B72913F24600E3FA70 /* oneway */ = {
+			isa = PBXGroup;
+			children = (
+				652C99C42912A389003F3110 /* onewayModel */,
+				657A33A82913F24100E3FA70 /* FlightDetailsModel */,
+			);
+			path = oneway;
+			sourceTree = "<group>";
+		};
+		65848AF3290AD9D300F5D030 /* TravellersViewTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65848AF4290ADA4F00F5D030 /* TravellersViewTVCell.swift */,
+				65848AF5290ADA4F00F5D030 /* TravellersViewTVCell.xib */,
+			);
+			path = TravellersViewTVCell;
+			sourceTree = "<group>";
+		};
+		65DC18F0290E588E00BEDA92 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				65DC1908290EC66300BEDA92 /* DepartureTimeTVCell */,
+				65DC1903290EAF8B00BEDA92 /* AirlinesNameTVCell */,
+				65DC18F6290EA7B900BEDA92 /* AirlinesFilterTVCell */,
+				65DC18F1290E589400BEDA92 /* PriceFilterTVCell */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		65DC18F1290E589400BEDA92 /* PriceFilterTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65DC18F2290E58B100BEDA92 /* PriceFilterTVCell.swift */,
+				65DC18F3290E58B100BEDA92 /* PriceFilterTVCell.xib */,
+			);
+			path = PriceFilterTVCell;
+			sourceTree = "<group>";
+		};
+		65DC18F6290EA7B900BEDA92 /* AirlinesFilterTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65DC18FF290EAA2D00BEDA92 /* AirlinesFilterTVCell.swift */,
+				65DC1900290EAA2D00BEDA92 /* AirlinesFilterTVCell.xib */,
+			);
+			path = AirlinesFilterTVCell;
+			sourceTree = "<group>";
+		};
+		65DC1903290EAF8B00BEDA92 /* AirlinesNameTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65DC1904290EAFA800BEDA92 /* AirlinesNameTVCell.swift */,
+				65DC1905290EAFA800BEDA92 /* AirlinesNameTVCell.xib */,
+			);
+			path = AirlinesNameTVCell;
+			sourceTree = "<group>";
+		};
+		65DC1908290EC66300BEDA92 /* DepartureTimeTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65DC1909290EC67A00BEDA92 /* DepartureTimeTVCell.swift */,
+				65DC190A290EC67A00BEDA92 /* DepartureTimeTVCell.xib */,
+			);
+			path = DepartureTimeTVCell;
+			sourceTree = "<group>";
+		};
+		65DC190D290EC92F00BEDA92 /* DepartureTimeCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65DC190E290EC94600BEDA92 /* DepartureTimeCVCell.swift */,
+				65DC190F290EC94600BEDA92 /* DepartureTimeCVCell.xib */,
+			);
+			path = DepartureTimeCVCell;
+			sourceTree = "<group>";
+		};
+		65E48135290B8F2B008366E6 /* FromCityTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E48136290B8F2B008366E6 /* FromCityTVCell.swift */,
+				65E48137290B8F2B008366E6 /* FromCityTVCell.xib */,
+			);
+			path = FromCityTVCell;
+			sourceTree = "<group>";
+		};
+		65E4813E290B99BA008366E6 /* CalendarCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E48140290B99BA008366E6 /* calendarCVCell.swift */,
+				65E4813F290B99BA008366E6 /* calendarCVCell.xib */,
+			);
+			path = CalendarCVCell;
+			sourceTree = "<group>";
+		};
+		65E48143290B9B08008366E6 /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				65E48144290B9B08008366E6 /* Inter-VariableFont_slnt,wght.ttf */,
+				65E48146290B9B08008366E6 /* Inter-Medium.ttf */,
+				65E48147290B9B08008366E6 /* Inter-Light.ttf */,
+				65E48148290B9B08008366E6 /* Inter-Thin.ttf */,
+				65E48149290B9B08008366E6 /* Inter-Bold.ttf */,
+				65E4814A290B9B08008366E6 /* Inter-Regular.ttf */,
+				65E4814B290B9B08008366E6 /* Inter-ExtraBold.ttf */,
+				65E4814C290B9B08008366E6 /* Inter-ExtraLight.ttf */,
+				65E4814D290B9B08008366E6 /* Inter-Black.ttf */,
+				65E4814E290B9B08008366E6 /* Inter-SemiBold.ttf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		65E4815F290BB531008366E6 /* AddAdultsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E48161290BB558008366E6 /* AddAdultsTVCell.swift */,
+				65E48162290BB558008366E6 /* AddAdultsTVCell.xib */,
+			);
+			path = AddAdultsTVCell;
+			sourceTree = "<group>";
+		};
+		65E48165290BB55E008366E6 /* FlightsTVCells */ = {
+			isa = PBXGroup;
+			children = (
+				652C996729124705003F3110 /* RoundTripTVCell */,
+				65F869032910FD49005987FF /* BarefareTVCell */,
+				65F868FE2910F987005987FF /* FareSummaryTVCell */,
+				65F9ADD7290FE7A100085901 /* ContactDetailsTVCell */,
+				65F9ADD2290FE27900085901 /* AdultDetailsTVCell */,
+				65F9ADCD290FDD8500085901 /* PassengerDetailsTVCell */,
+				65F9ADC8290FD1B500085901 /* ExtraBaggagesTVCell */,
+				65F9ADC3290FCAF600085901 /* CheckinBaggageTVCell */,
+				65F9ADBE290FC6B900085901 /* TDetailsLoginTVCell */,
+				65F9ADB7290FA77700085901 /* FlightDetailTVCell */,
+				65F9ADB2290FA31100085901 /* BaggageTVCell */,
+				65F9ADAD290F996300085901 /* BaggageInfoTVCell */,
+				65F9ADA8290F929F00085901 /* FareRulesTVCell */,
+				65F9ADA3290F8D6600085901 /* BottomBookNowTVCell */,
+				65FEE0E9290D22E00038EC23 /* BottomFilterTVCell */,
+				65E4817A290BF07C008366E6 /* FlightResultTVCell */,
+				65E48174290BE7AD008366E6 /* LabelTVCell */,
+				65E48166290BD483008366E6 /* SelectCabinClassTVCell */,
+				65E4815F290BB531008366E6 /* AddAdultsTVCell */,
+				65E48135290B8F2B008366E6 /* FromCityTVCell */,
+				65848AF3290AD9D300F5D030 /* TravellersViewTVCell */,
+				652414B5290AB37800BB0A97 /* DepartDateViewTVCell */,
+				652414B0290AA3BC00BB0A97 /* FromViewTVCell */,
+				652414AB290A9A6D00BB0A97 /* ButtonTVCell */,
+				652414A6290A9A5B00BB0A97 /* EmptyTVCell */,
+			);
+			path = FlightsTVCells;
+			sourceTree = "<group>";
+		};
+		65E48166290BD483008366E6 /* SelectCabinClassTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E48167290BD4A3008366E6 /* SelectCabinClassTVCell.swift */,
+				65E48168290BD4A3008366E6 /* SelectCabinClassTVCell.xib */,
+			);
+			path = SelectCabinClassTVCell;
+			sourceTree = "<group>";
+		};
+		65E4816B290BD635008366E6 /* SelectClassCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E48170290BD701008366E6 /* SelectClassCVCell.swift */,
+				65E48171290BD701008366E6 /* SelectClassCVCell.xib */,
+			);
+			path = SelectClassCVCell;
+			sourceTree = "<group>";
+		};
+		65E48174290BE7AD008366E6 /* LabelTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E48175290BE7C3008366E6 /* LabelTVCell.swift */,
+				65E48176290BE7C3008366E6 /* LabelTVCell.xib */,
+			);
+			path = LabelTVCell;
+			sourceTree = "<group>";
+		};
+		65E4817A290BF07C008366E6 /* FlightResultTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65E4817B290BF09A008366E6 /* FlightResultTVCell.swift */,
+				65E4817C290BF09A008366E6 /* FlightResultTVCell.xib */,
+			);
+			path = FlightResultTVCell;
+			sourceTree = "<group>";
+		};
+		65F868FE2910F987005987FF /* FareSummaryTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F868FF2910F99E005987FF /* FareSummaryTVCell.swift */,
+				65F869002910F99E005987FF /* FareSummaryTVCell.xib */,
+			);
+			path = FareSummaryTVCell;
+			sourceTree = "<group>";
+		};
+		65F869032910FD49005987FF /* BarefareTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F869042910FD5F005987FF /* BarefareTVCell.swift */,
+				65F869052910FD5F005987FF /* BarefareTVCell.xib */,
+			);
+			path = BarefareTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADA3290F8D6600085901 /* BottomBookNowTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADA4290F8D9E00085901 /* BottomBookNowTVCell.swift */,
+				65F9ADA5290F8D9E00085901 /* BottomBookNowTVCell.xib */,
+			);
+			path = BottomBookNowTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADA8290F929F00085901 /* FareRulesTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADA9290F92DA00085901 /* FareRulesTVCell.swift */,
+				65F9ADAA290F92DA00085901 /* FareRulesTVCell.xib */,
+			);
+			path = FareRulesTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADAD290F996300085901 /* BaggageInfoTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADAE290F997F00085901 /* BaggageInfoTVCell.swift */,
+				65F9ADAF290F997F00085901 /* BaggageInfoTVCell.xib */,
+			);
+			path = BaggageInfoTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADB2290FA31100085901 /* BaggageTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADB3290FA32600085901 /* BaggageTVCell.swift */,
+				65F9ADB4290FA32600085901 /* BaggageTVCell.xib */,
+			);
+			path = BaggageTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADB7290FA77700085901 /* FlightDetailTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADB8290FA79100085901 /* FlightDetailTVCell.swift */,
+				65F9ADB9290FA79100085901 /* FlightDetailTVCell.xib */,
+			);
+			path = FlightDetailTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADBE290FC6B900085901 /* TDetailsLoginTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADBF290FC6B900085901 /* TDetailsLoginTVCell.swift */,
+				65F9ADC0290FC6B900085901 /* TDetailsLoginTVCell.xib */,
+			);
+			path = TDetailsLoginTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADC3290FCAF600085901 /* CheckinBaggageTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADC4290FCB1200085901 /* CheckinBaggageTVCell.swift */,
+				65F9ADC5290FCB1200085901 /* CheckinBaggageTVCell.xib */,
+			);
+			path = CheckinBaggageTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADC8290FD1B500085901 /* ExtraBaggagesTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADC9290FD1CF00085901 /* ExtraBaggagesTVCell.swift */,
+				65F9ADCA290FD1CF00085901 /* ExtraBaggagesTVCell.xib */,
+			);
+			path = ExtraBaggagesTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADCD290FDD8500085901 /* PassengerDetailsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADCE290FDDA000085901 /* PassengerDetailsTVCell.swift */,
+				65F9ADCF290FDDA000085901 /* PassengerDetailsTVCell.xib */,
+			);
+			path = PassengerDetailsTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADD2290FE27900085901 /* AdultDetailsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADD3290FE29900085901 /* AdultDetailsTVCell.swift */,
+				65F9ADD4290FE29900085901 /* AdultDetailsTVCell.xib */,
+			);
+			path = AdultDetailsTVCell;
+			sourceTree = "<group>";
+		};
+		65F9ADD7290FE7A100085901 /* ContactDetailsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65F9ADD8290FE7C200085901 /* ContactDetailsTVCell.swift */,
+				65F9ADD9290FE7C200085901 /* ContactDetailsTVCell.xib */,
+			);
+			path = ContactDetailsTVCell;
+			sourceTree = "<group>";
+		};
+		65FEE0E4290D1CB60038EC23 /* airlinesListCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE0E5290D1CD90038EC23 /* AirlinesListCVCell.swift */,
+				65FEE0E6290D1CD90038EC23 /* AirlinesListCVCell.xib */,
+			);
+			path = airlinesListCVCell;
+			sourceTree = "<group>";
+		};
+		65FEE0E9290D22E00038EC23 /* BottomFilterTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE0EA290D22F90038EC23 /* BottomFilterTVCell.swift */,
+				65FEE0EB290D22F90038EC23 /* BottomFilterTVCell.xib */,
+			);
+			path = BottomFilterTVCell;
+			sourceTree = "<group>";
+		};
+		65FEE0F0290D389A0038EC23 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				652410E3290A6DB800BB0A97 /* ViewController.swift */,
+				65241487290A8A2C00BB0A97 /* HomeVC.swift */,
+				65E48131290B8E7F008366E6 /* SelectFromCityVC.swift */,
+				65E4813C290B97F6008366E6 /* CalenderVC.swift */,
+				65E4815D290BB26F008366E6 /* ChoosePassengerVC.swift */,
+				65E4817F290C02C3008366E6 /* FlightsResultVC.swift */,
+				65F9ADA1290F888200085901 /* ShowFlightDetailsVC.swift */,
+				65F9ADBC290FB7A100085901 /* ContinueToPaymentVC.swift */,
+				652C99B229129C99003F3110 /* BookingConfirmedVC.swift */,
+			);
+			name = Flights;
+			sourceTree = "<group>";
+		};
+		65FEE0F1290D38B10038EC23 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE0F2290D38C60038EC23 /* Filter.storyboard */,
+				65FEE0EE290D38730038EC23 /* FilterVC.swift */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		BA9695C6E4773B5041E0CB40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68A54CD93B18AC3AC8070924 /* Pods-BestFares365App.debug.xcconfig */,
+				CD2FE98070AC6AD8DE735DA2 /* Pods-BestFares365App.release.xcconfig */,
+				EE2B9F1A7FB018FECD2C75E1 /* Pods-BestFares365App-BestFares365AppUITests.debug.xcconfig */,
+				20CE48F5C8FA081495DE28B6 /* Pods-BestFares365App-BestFares365AppUITests.release.xcconfig */,
+				0A9E43DCCEDB80BA7782B015 /* Pods-BestFares365AppTests.debug.xcconfig */,
+				CC5AE72C9738C297B95A3DBC /* Pods-BestFares365AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		652410DB290A6DB800BB0A97 /* BestFares365App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65241106290A6DBA00BB0A97 /* Build configuration list for PBXNativeTarget "BestFares365App" */;
+			buildPhases = (
+				55D6A3538C7C044CD568048B /* [CP] Check Pods Manifest.lock */,
+				652410D8290A6DB800BB0A97 /* Sources */,
+				652410D9290A6DB800BB0A97 /* Frameworks */,
+				652410DA290A6DB800BB0A97 /* Resources */,
+				984F5BEF85A7F4E7497B3340 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BestFares365App;
+			productName = BestFares365App;
+			productReference = 652410DC290A6DB800BB0A97 /* BestFares365App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		652410F1290A6DBA00BB0A97 /* BestFares365AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65241109290A6DBA00BB0A97 /* Build configuration list for PBXNativeTarget "BestFares365AppTests" */;
+			buildPhases = (
+				60CFDECCC7327C6925DDDDC7 /* [CP] Check Pods Manifest.lock */,
+				652410EE290A6DBA00BB0A97 /* Sources */,
+				652410EF290A6DBA00BB0A97 /* Frameworks */,
+				652410F0290A6DBA00BB0A97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652410F4290A6DBA00BB0A97 /* PBXTargetDependency */,
+			);
+			name = BestFares365AppTests;
+			productName = BestFares365AppTests;
+			productReference = 652410F2290A6DBA00BB0A97 /* BestFares365AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		652410FB290A6DBA00BB0A97 /* BestFares365AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6524110C290A6DBA00BB0A97 /* Build configuration list for PBXNativeTarget "BestFares365AppUITests" */;
+			buildPhases = (
+				84CF413B75D321179D83FB05 /* [CP] Check Pods Manifest.lock */,
+				652410F8290A6DBA00BB0A97 /* Sources */,
+				652410F9290A6DBA00BB0A97 /* Frameworks */,
+				652410FA290A6DBA00BB0A97 /* Resources */,
+				5C81F8D1F965E64BA47B7DF6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652410FE290A6DBA00BB0A97 /* PBXTargetDependency */,
+			);
+			name = BestFares365AppUITests;
+			productName = BestFares365AppUITests;
+			productReference = 652410FC290A6DBA00BB0A97 /* BestFares365AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		652410D4290A6DB800BB0A97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					652410DB290A6DB800BB0A97 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					652410F1290A6DBA00BB0A97 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 652410DB290A6DB800BB0A97;
+					};
+					652410FB290A6DBA00BB0A97 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 652410DB290A6DB800BB0A97;
+					};
+				};
+			};
+			buildConfigurationList = 652410D7290A6DB800BB0A97 /* Build configuration list for PBXProject "BestFares365App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = 652410D3290A6DB800BB0A97;
+			productRefGroup = 652410DD290A6DB800BB0A97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				652410DB290A6DB800BB0A97 /* BestFares365App */,
+				652410F1290A6DBA00BB0A97 /* BestFares365AppTests */,
+				652410FB290A6DBA00BB0A97 /* BestFares365AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		652410DA290A6DB800BB0A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6524149C290A910200BB0A97 /* SigvarRegular.ttf in Resources */,
+				652C99C229129E12003F3110 /* BookedAdultDetailsTVCell.xib in Resources */,
+				652C997E291253EB003F3110 /* MenuBGTVCell.xib in Resources */,
+				65F869072910FD5F005987FF /* BarefareTVCell.xib in Resources */,
+				65241450290A6DFC00BB0A97 /* Lato-Semibold.ttf in Resources */,
+				65241459290A6DFC00BB0A97 /* Poppins-Regular.ttf in Resources */,
+				65DC190C290EC67A00BEDA92 /* DepartureTimeTVCell.xib in Resources */,
+				65E48158290B9B08008366E6 /* Inter-ExtraLight.ttf in Resources */,
+				6524145E290A6DFC00BB0A97 /* OpenSans-Semibold.ttf in Resources */,
+				65241496290A8E6C00BB0A97 /* Proxima Nova Black.otf in Resources */,
+				6524145B290A6DFC00BB0A97 /* Poppins-Bold.ttf in Resources */,
+				65F9ADD6290FE29900085901 /* AdultDetailsTVCell.xib in Resources */,
+				6524147E290A858C00BB0A97 /* sigvar bold.ttf in Resources */,
+				6524144F290A6DFC00BB0A97 /* Lato-Regular.ttf in Resources */,
+				652410EC290A6DBA00BB0A97 /* LaunchScreen.storyboard in Resources */,
+				652414AA290A9A5B00BB0A97 /* EmptyTVCell.xib in Resources */,
+				65E48156290B9B08008366E6 /* Inter-Regular.ttf in Resources */,
+				652C996B291247A8003F3110 /* RoundTripTVCell.xib in Resources */,
+				65DC1911290EC94600BEDA92 /* DepartureTimeCVCell.xib in Resources */,
+				65E48178290BE7C3008366E6 /* LabelTVCell.xib in Resources */,
+				65E4816A290BD4A3008366E6 /* SelectCabinClassTVCell.xib in Resources */,
+				652C99BE29129DBE003F3110 /* BookedTravelDetailsTVCell.xib in Resources */,
+				65241458290A6DFC00BB0A97 /* Poppins-ExtraBold.ttf in Resources */,
+				65241457290A6DFC00BB0A97 /* Oswald-Medium.ttf in Resources */,
+				65E48154290B9B08008366E6 /* Inter-Thin.ttf in Resources */,
+				652C9986291255ED003F3110 /* LoignOrSignupBtnsTVCell.xib in Resources */,
+				65F9ADD1290FDDA000085901 /* PassengerDetailsTVCell.xib in Resources */,
+				65241498290A8E6C00BB0A97 /* ProximaNova-Regular.otf in Resources */,
+				65E4815A290B9B08008366E6 /* Inter-SemiBold.ttf in Resources */,
+				65241493290A8E6C00BB0A97 /* Proxima Nova Alt Bold.otf in Resources */,
+				65F9ADAC290F92DA00085901 /* FareRulesTVCell.xib in Resources */,
+				65F9ADB6290FA32600085901 /* BaggageTVCell.xib in Resources */,
+				652C999A29127130003F3110 /* MenuTVCell.xib in Resources */,
+				65241494290A8E6C00BB0A97 /* Proxima Nova Extrabold.otf in Resources */,
+				65241481290A858C00BB0A97 /* SigvarItalic.ttf in Resources */,
+				652C998F29125698003F3110 /* UnderLineTVCell.xib in Resources */,
+				65848AF7290ADA4F00F5D030 /* TravellersViewTVCell.xib in Resources */,
+				6524147F290A858C00BB0A97 /* sigvar bold italic.ttf in Resources */,
+				652C99B1291287E8003F3110 /* DropDownTVCell.xib in Resources */,
+				65241455290A6DFC00BB0A97 /* Poppins-Light.ttf in Resources */,
+				65241454290A6DFC00BB0A97 /* Roboto-Medium.ttf in Resources */,
+				65F9ADBB290FA79100085901 /* FlightDetailTVCell.xib in Resources */,
+				652C99AB29128727003F3110 /* SelectGenderTVCell.xib in Resources */,
+				6524144E290A6DFC00BB0A97 /* Oswald-SemiBold.ttf in Resources */,
+				65E4817E290BF09A008366E6 /* FlightResultTVCell.xib in Resources */,
+				65F9ADA7290F8D9E00085901 /* BottomBookNowTVCell.xib in Resources */,
+				65241484290A858C00BB0A97 /* sigvar italic.ttf in Resources */,
+				65E48153290B9B08008366E6 /* Inter-Light.ttf in Resources */,
+				65E48155290B9B08008366E6 /* Inter-Bold.ttf in Resources */,
+				652414B9290AB39F00BB0A97 /* DepartDateViewTVCell.xib in Resources */,
+				65F9ADB1290F997F00085901 /* BaggageInfoTVCell.xib in Resources */,
+				65DC1907290EAFA800BEDA92 /* AirlinesNameTVCell.xib in Resources */,
+				65DC1902290EAA2D00BEDA92 /* AirlinesFilterTVCell.xib in Resources */,
+				65241451290A6DFC00BB0A97 /* Oswald-Regular.ttf in Resources */,
+				65E48139290B8F2B008366E6 /* FromCityTVCell.xib in Resources */,
+				65F9ADDB290FE7C200085901 /* ContactDetailsTVCell.xib in Resources */,
+				652C999529125826003F3110 /* SignUpWithTVCell.xib in Resources */,
+				6524144D290A6DFC00BB0A97 /* Oswald-Bold.ttf in Resources */,
+				652410E9290A6DBA00BB0A97 /* Assets.xcassets in Resources */,
+				652C99702912493B003F3110 /* RoundTripDetailsTVCell.xib in Resources */,
+				65241483290A858C00BB0A97 /* SigvarBold.ttf in Resources */,
+				65F9ADC7290FCB1200085901 /* CheckinBaggageTVCell.xib in Resources */,
+				65F9ADC2290FC6B900085901 /* TDetailsLoginTVCell.xib in Resources */,
+				6524145C290A6DFC00BB0A97 /* Poppins-Black.ttf in Resources */,
+				652414A5290A949000BB0A97 /* SelectModuleCVCell.xib in Resources */,
+				65F869022910F99E005987FF /* FareSummaryTVCell.xib in Resources */,
+				65FEE0ED290D22F90038EC23 /* BottomFilterTVCell.xib in Resources */,
+				6524145F290A6DFC00BB0A97 /* OpenSans-Light.ttf in Resources */,
+				65E48173290BD701008366E6 /* SelectClassCVCell.xib in Resources */,
+				652414B4290AA41400BB0A97 /* FromViewTVCell.xib in Resources */,
+				652C998B29125642003F3110 /* TextfieldTVCell.xib in Resources */,
+				652414AE290A9A6D00BB0A97 /* ButtonTVCell.xib in Resources */,
+				652410E7290A6DB800BB0A97 /* Main.storyboard in Resources */,
+				65241499290A8E6C00BB0A97 /* Proxima Nova Thin.otf in Resources */,
+				65241460290A6DFC00BB0A97 /* OpenSans-Bold.ttf in Resources */,
+				652C99732912539B003F3110 /* Login.storyboard in Resources */,
+				65241495290A8E6C00BB0A97 /* Proxima Nova Alt Light.otf in Resources */,
+				6524145D290A6DFC00BB0A97 /* Poppins-SemiBold.ttf in Resources */,
+				65E48164290BB558008366E6 /* AddAdultsTVCell.xib in Resources */,
+				65E48152290B9B08008366E6 /* Inter-Medium.ttf in Resources */,
+				65DC18F5290E58B100BEDA92 /* PriceFilterTVCell.xib in Resources */,
+				65E48141290B99BA008366E6 /* calendarCVCell.xib in Resources */,
+				652C99B929129CC3003F3110 /* BookingConfirmedTVCell.xib in Resources */,
+				65FEE0E8290D1CD90038EC23 /* AirlinesListCVCell.xib in Resources */,
+				65F9ADCC290FD1CF00085901 /* ExtraBaggagesTVCell.xib in Resources */,
+				65241461290A6DFC00BB0A97 /* OpenSans-Regular.ttf in Resources */,
+				652C99662912302F003F3110 /* MulticityTVCell.xib in Resources */,
+				65E48159290B9B08008366E6 /* Inter-Black.ttf in Resources */,
+				65E48157290B9B08008366E6 /* Inter-ExtraBold.ttf in Resources */,
+				6524143F290A6DFC00BB0A97 /* NavBar.xib in Resources */,
+				65241452290A6DFC00BB0A97 /* Lato-Light.ttf in Resources */,
+				65241456290A6DFC00BB0A97 /* Poppins-Medium.ttf in Resources */,
+				652C99A42912841F003F3110 /* SelectLanguageTVCell.xib in Resources */,
+				65E48151290B9B08008366E6 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
+				652C9961291229B2003F3110 /* MulticityFromTVCell.xib in Resources */,
+				65241497290A8E6C00BB0A97 /* Proxima Nova Bold.otf in Resources */,
+				65241453290A6DFC00BB0A97 /* Lato-Medium.ttf in Resources */,
+				65FEE0F3290D38C60038EC23 /* Filter.storyboard in Resources */,
+				65241492290A8E6C00BB0A97 /* Proxima Nova Alt Thin.otf in Resources */,
+				6524145A290A6DFC00BB0A97 /* OpenSans-Medium.ttf in Resources */,
+				65241482290A858C00BB0A97 /* SigvarBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652410F0290A6DBA00BB0A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652410FA290A6DBA00BB0A97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55D6A3538C7C044CD568048B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestFares365App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C81F8D1F965E64BA47B7DF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestFares365App-BestFares365AppUITests/Pods-BestFares365App-BestFares365AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestFares365App-BestFares365AppUITests/Pods-BestFares365App-BestFares365AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestFares365App-BestFares365AppUITests/Pods-BestFares365App-BestFares365AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60CFDECCC7327C6925DDDDC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestFares365AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84CF413B75D321179D83FB05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestFares365App-BestFares365AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		984F5BEF85A7F4E7497B3340 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestFares365App/Pods-BestFares365App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestFares365App/Pods-BestFares365App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestFares365App/Pods-BestFares365App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		652410D8290A6DB800BB0A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652C998A29125642003F3110 /* TextfieldTVCell.swift in Sources */,
+				65DC18F4290E58B100BEDA92 /* PriceFilterTVCell.swift in Sources */,
+				6524144A290A6DFC00BB0A97 /* DateExtension.swift in Sources */,
+				652414A9290A9A5B00BB0A97 /* EmptyTVCell.swift in Sources */,
+				65E4815E290BB26F008366E6 /* ChoosePassengerVC.swift in Sources */,
+				652C99DB2912A389003F3110 /* Flights.swift in Sources */,
+				65241466290A6DFC00BB0A97 /* Loader.swift in Sources */,
+				652C9985291255ED003F3110 /* LoignOrSignupBtnsTVCell.swift in Sources */,
+				6524143A290A6DFC00BB0A97 /* UIModels.swift in Sources */,
+				65F9ADB5290FA32600085901 /* BaggageTVCell.swift in Sources */,
+				65E48169290BD4A3008366E6 /* SelectCabinClassTVCell.swift in Sources */,
+				65241444290A6DFC00BB0A97 /* ButtonExtension.swift in Sources */,
+				652414A4290A949000BB0A97 /* SelectModuleCVCell.swift in Sources */,
+				65FEE0EF290D38730038EC23 /* FilterVC.swift in Sources */,
+				65241463290A6DFC00BB0A97 /* DeviceName.swift in Sources */,
+				65F9ADCB290FD1CF00085901 /* ExtraBaggagesTVCell.swift in Sources */,
+				657A33A72913D60700E3FA70 /* BestFares365App.xcdatamodeld in Sources */,
+				65241488290A8A2C00BB0A97 /* HomeVC.swift in Sources */,
+				652414AF290A9A6D00BB0A97 /* ButtonTVCell.swift in Sources */,
+				657A33B12913F24100E3FA70 /* FDOriginDetails.swift in Sources */,
+				65241464290A6DFC00BB0A97 /* NSObject+Helper.swift in Sources */,
+				652414B8290AB39F00BB0A97 /* DepartDateViewTVCell.swift in Sources */,
+				652C99DC2912A389003F3110 /* DestinationDetails.swift in Sources */,
+				65241445290A6DFC00BB0A97 /* UIKitHelper.swift in Sources */,
+				6524143E290A6DFC00BB0A97 /* CountryCodesList.swift in Sources */,
+				652C999C29127BEA003F3110 /* ResetPasswordVC.swift in Sources */,
+				65241446290A6DFC00BB0A97 /* TableViewExtensions.swift in Sources */,
+				65E48180290C02C3008366E6 /* FlightsResultVC.swift in Sources */,
+				65241465290A6DFC00BB0A97 /* Decodable.swift in Sources */,
+				65F9ADBA290FA79100085901 /* FlightDetailTVCell.swift in Sources */,
+				652C997A291253DE003F3110 /* SideMenuVC.swift in Sources */,
+				65E48177290BE7C3008366E6 /* LabelTVCell.swift in Sources */,
+				65FEE0E7290D1CD90038EC23 /* AirlinesListCVCell.swift in Sources */,
+				65E48163290BB558008366E6 /* AddAdultsTVCell.swift in Sources */,
+				65241437290A6DFC00BB0A97 /* BaseVC.swift in Sources */,
+				657A33B22913F24100E3FA70 /* FDDestinationDetails.swift in Sources */,
+				65241468290A6DFC00BB0A97 /* ProgressHUD.swift in Sources */,
+				65F9ADA6290F8D9E00085901 /* BottomBookNowTVCell.swift in Sources */,
+				65F9ADB0290F997F00085901 /* BaggageInfoTVCell.swift in Sources */,
+				657A33B52913F24100E3FA70 /* FDFare_details.swift in Sources */,
+				652C996F2912493B003F3110 /* RoundTripDetailsTVCell.swift in Sources */,
+				65E4813B290B8F66008366E6 /* SelectCityViewModel.swift in Sources */,
+				652C99D42912A389003F3110 /* B2c_PriceDetails.swift in Sources */,
+				652414B3290AA41400BB0A97 /* FromViewTVCell.swift in Sources */,
+				65241462290A6DFC00BB0A97 /* ColorManager.swift in Sources */,
+				652C99BD29129DBE003F3110 /* BookedTravelDetailsTVCell.swift in Sources */,
+				65241447290A6DFC00BB0A97 /* UITapGestureRecognizerExtension.swift in Sources */,
+				657A33B42913F24100E3FA70 /* Flight_details.swift in Sources */,
+				652C99A52912841F003F3110 /* SelectLanguageTVCell.swift in Sources */,
+				65241442290A6DFC00BB0A97 /* UITextViewExtension.swift in Sources */,
+				65DC1910290EC94600BEDA92 /* DepartureTimeCVCell.swift in Sources */,
+				65E48142290B99BA008366E6 /* calendarCVCell.swift in Sources */,
+				652C99A02912826F003F3110 /* SelectLanguageVC.swift in Sources */,
+				652C99B329129C99003F3110 /* BookingConfirmedVC.swift in Sources */,
+				65DC1906290EAFA800BEDA92 /* AirlinesNameTVCell.swift in Sources */,
+				65F9ADC1290FC6B900085901 /* TDetailsLoginTVCell.swift in Sources */,
+				652C99B829129CC3003F3110 /* BookingConfirmedTVCell.swift in Sources */,
+				657A33B32913F24100E3FA70 /* FDData.swift in Sources */,
+				652C99A7291286F7003F3110 /* AddTravellerDetailsVC.swift in Sources */,
+				65241449290A6DFC00BB0A97 /* TextFieldExtension.swift in Sources */,
+				652C99652912302F003F3110 /* MulticityTVCell.swift in Sources */,
+				65F9ADAB290F92DA00085901 /* FareRulesTVCell.swift in Sources */,
+				652C99B0291287E8003F3110 /* DropDownTVCell.swift in Sources */,
+				65F9ADD5290FE29900085901 /* AdultDetailsTVCell.swift in Sources */,
+				65DC1901290EAA2D00BEDA92 /* AirlinesFilterTVCell.swift in Sources */,
+				652410E4290A6DB800BB0A97 /* ViewController.swift in Sources */,
+				652C99E02912A389003F3110 /* SegmentSummary.swift in Sources */,
+				657A33A4291398A200E3FA70 /* SegmentDetails.swift in Sources */,
+				6524144C290A6DFC00BB0A97 /* UIColorManager.swift in Sources */,
+				65E4817D290BF09A008366E6 /* FlightResultTVCell.swift in Sources */,
+				65241439290A6DFC00BB0A97 /* BaseTableVC.swift in Sources */,
+				65241443290A6DFC00BB0A97 /* UIViewControllerExtension.swift in Sources */,
+				6524143B290A6DFC00BB0A97 /* Constants.swift in Sources */,
+				652C9960291229B2003F3110 /* MulticityFromTVCell.swift in Sources */,
+				652C99D62912A389003F3110 /* AirlineDetails.swift in Sources */,
+				652C999E29127C0D003F3110 /* CreateNewPasswordVC.swift in Sources */,
+				65241440290A6DFC00BB0A97 /* NavBar.swift in Sources */,
+				65F9ADBD290FB7A100085901 /* ContinueToPaymentVC.swift in Sources */,
+				652C997F291253EB003F3110 /* MenuBGTVCell.swift in Sources */,
+				652C99C329129E12003F3110 /* BookedAdultDetailsTVCell.swift in Sources */,
+				6524144B290A6DFC00BB0A97 /* FontManager.swift in Sources */,
+				652C999429125826003F3110 /* SignUpWithTVCell.swift in Sources */,
+				652410E0290A6DB800BB0A97 /* AppDelegate.swift in Sources */,
+				652C99AC29128727003F3110 /* SelectGenderTVCell.swift in Sources */,
+				65848AF6290ADA4F00F5D030 /* TravellersViewTVCell.swift in Sources */,
+				652C996A291247A8003F3110 /* RoundTripTVCell.swift in Sources */,
+				6524146B290A6DFC00BB0A97 /* ServiceManager.swift in Sources */,
+				657A33A22913753F00E3FA70 /* OnewayViewModel.swift in Sources */,
+				652C9981291254A0003F3110 /* LoginVC.swift in Sources */,
+				652C999029125698003F3110 /* UnderLineTVCell.swift in Sources */,
+				652410E2290A6DB800BB0A97 /* SceneDelegate.swift in Sources */,
+				65241438290A6DFC00BB0A97 /* TableViewCell.swift in Sources */,
+				65E48132290B8E7F008366E6 /* SelectFromCityVC.swift in Sources */,
+				65241441290A6DFC00BB0A97 /* TableViewHelper.swift in Sources */,
+				65E48134290B8F0E008366E6 /* SelectCityModel.swift in Sources */,
+				65241448290A6DFC00BB0A97 /* StringExtension.swift in Sources */,
+				652C99DF2912A389003F3110 /* OriginDetails.swift in Sources */,
+				65F869062910FD5F005987FF /* BarefareTVCell.swift in Sources */,
+				652C99E42912A3EC003F3110 /* OneWayModel.swift in Sources */,
+				652C99E22912A389003F3110 /* PassengerConfig.swift in Sources */,
+				657A33B02913F24100E3FA70 /* FDAirlineDetails.swift in Sources */,
+				65E48172290BD701008366E6 /* SelectClassCVCell.swift in Sources */,
+				652C999929127130003F3110 /* MenuTVCell.swift in Sources */,
+				65FEE0EC290D22F90038EC23 /* BottomFilterTVCell.swift in Sources */,
+				657A33B62913F24100E3FA70 /* FlightDetailsModel.swift in Sources */,
+				65F9ADA2290F888200085901 /* ShowFlightDetailsVC.swift in Sources */,
+				65F9ADC6290FCB1200085901 /* CheckinBaggageTVCell.swift in Sources */,
+				65F9ADDA290FE7C200085901 /* ContactDetailsTVCell.swift in Sources */,
+				65DC190B290EC67A00BEDA92 /* DepartureTimeTVCell.swift in Sources */,
+				652C99E12912A389003F3110 /* ADT.swift in Sources */,
+				6524143C290A6DFC00BB0A97 /* DefaultsExtension.swift in Sources */,
+				65E48138290B8F2B008366E6 /* FromCityTVCell.swift in Sources */,
+				65241469290A6DFC00BB0A97 /* StoryboardExtension.swift in Sources */,
+				65F869012910F99E005987FF /* FareSummaryTVCell.swift in Sources */,
+				652C99DD2912A389003F3110 /* Raw_flight_list.swift in Sources */,
+				65241467290A6DFC00BB0A97 /* BaseViewModelProtocol.swift in Sources */,
+				652C99DE2912A389003F3110 /* FareDetails.swift in Sources */,
+				65E4813D290B97F6008366E6 /* CalenderVC.swift in Sources */,
+				6524143D290A6DFC00BB0A97 /* SessionManager.swift in Sources */,
+				65F9ADD0290FDDA000085901 /* PassengerDetailsTVCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652410EE290A6DBA00BB0A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652410F7290A6DBA00BB0A97 /* BestFares365AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652410F8290A6DBA00BB0A97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65241101290A6DBA00BB0A97 /* BestFares365AppUITests.swift in Sources */,
+				65241103290A6DBA00BB0A97 /* BestFares365AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		652410F4290A6DBA00BB0A97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652410DB290A6DB800BB0A97 /* BestFares365App */;
+			targetProxy = 652410F3290A6DBA00BB0A97 /* PBXContainerItemProxy */;
+		};
+		652410FE290A6DBA00BB0A97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652410DB290A6DB800BB0A97 /* BestFares365App */;
+			targetProxy = 652410FD290A6DBA00BB0A97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		652410E5290A6DB800BB0A97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				652410E6290A6DB800BB0A97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		652410EA290A6DBA00BB0A97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				652410EB290A6DBA00BB0A97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65241104290A6DBA00BB0A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		65241105290A6DBA00BB0A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65241107290A6DBA00BB0A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A54CD93B18AC3AC8070924 /* Pods-BestFares365App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 5TLY5PME9K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BestFares365App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.provab.BestFaresApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65241108290A6DBA00BB0A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2FE98070AC6AD8DE735DA2 /* Pods-BestFares365App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 5TLY5PME9K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BestFares365App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.provab.BestFaresApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6524110A290A6DBA00BB0A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9E43DCCEDB80BA7782B015 /* Pods-BestFares365AppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TLY5PME9K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreDataProject.BestFares365AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BestFares365App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BestFares365App";
+			};
+			name = Debug;
+		};
+		6524110B290A6DBA00BB0A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5AE72C9738C297B95A3DBC /* Pods-BestFares365AppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TLY5PME9K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreDataProject.BestFares365AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BestFares365App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BestFares365App";
+			};
+			name = Release;
+		};
+		6524110D290A6DBA00BB0A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE2B9F1A7FB018FECD2C75E1 /* Pods-BestFares365App-BestFares365AppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TLY5PME9K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreDataProject.BestFares365AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BestFares365App;
+			};
+			name = Debug;
+		};
+		6524110E290A6DBA00BB0A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20CE48F5C8FA081495DE28B6 /* Pods-BestFares365App-BestFares365AppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5TLY5PME9K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreDataProject.BestFares365AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BestFares365App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		652410D7290A6DB800BB0A97 /* Build configuration list for PBXProject "BestFares365App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65241104290A6DBA00BB0A97 /* Debug */,
+				65241105290A6DBA00BB0A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65241106290A6DBA00BB0A97 /* Build configuration list for PBXNativeTarget "BestFares365App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65241107290A6DBA00BB0A97 /* Debug */,
+				65241108290A6DBA00BB0A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65241109290A6DBA00BB0A97 /* Build configuration list for PBXNativeTarget "BestFares365AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6524110A290A6DBA00BB0A97 /* Debug */,
+				6524110B290A6DBA00BB0A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6524110C290A6DBA00BB0A97 /* Build configuration list for PBXNativeTarget "BestFares365AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6524110D290A6DBA00BB0A97 /* Debug */,
+				6524110E290A6DBA00BB0A97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		657A33A52913D60700E3FA70 /* BestFares365App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				657A33A62913D60700E3FA70 /* BestFares365App.xcdatamodel */,
+			);
+			currentVersion = 657A33A62913D60700E3FA70 /* BestFares365App.xcdatamodel */;
+			path = BestFares365App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 652410D4290A6DB800BB0A97 /* Project object */;
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="BottomBookNowTVCell" customModule="BestFares365App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZ1-VL-Zxf">
+                        <rect key="frame" x="16" y="0.0" width="453" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-Bn-99T">
+                                <rect key="frame" x="17" y="21.666666666666671" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-n7-kGL">
+                                <rect key="frame" x="330" y="14" width="100" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tt-ha-mMa">
+                                        <rect key="frame" x="29" y="7.6666666666666679" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isb-ZK-78k">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="CalSelectedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="GOp-ZZ-NT7"/>
+                                    <constraint firstItem="Isb-ZK-78k" firstAttribute="top" secondItem="CEJ-n7-kGL" secondAttribute="top" id="Q63-6y-Lcx"/>
+                                    <constraint firstItem="2tt-ha-mMa" firstAttribute="centerY" secondItem="CEJ-n7-kGL" secondAttribute="centerY" id="VfX-r4-v9v"/>
+                                    <constraint firstItem="2tt-ha-mMa" firstAttribute="centerX" secondItem="CEJ-n7-kGL" secondAttribute="centerX" id="ZxQ-Eb-UYP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Isb-ZK-78k" secondAttribute="trailing" id="a7h-0J-m4F"/>
+                                    <constraint firstAttribute="width" constant="100" id="eHO-KY-bRL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Isb-ZK-78k" secondAttribute="bottom" id="geN-D4-Xu4"/>
+                                    <constraint firstItem="Isb-ZK-78k" firstAttribute="leading" secondItem="CEJ-n7-kGL" secondAttribute="leading" id="ohY-UK-8vx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fYh-Bn-99T" firstAttribute="leading" secondItem="KZ1-VL-Zxf" secondAttribute="leading" constant="17" id="5Zf-9U-hlP"/>
+                            <constraint firstItem="CEJ-n7-kGL" firstAttribute="centerY" secondItem="KZ1-VL-Zxf" secondAttribute="centerY" id="DiM-q7-X0L"/>
+                            <constraint firstAttribute="bottom" secondItem="CEJ-n7-kGL" secondAttribute="bottom" constant="14" id="GHD-MH-2kB"/>
+                            <constraint firstAttribute="trailing" secondItem="CEJ-n7-kGL" secondAttribute="trailing" constant="23" id="LYz-Fj-fEe"/>
+                            <constraint firstItem="fYh-Bn-99T" firstAttribute="centerY" secondItem="KZ1-VL-Zxf" secondAttribute="centerY" id="a3f-OT-fsA"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="hZM-bZ-kZv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KZ1-VL-Zxf" secondAttribute="trailing" constant="16" id="2Xq-J6-egc"/>
+                    <constraint firstAttribute="bottom" secondItem="KZ1-VL-Zxf" secondAttribute="bottom" constant="24" id="POm-7O-6ST"/>
+                    <constraint firstItem="KZ1-VL-Zxf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aR8-tc-wRQ"/>
+                    <constraint firstItem="KZ1-VL-Zxf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="meA-oJ-2JS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookNowBtn" destination="Isb-ZK-78k" id="1JZ-bq-Lyz"/>
+                <outlet property="bookNowView" destination="CEJ-n7-kGL" id="s0D-WS-Bo4"/>
+                <outlet property="bookNowlbl" destination="2tt-ha-mMa" id="cjm-vt-fw9"/>
+                <outlet property="holderView" destination="KZ1-VL-Zxf" id="1bw-FZ-MM0"/>
+                <outlet property="titlelbl" destination="fYh-Bn-99T" id="zUe-bj-XwM"/>
+            </connections>
+            <point key="canvasLocation" x="154.61538461538461" y="64.691943127962077"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CalSelectedColor">
+            <color red="0.0" green="0.62000000476837158" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

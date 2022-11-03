@@ -1,0 +1,6 @@
+framework module Pods_BestFares365App_BestFares365AppUITests {
+  umbrella header "Pods-BestFares365App-BestFares365AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
