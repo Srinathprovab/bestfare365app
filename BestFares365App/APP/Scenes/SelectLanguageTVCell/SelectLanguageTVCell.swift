@@ -14,7 +14,7 @@ class SelectLanguageTVCell: TableViewCell {
     @IBOutlet weak var subTitlelbl: UILabel!
     @IBOutlet weak var langLogoImg: UIImageView!
     
-    
+    var currency_symbol = String()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,6 +28,8 @@ class SelectLanguageTVCell: TableViewCell {
     }
     
     
+    
+    
     override func prepareForReuse() {
         unselected()
     }
@@ -37,6 +39,8 @@ class SelectLanguageTVCell: TableViewCell {
         
         titlelbl.text = cellInfo?.title
         subTitlelbl.text = cellInfo?.subTitle
+        currency_symbol = cellInfo?.buttonTitle ?? ""
+        
         langLogoImg.image = UIImage(named: cellInfo?.image ?? "")
         
         subTitlelbl.isHidden = true
@@ -49,6 +53,15 @@ class SelectLanguageTVCell: TableViewCell {
             subTitlelbl.isHidden = false
             langLogoImg.isHidden = true
         }
+        
+        
+        if let currency = defaults.string(forKey: UserDefaultsKeys.selectedCurrency) {
+            if currency == subTitlelbl.text {
+                selected()
+            }
+        }
+        
+        
     }
     
     func setupUI() {
@@ -56,10 +69,10 @@ class SelectLanguageTVCell: TableViewCell {
         holderView.backgroundColor = .WhiteColor
         holderView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 4)
         
-        titlelbl.textColor = .LabelTitleColor
+        titlelbl.textColor = .AppLabelColor
         titlelbl.font = UIFont.SigvarRegular(size: 16)
         
-        subTitlelbl.textColor = .LabelTitleColor
+        subTitlelbl.textColor = .AppLabelColor
         subTitlelbl.font = UIFont.SigvarRegular(size: 16)
         
     }

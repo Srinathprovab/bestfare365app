@@ -42,7 +42,7 @@ class LoignOrSignupBtnsTVCell: TableViewCell {
         signUpView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 4)
         signUpView.backgroundColor = .WhiteColor
         setuplabels(lbl: loginlbl, text: "Login", textcolor: .WhiteColor, font: .ProximaNovaRegular(size: 18), align: .left)
-        setuplabels(lbl: signuplbl, text: "Sign Up", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 18), align: .left)
+        setuplabels(lbl: signuplbl, text: "Sign Up", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 18), align: .left)
     }
     
     

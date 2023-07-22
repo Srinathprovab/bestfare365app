@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +45,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4z-y2-MYP">
-                                        <rect key="frame" x="56" y="19.333333333333329" width="425" height="21"/>
+                                        <rect key="frame" x="46" y="19.333333333333329" width="445" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -58,8 +59,8 @@
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="X4z-y2-MYP" firstAttribute="centerY" secondItem="LTW-sq-BYc" secondAttribute="centerY" id="0HD-Nk-fxp"/>
-                                    <constraint firstItem="X4z-y2-MYP" firstAttribute="leading" secondItem="LTW-sq-BYc" secondAttribute="trailing" constant="20" id="Aix-Ba-KTC"/>
-                                    <constraint firstItem="fQa-Bi-95O" firstAttribute="leading" secondItem="X4z-y2-MYP" secondAttribute="trailing" constant="20" id="Jbp-jS-Jte"/>
+                                    <constraint firstItem="X4z-y2-MYP" firstAttribute="leading" secondItem="LTW-sq-BYc" secondAttribute="trailing" constant="10" id="Aix-Ba-KTC"/>
+                                    <constraint firstItem="fQa-Bi-95O" firstAttribute="leading" secondItem="X4z-y2-MYP" secondAttribute="trailing" constant="10" id="Jbp-jS-Jte"/>
                                     <constraint firstAttribute="height" constant="60" id="Xel-jB-3Og"/>
                                     <constraint firstItem="LTW-sq-BYc" firstAttribute="leading" secondItem="zmX-jo-CSP" secondAttribute="leading" constant="16" id="dbI-iP-eRC"/>
                                     <constraint firstItem="LTW-sq-BYc" firstAttribute="centerY" secondItem="zmX-jo-CSP" secondAttribute="centerY" id="e2q-tE-Cxg"/>

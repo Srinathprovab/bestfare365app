@@ -11,6 +11,8 @@ import DropDown
 
 protocol DropDownTVCellDelegate {
     func didTapOnDropDownBtn(cell:DropDownTVCell)
+    func didTapOnIssuingCountryDropDownBtn(cell:DropDownTVCell)
+    
 }
 
 class DropDownTVCell: TableViewCell {
@@ -22,9 +24,16 @@ class DropDownTVCell: TableViewCell {
     @IBOutlet weak var dropdownImg: UIImageView!
     @IBOutlet weak var dropdownBtn: UIButton!
     
+    
+    let datePicker = UIDatePicker()
     var delegate:DropDownTVCellDelegate?
     var optionArray = [String]()
     let dropDown = DropDown()
+    var countryNameArray = [String]()
+    var pass_isssung_country_code = String()
+    var pass_nationality = String()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,15 +47,30 @@ class DropDownTVCell: TableViewCell {
     }
     
     override func updateUI() {
+        countryNameArray.removeAll()
         titlelbl.text = cellInfo?.title
         dropdownlbl.text = cellInfo?.subTitle
         dropdownImg.image = UIImage(named: cellInfo?.image ?? "")
-        dropDown.dataSource = cellInfo?.moreData as? [String] ?? []
+       
+        if cellInfo?.key == "cal" {
+            dropDown.dataSource = cellInfo?.moreData as? [String] ?? []
+            setupDropDown()
+        }else {
+            phoneCodeArray.forEach { i in
+                countryNameArray.append(i.name ?? "")
+            }
+            
+            dropDown.dataSource = countryNameArray
+            setupDropDown()
+        }
         
-        setupDropDown()
+        
+        
     }
     
     
+    
+  
     func setupDropDown() {
         
         dropDown.direction = .any
@@ -54,9 +78,19 @@ class DropDownTVCell: TableViewCell {
         dropDown.anchorView = self.dropdownBtn
         dropDown.bottomOffset = CGPoint(x: 0, y: dropdownView.frame.size.height + 10)
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
-            self?.dropdownlbl.text = item
-            self?.dropdownlbl.textColor = .LabelTitleColor
-            self?.delegate?.didTapOnDropDownBtn(cell: self!)
+            
+            
+            if self?.cellInfo?.key == "cal" {
+                self?.dropdownlbl.text = item
+                self?.dropdownlbl.textColor = .AppLabelColor
+                self?.delegate?.didTapOnDropDownBtn(cell: self!)
+            }else {
+                self?.dropdownlbl.text = phoneCodeArray[index].name
+                self?.dropdownlbl.textColor = .AppLabelColor
+                self?.pass_isssung_country_code = phoneCodeArray[index].iso_country_code ?? ""
+                self?.pass_nationality = phoneCodeArray[index].origin ?? ""
+                self?.delegate?.didTapOnIssuingCountryDropDownBtn(cell: self!)
+            }
         }
     }
     
@@ -69,9 +103,10 @@ class DropDownTVCell: TableViewCell {
         dropdownView.layer.borderColor = UIColor.BorderColor.cgColor
         dropdownView.layer.borderWidth = 1
         
-        titlelbl.textColor = .LabelTitleColor
+        titlelbl.textColor = .AppLabelColor
         titlelbl.font = UIFont.SigvarRegular(size: 14)
         
+        dropdownlbl.text = cellInfo?.subTitle
         dropdownlbl.textColor = HexColor("#CECECE")
         dropdownlbl.font = UIFont.SigvarRegular(size: 18)
         dropdownBtn.setTitle("", for: .normal)

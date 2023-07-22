@@ -24,11 +24,13 @@ class AirlinesListCVCell: UICollectionViewCell {
     func setupUI() {
         holderView.backgroundColor = .WhiteColor
         lineView.backgroundColor = .BorderColor
-        setupLabels(lbl: titlelbl, text: "Emirates ", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 12))
-        setupLabels(lbl: subtitlelbl, text: "A$ 150 ", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 14))
+        setupLabels(lbl: titlelbl, text: "Emirates", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16))
+        setupLabels(lbl: subtitlelbl, text: "A$ 150 ", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 14))
         logoImg.image = UIImage(named: "alogo")?.withRenderingMode(.alwaysOriginal)
         logoImg.layer.cornerRadius = 15
         logoImg.clipsToBounds = true
+        
+        subtitlelbl.isHidden = true
     }
     
     func setupLabels(lbl:UILabel,text:String,textcolor:UIColor,font:UIFont) {

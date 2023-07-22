@@ -13,42 +13,40 @@ class DepartureTimeCVCell: UICollectionViewCell {
     @IBOutlet weak var titlelbl: UILabel!
     @IBOutlet weak var subtitlelbl: UILabel!
     
+    
+    
+    var filterTitle = String()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupUI()
     }
     
+    override func prepareForReuse() {
+        unselected()
+    }
     
     func setupUI() {
         holderView.backgroundColor = .WhiteColor
         holderView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 16)
         holderView.backgroundColor = .WhiteColor
-        setupLabels(lbl: titlelbl, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 14))
-        setupLabels(lbl: subtitlelbl, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 14))
+        setuplabels(lbl: titlelbl, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 14), align: .center)
+        setuplabels(lbl: subtitlelbl, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 14), align: .center)
     }
     
-    
-    func setupLabels(lbl:UILabel,text:String,textcolor:UIColor,font:UIFont) {
-        lbl.text = text
-        lbl.textColor = textcolor
-        lbl.font = font
-        lbl.numberOfLines = 0
-    }
     
     
     func selected() {
         holderView.backgroundColor = .CalSelectedColor
         titlelbl.textColor = .WhiteColor
         subtitlelbl.textColor = .WhiteColor
-        
     }
     
     
     func unselected() {
         holderView.backgroundColor = .WhiteColor
-        titlelbl.textColor = .LabelTitleColor
-        subtitlelbl.textColor = .LabelTitleColor
+        titlelbl.textColor = .AppLabelColor
+        subtitlelbl.textColor = .AppLabelColor
     }
     
     

@@ -43,6 +43,8 @@ class FromViewTVCell: TableViewCell {
     }
     
     
+    
+    
     override func updateUI() {
         
         
@@ -74,18 +76,18 @@ class FromViewTVCell: TableViewCell {
     
     func setupUI() {
         holderView.backgroundColor = .WhiteColor
-        setupLabels(lbl: fromlbl, text: "From", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16))
+        setupLabels(lbl: fromlbl, text: "From", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16))
         fromCityView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 6)
         fromCityView.backgroundColor = .WhiteColor
         fromimg.image = UIImage(named: "from")?.withRenderingMode(.alwaysOriginal)
-        setupLabels(lbl: fromCityNamelbl, text: "Dubai", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18))
+        setupLabels(lbl: fromCityNamelbl, text: "Dubai", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18))
         setupLabels(lbl: fromAirportNamelbl, text: "Airports Dubai International (DXB)", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14))
         
-        setupLabels(lbl: tolbl, text: "To", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16))
+        setupLabels(lbl: tolbl, text: "To", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16))
         toCityView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 6)
         toCityView.backgroundColor = .WhiteColor
         toimg.image = UIImage(named: "to")?.withRenderingMode(.alwaysOriginal)
-        setupLabels(lbl: toCityNamelbl, text: "Kuwait", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18))
+        setupLabels(lbl: toCityNamelbl, text: "Kuwait", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18))
         setupLabels(lbl: toAirportNamelbl, text: "Kuwait International Airport (KWI)", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14))
         
         swapimg.image = UIImage(named: "swap")?.withRenderingMode(.alwaysOriginal)
@@ -98,7 +100,7 @@ class FromViewTVCell: TableViewCell {
         
     }
     
-    //MARK:- SETUP UI LABELS
+    //MARK: - SETUP UI LABELS
     func setupLabels(lbl:UILabel,text:String,textcolor:UIColor,font:UIFont) {
         lbl.text = text
         lbl.textColor = textcolor
@@ -106,7 +108,7 @@ class FromViewTVCell: TableViewCell {
     }
     
     
-    //MARK:- SWAP CITY FROM TO TOCITY FUNCTION
+    //MARK: - SWAP CITY FROM TO TOCITY FUNCTION
     @objc func didTapOnSwapCityBtn(_ sender:UIButton) {
         let a = fromCityNamelbl.text
         let b = fromAirportNamelbl.text
@@ -118,6 +120,7 @@ class FromViewTVCell: TableViewCell {
         toCityNamelbl.text = a
         toAirportNamelbl.text = b
         
+       
         
         
         if let journyType = defaults.string(forKey: UserDefaultsKeys.journeyType) {
@@ -127,6 +130,12 @@ class FromViewTVCell: TableViewCell {
                 defaults.set(self.fromAirportNamelbl.text , forKey: UserDefaultsKeys.fromairportCode)
                 defaults.set(toCityNamelbl.text ?? "", forKey: UserDefaultsKeys.toCity)
                 defaults.set(toAirportNamelbl.text , forKey: UserDefaultsKeys.toairportCode)
+
+                let i = defaults.string(forKey: UserDefaultsKeys.fromairport_city)
+                let j = defaults.string(forKey: UserDefaultsKeys.toairport_city)
+                defaults.set(i, forKey: UserDefaultsKeys.toairport_city)
+                defaults.set(j, forKey: UserDefaultsKeys.fromairport_city)
+                
                 break
             case "circle":
                 defaults.set(self.fromCityNamelbl.text ?? "", forKey: UserDefaultsKeys.rfromCity)

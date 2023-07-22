@@ -15,6 +15,8 @@ class AirlinesNameTVCell: UITableViewCell {
     @IBOutlet weak var titlelbl: UILabel!
     @IBOutlet weak var logoImgWidth: NSLayoutConstraint!
     
+    
+    var filtertitle = String()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +27,11 @@ class AirlinesNameTVCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
+        if isSelected == true {
+            selected1()
+        }else {
+            unselected()
+        }
     }
     
     func setupUI() {
@@ -41,7 +48,7 @@ class AirlinesNameTVCell: UITableViewCell {
         lbl.numberOfLines = 0
     }
     
-    func selected() {
+    func selected1() {
         chechBoxImg.image = UIImage(named: "check")?.withRenderingMode(.alwaysOriginal)
     }
     

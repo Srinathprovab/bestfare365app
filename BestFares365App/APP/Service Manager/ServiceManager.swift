@@ -347,7 +347,7 @@ class ServiceManager {
             
             do {
                 
-                // request.httpBody = p.percentEncoded()
+                //  request.httpBody = p.percentEncoded()
                 request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted) // pass dictionary to data object and set it as request body
                 
                 
@@ -359,55 +359,76 @@ class ServiceManager {
         }
         
         
+        
         AF.request(
             completeEndpointURL,
             method: .post,
             parameters: parameters as? Parameters,
             encoding: URLEncoding.default,
-            headers: nil).responseJSON { (responseData) -> Void in
-                if responseData.value != nil {
+            headers: nil).validate().responseJSON { resp in
+                
+                
+                
+                print(resp.response?.statusCode)
+                if let data = resp.data { // Assuming `response` is the API response object
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with:  resp.data ?? NSData() as Data, options: []) as? [String: Any] {
+                            
+                            let arrJson = try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+                            let theJSONText = NSString(data: arrJson, encoding: String.Encoding.utf8.rawValue)
+                        //    print(theJSONText ?? "")
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                
+                if resp.value != nil {
                     //do something with data
-                    print(responseData.value as Any)
                     
-                    switch responseData.result {
+                    switch resp.result {
                     case .success(let data):
                         
-                        print("Parsing the data:  ")
                         
                         do{
                             
                             
-                            let jsonData = try JSONSerialization.data(withJSONObject: responseData.value as Any, options: [])
-                            
+                            let jsonData = try JSONSerialization.data(withJSONObject: resp.value as Any,options: [])
                             if let jsonResponse = try? JSONDecoder().decode(T.self, from: jsonData) {
                                 
                                 completionHandler(true, jsonResponse, nil)
                             }
                             
                             else {
-                                completionHandler(false, nil, ApiError.somthingwentwrong.message)
+                                
+                                completionHandler(false, nil, "jSONSerialization error")
                             }
                             
                             
                             
                         }catch {
-                            
-                            completionHandler(false, nil, ApiError.unknown.message)
-                            print("JSONSerialization error")
+                            completionHandler(false, nil, "jSONSerialization error do loop")
+                          
                         }
                         
                         
-                        
                     case .failure(let error):
+                        
                         print("error ----- \(error)")
                         completionHandler(false, nil, ApiError.unknown.message)
                         break
                         
+                        
                     default:
                         break
+                        
+                        
                     }
                     
                     
+                }else {
+                    
+                    completionHandler(false, nil, "Result Nil")
                 }
             }
         

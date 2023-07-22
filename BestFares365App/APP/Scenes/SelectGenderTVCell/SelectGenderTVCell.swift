@@ -10,6 +10,7 @@ protocol SelectGenderTVCellDelegate {
     
     func didSelectMaleRadioBtn(cell:SelectGenderTVCell)
     func didSelectOnFemaleBtn(cell:SelectGenderTVCell)
+    func didSelectOnOthersBtn(cell:SelectGenderTVCell)
     func didTapOnSaveBtn(cell:SelectGenderTVCell)
     
 }
@@ -28,6 +29,9 @@ class SelectGenderTVCell: TableViewCell {
     @IBOutlet weak var savelbl: UILabel!
     @IBOutlet weak var saveBtn: UIButton!
     
+    @IBOutlet weak var otherImg: UIImageView!
+    @IBOutlet weak var otherslbl: UILabel!
+    @IBOutlet weak var othersBtn: UIButton!
     
     var gender = String()
     var delegate:SelectGenderTVCellDelegate?
@@ -51,6 +55,14 @@ class SelectGenderTVCell: TableViewCell {
             saveBtnView.isHidden = false
             genderView.isHidden = true
         }
+        
+        if cellInfo?.title == "Male" {
+            maleSetup()
+        }else if cellInfo?.title == "Female" {
+            femaleSetup()
+        }else {
+            othersSetup()
+        }
     }
     
     
@@ -58,17 +70,17 @@ class SelectGenderTVCell: TableViewCell {
         holderView.backgroundColor = .WhiteColor
         maleRadioImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
         femaleRadioImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
-        
-        setupLabels(lbl: malelbl, text: "Male", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 16))
-        setupLabels(lbl: femalelbl, text: "Female", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 16))
-        setupLabels(lbl: savelbl, text: "Save", textcolor: .WhiteColor, font: .SigvarRegular(size: 16))
-        
+        otherImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
+        setuplabels(lbl: malelbl, text: "Male", textcolor: .AppLabelColor, font: .SigvarRegular(size: 16), align: .left)
+        setuplabels(lbl: femalelbl, text: "Female", textcolor: .AppLabelColor, font: .SigvarRegular(size: 16), align: .left)
+        setuplabels(lbl: otherslbl, text: "Others", textcolor: .AppLabelColor, font: .SigvarRegular(size: 16), align: .left)
+        setuplabels(lbl: savelbl, text: "Save", textcolor: .WhiteColor, font: .SigvarRegular(size: 16), align: .center)
         setupViews(v: saveBtnView, radius: 4, color: .ButtonColor)
         
         maleBtn.setTitle("", for: .normal)
         femaleBtn.setTitle("", for: .normal)
+        othersBtn.setTitle("", for: .normal)
         saveBtn.setTitle("", for: .normal)
-        
         saveBtnView.isHidden = true
         genderView.isHidden = false
     }
@@ -81,24 +93,41 @@ class SelectGenderTVCell: TableViewCell {
         v.layer.borderColor = UIColor.BorderColor.cgColor
     }
     
-    func setupLabels(lbl:UILabel,text:String,textcolor:UIColor,font:UIFont) {
-        lbl.text = text
-        lbl.textColor = textcolor
-        lbl.font = font
+    @IBAction func didSelectMaleRadioBtn(_ sender: Any) {
+        maleSetup()
     }
     
-    @IBAction func didSelectMaleRadioBtn(_ sender: Any) {
+    func maleSetup(){
         gender = "Male"
-        delegate?.didSelectMaleRadioBtn(cell: self)
-        maleRadioImg.image = UIImage(named: "radioSelected")?.withRenderingMode(.alwaysOriginal)
+        maleRadioImg.image = UIImage(named: "radioSelected")?.withRenderingMode(.alwaysOriginal).withTintColor(.ButtonColor)
         femaleRadioImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
+        otherImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
+        delegate?.didSelectMaleRadioBtn(cell: self)
     }
     
     @IBAction func didSelectOnFemaleBtn(_ sender: Any) {
+        femaleSetup()
+    }
+    
+    func femaleSetup(){
         gender = "Female"
-        delegate?.didSelectOnFemaleBtn(cell: self)
         maleRadioImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
-        femaleRadioImg.image = UIImage(named: "radioSelected")?.withRenderingMode(.alwaysOriginal)
+        femaleRadioImg.image = UIImage(named: "radioSelected")?.withRenderingMode(.alwaysOriginal).withTintColor(.ButtonColor)
+        otherImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
+        delegate?.didSelectOnFemaleBtn(cell: self)
+    }
+    
+    
+    @IBAction func didTapOnOthersBtn(_ sender: Any) {
+        othersSetup()
+    }
+    
+    func othersSetup(){
+        gender = "Others"
+        maleRadioImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
+        femaleRadioImg.image = UIImage(named: "radioUnselected")?.withRenderingMode(.alwaysOriginal)
+        otherImg.image = UIImage(named: "radioSelected")?.withRenderingMode(.alwaysOriginal).withTintColor(.ButtonColor)
+        delegate?.didSelectOnOthersBtn(cell: self)
     }
     
     

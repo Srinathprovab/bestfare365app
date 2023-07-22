@@ -42,7 +42,11 @@ extension String {
     
     func isValidPassport() -> Bool {
           //  let PASSPORT_REG_EX = "^(?!^0+$)[a-zA-Z0-9]{3,20}$"
-        let PASSPORT_REG_EX = "[A-Z]{2}[0-9]{6}"
+       //   let PASSPORT_REG_EX = "^([0-9]|[a-zA-Z]){9}$" //Australian
+          let PASSPORT_REG_EX = "^[A-Z]{2}[0-9]{7}$"
+        
+        
+      //  let PASSPORT_REG_EX = "[A-Z]{2}[0-9]{7}"
         
             let passport = NSPredicate(format:"SELF MATCHES %@", PASSPORT_REG_EX)
 

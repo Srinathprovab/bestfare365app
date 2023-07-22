@@ -51,14 +51,14 @@ class RoundTripDetailsTVCell: UITableViewCell {
         img3.isHidden = true
         leftLineImg.image = UIImage(named: "dash")?.withRenderingMode(.alwaysOriginal)
         rightLineImg.image = UIImage(named: "dash")?.withRenderingMode(.alwaysOriginal)
-        setupLabels(lbl: fromTimelbl, text: "13:00", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 16))
-        setupLabels(lbl: fromCodelbl, text: "DXB", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 14))
-        setupLabels(lbl: toTimelbl, text: "15:00", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 20))
-        setupLabels(lbl: toCodelbl, text: "KWI", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 14))
-        setupLabels(lbl: travelTimelbl, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 14))
-        setupLabels(lbl: totalStopslbl, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 14))
+        setupLabels(lbl: fromTimelbl, text: "13:00", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 16))
+        setupLabels(lbl: fromCodelbl, text: "DXB", textcolor: .AppLabelColor, font: .SigvarRegular(size: 14))
+        setupLabels(lbl: toTimelbl, text: "15:00", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 20))
+        setupLabels(lbl: toCodelbl, text: "KWI", textcolor: .AppLabelColor, font: .SigvarRegular(size: 14))
+        setupLabels(lbl: travelTimelbl, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 14))
+        setupLabels(lbl: totalStopslbl, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 14))
         kgImg.image = UIImage(named: "kg")?.withRenderingMode(.alwaysOriginal)
-        setupLabels(lbl: kglbl, text: "1 x 0kg", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 12))
+        setupLabels(lbl: kglbl, text: "1 x 0kg", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 12))
     }
     
     

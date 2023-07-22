@@ -50,7 +50,7 @@ class SelectClassCVCell: UICollectionViewCell {
     
     
     func setupSortByFilterView() {
-        setupLabels(lbl: titlelbl, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 14))
+        setupLabels(lbl: titlelbl, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 14))
         titlelbl.font = .ProximaNovaRegular(size: 14)
         holderView.layer.cornerRadius = 16
         holderView.clipsToBounds = true

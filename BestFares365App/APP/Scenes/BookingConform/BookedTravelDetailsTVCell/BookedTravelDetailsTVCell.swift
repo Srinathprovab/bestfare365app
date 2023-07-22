@@ -18,7 +18,7 @@ class BookedTravelDetailsTVCell: TableViewCell {
     @IBOutlet weak var adultDetailsTV: UITableView!
     @IBOutlet weak var tvHeight: NSLayoutConstraint!
     
-    var adultNamesArray = ["aaa","bbb"]
+    var cdeatils = [Customer_details]()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,8 +34,17 @@ class BookedTravelDetailsTVCell: TableViewCell {
     
     
     override func updateUI() {
-        if adultNamesArray.count > 3 {
-            tvHeight.constant = CGFloat(adultNamesArray.count * 35)
+        
+        
+        cdeatils = cellInfo?.moreData as! [Customer_details]
+        
+//        vocherdata?.booking_details?.forEach({ i in
+//            cdeatils = i.customer_details ?? []
+//        })
+        
+     
+        if cdeatils.count > 3 {
+            tvHeight.constant = CGFloat(cdeatils.count * 35)
         }
         
         if cellInfo?.key == "hotel" {
@@ -90,16 +99,16 @@ class BookedTravelDetailsTVCell: TableViewCell {
 
 extension BookedTravelDetailsTVCell:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return adultNamesArray.count
+        return cdeatils.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var c = UITableViewCell()
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? BookedAdultDetailsTVCell {
             cell.selectionStyle = .none
-            cell.travellerNamelbl.text = adultNamesArray[indexPath.row]
-            cell.typelbl.text = "1 Adult"
-            cell.seatlbl.text = "m36"
+            cell.travellerNamelbl.text = "\(cdeatils[indexPath.row].first_name ?? "") \(cdeatils[indexPath.row].last_name ?? "")"
+            cell.typelbl.text = "\(cdeatils[indexPath.row].passenger_type ?? "")"
+            cell.seatlbl.text = "\(cdeatils[indexPath.row].ticketNumber ?? "0000")"
             c = cell
         }
         return c

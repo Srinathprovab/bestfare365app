@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
+
+
 protocol MenuBGTVCellDelegate {
     func didTapOnLoginBtn(cell:MenuBGTVCell)
     func didTapOnEditProfileBtn(cell:MenuBGTVCell)
@@ -33,23 +36,43 @@ class MenuBGTVCell: TableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    
+    override func updateUI() {
+        
+        if defaults.bool(forKey: sessionMgrDefaults.loggedInStatus) == true {
+            editProfileView.isHidden = false
+            loginBtn.isHidden = true
+            editProfilelbl.text = "\(profileDetailsArray?.first_name ?? "") \(profileDetailsArray?.last_name ?? "")"
+            profileImage.sd_setImage(with: URL(string: img1 ), placeholderImage:UIImage(contentsOfFile:"placeholder.png"))
+        }else {
+            editProfileView.isHidden = true
+            loginBtn.isHidden = false
+            profileImage.image = UIImage(named: "profile1")?.withRenderingMode(.alwaysOriginal)
+    
+        }
+        
+    }
+    
+    
     func setupUI() {
-        profileImage.image = UIImage(named: "profile1")?.withRenderingMode(.alwaysOriginal)
         profileImage.layer.cornerRadius = 50
         profileImage.clipsToBounds = true
+        profileImage.contentMode = .scaleToFill
+        profileImage.layer.borderWidth = 3
+        profileImage.layer.borderColor = UIColor.WhiteColor.cgColor
         
         editProfileBtn.setTitle("", for: .normal)
-        loginBtn.setTitle("Login/Signup", for: .normal)
+        
         loginBtn.setTitleColor(.WhiteColor, for: .normal)
         loginBtn.titleLabel?.font = UIFont.sigvarbold(size: 25)
         loginBtn.addTarget(self, action: #selector(didTapOnLoginBtn(_:)), for: .touchUpInside)
         
-        editProfileView.backgroundColor = .ButtonColor
-        editProfileView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 15)
+        editProfileView.backgroundColor = .clear
+//        editProfileView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 15)
         setuplabels(lbl: editProfilelbl, text: "Edit Profile", textcolor: .WhiteColor, font: .SigvarRegular(size: 20), align: .left)
-        
-        editProfileViewHeight.constant = 0
-        editProfileView.isHidden = true
+        loginBtn.isHidden = true
+        loginBtn.setTitle("Login/Signup", for: .normal)
     }
     
     
@@ -59,6 +82,8 @@ class MenuBGTVCell: TableViewCell {
     
     @IBAction func didTapOnEditProfileBtn(_ sender: Any) {
         delegate?.didTapOnEditProfileBtn(cell: self)
-        
     }
+    
+    
+    
 }

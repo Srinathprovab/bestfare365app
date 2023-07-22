@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol DepartureTimeTVCellDelegate {
+    func didTapOnSortByFiltersCell(cell:DepartureTimeCVCell)
+}
+
+
 class DepartureTimeTVCell: TableViewCell {
     
     @IBOutlet weak var holderView: UIView!
@@ -18,6 +23,7 @@ class DepartureTimeTVCell: TableViewCell {
     
     var array = [String]()
     var array1 = [String]()
+    var delegate:DepartureTimeTVCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,7 +42,7 @@ class DepartureTimeTVCell: TableViewCell {
         
         switch array.count {
         case 1,2:
-            cvHeight.constant = 60
+            cvHeight.constant = 50
             break
             
         case 3,4:
@@ -53,8 +59,8 @@ class DepartureTimeTVCell: TableViewCell {
     
     func setupUI() {
         holderView.backgroundColor = .WhiteColor
-        setupLabels(lbl: titlelbl, text: cellInfo?.title ?? "", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 16))
-        dropdownImg.image = UIImage(named: "droparrow")?.withRenderingMode(.alwaysOriginal).withTintColor(.LabelTitleColor)
+        setupLabels(lbl: titlelbl, text: cellInfo?.title ?? "", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 16))
+        dropdownImg.image = UIImage(named: "droparrow")?.withRenderingMode(.alwaysOriginal).withTintColor(.AppLabelColor)
         setupCV()
     }
     
@@ -77,8 +83,8 @@ class DepartureTimeTVCell: TableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = 5
+        layout.minimumInteritemSpacing = 20
+        layout.minimumLineSpacing = 20
         depTimeCV.backgroundColor = .clear
         depTimeCV.collectionViewLayout = layout
         depTimeCV.isScrollEnabled = false
@@ -98,12 +104,14 @@ extension DepartureTimeTVCell:UICollectionViewDelegate,UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var commonCell = UICollectionViewCell()
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DepartureTimeCVCell {
-            
+            cell.filterTitle = cellInfo?.title ?? ""
             if cellInfo?.key == "sort" {
                 cell.titlelbl.text = array[indexPath.row]
+                cell.subtitlelbl.isHidden = true
             }else {
                 cell.titlelbl.text = array[indexPath.row]
                 cell.subtitlelbl.text = array1[indexPath.row]
+                cell.subtitlelbl.isHidden = false
             }
             commonCell = cell
         }
@@ -112,6 +120,7 @@ extension DepartureTimeTVCell:UICollectionViewDelegate,UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? DepartureTimeCVCell {
+            delegate?.didTapOnSortByFiltersCell(cell: cell)
             cell.selected()
         }
     }
@@ -125,7 +134,7 @@ extension DepartureTimeTVCell:UICollectionViewDelegate,UICollectionViewDataSourc
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 50)
+        return CGSize(width: 130, height: 50)
     }
     
 }

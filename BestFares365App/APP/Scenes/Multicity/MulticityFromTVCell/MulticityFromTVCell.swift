@@ -66,12 +66,12 @@ class MulticityFromTVCell: UITableViewCell {
     func setupUI() {
         
         holderView.backgroundColor = .WhiteColor
-        setuplabels(lbl: fromlbl, text: "From", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16), align: .left)
-        setuplabels(lbl: tolbl, text: "To", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16), align: .left)
-        setuplabels(lbl: datelbl, text: "Date", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16), align: .left)
-        setuplabels(lbl: fromCityCodelbl, text: "DXB", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18), align: .left)
-        setuplabels(lbl: toCityCodelbl, text: "KWI", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18), align: .left)
-        setuplabels(lbl: dateValuelbl, text: "23-11-2022", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18), align: .left)
+        setuplabels(lbl: fromlbl, text: "From", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16), align: .left)
+        setuplabels(lbl: tolbl, text: "To", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16), align: .left)
+        setuplabels(lbl: datelbl, text: "Date", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16), align: .left)
+        setuplabels(lbl: fromCityCodelbl, text: "DXB", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18), align: .left)
+        setuplabels(lbl: toCityCodelbl, text: "KWI", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18), align: .left)
+        setuplabels(lbl: dateValuelbl, text: "23-11-2022", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18), align: .left)
         setuplabels(lbl: fromCityNamelbl, text: "Dubhi", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14), align: .left)
         setuplabels(lbl: toCityNamelbl, text: "kuwait ", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14), align: .left)
         

@@ -14,6 +14,8 @@ class SelectCabinClassTVCell: TableViewCell {
     @IBOutlet weak var classCV: UICollectionView!
     @IBOutlet weak var cvHeight: NSLayoutConstraint!
     
+    
+    var cellIndex = Int()
     var price = [String]()
     var classArray = ["Economy","Premium Economy","Frist","Business"]
     override func awakeFromNib() {
@@ -29,6 +31,22 @@ class SelectCabinClassTVCell: TableViewCell {
     
     
     override func updateUI() {
+        if let journyType = defaults.string(forKey: UserDefaultsKeys.journeyType) {
+            switch journyType {
+            case "oneway":
+                cellIndex = Int(defaults.string(forKey: UserDefaultsKeys.selectClassIndex) ?? "") ?? 0
+                break
+            case "circle":
+                cellIndex = Int(defaults.string(forKey: UserDefaultsKeys.rselectClassIndex) ?? "") ?? 0
+                break
+            case "multicity":
+                cellIndex = Int(defaults.string(forKey: UserDefaultsKeys.mselectClassIndex) ?? "") ?? 0
+                break
+            default:
+                break
+            }
+        }
+       
         price = cellInfo?.moreData as? [String] ?? []
         cvHeight.constant = 120
         setupLabels(lbl: titlelbl, text: cellInfo?.title ?? "", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 16))
@@ -65,7 +83,6 @@ class SelectCabinClassTVCell: TableViewCell {
         classCV.collectionViewLayout = layout
         classCV.isScrollEnabled = false
         
-        
     }
     
 }
@@ -87,12 +104,18 @@ extension SelectCabinClassTVCell:UICollectionViewDelegate,UICollectionViewDataSo
             
             if cellInfo?.key == "sortbyprice" {
                 cvHeight.constant = 120
-                setupLabels(lbl: titlelbl, text: cellInfo?.title ?? "", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 16))
+                setupLabels(lbl: titlelbl, text: cellInfo?.title ?? "", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 16))
                 cell.setupSortByFilterView()
                 cell.titlelbl.text = price[indexPath.row]
                 
             }else {
                 cell.titlelbl.text = classArray[indexPath.row]
+                
+                if indexPath.row == cellIndex {
+                    collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+                    cell.selected()
+                }
+                
             }
             commonCell = cell
         }
@@ -109,12 +132,18 @@ extension SelectCabinClassTVCell:UICollectionViewDelegate,UICollectionViewDataSo
                     switch journyType {
                     case "oneway":
                         defaults.set(cell.titlelbl.text, forKey: UserDefaultsKeys.selectClass)
+                        defaults.set(indexPath.row, forKey: UserDefaultsKeys.selectClassIndex)
+
                         break
                     case "circle":
                         defaults.set(cell.titlelbl.text, forKey: UserDefaultsKeys.rselectClass)
+                        defaults.set(indexPath.row, forKey: UserDefaultsKeys.rselectClassIndex)
+
                         break
                     case "multicity":
                         defaults.set(cell.titlelbl.text, forKey: UserDefaultsKeys.mselectClass)
+                        defaults.set(indexPath.row, forKey: UserDefaultsKeys.mselectClassIndex)
+
                         break
                     default:
                         break

@@ -45,20 +45,10 @@ class AddAdultsTVCell: TableViewCell {
     override func updateUI() {
         titlelbl.text = cellInfo?.title
         subTitlelbl.text = cellInfo?.subTitle
+        count = Int(cellInfo?.buttonTitle ?? "0") ?? 0
+        countlbl.text = cellInfo?.buttonTitle 
         
-        
-        if titlelbl.text == "Adults" {
-            countlbl.text = cellInfo?.text ?? "1"
-        }else if titlelbl.text == "Children" {
-            countlbl.text = cellInfo?.text ?? "0"
-        }else if titlelbl.text == "Seat Infants" {
-            countlbl.text = cellInfo?.text ?? "0"
-        }else{
-            countlbl.text = cellInfo?.text ?? "0"
-        }
-        
-  
-        
+
         
     }
     
@@ -67,9 +57,9 @@ class AddAdultsTVCell: TableViewCell {
     func setupUI() {
         
         holderView.backgroundColor = .WhiteColor
-        setupLabels(lbl: titlelbl, text: "Adults", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18))
+        setupLabels(lbl: titlelbl, text: "Adults", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18))
         setupLabels(lbl: subTitlelbl, text: "+12 yrs", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14))
-        setupLabels(lbl: countlbl, text: "0", textcolor: .LabelTitleColor, font: .InterRegular(size: 16))
+        setupLabels(lbl: countlbl, text: "0", textcolor: .AppLabelColor, font: .InterRegular(size: 16))
         setupViews(v: incrementView, radius: 4, color: .WhiteColor)
         setupViews(v: decrementView, radius: 4, color: .WhiteColor)
         setupViews(v: countView, radius: 4, color: .WhiteColor)

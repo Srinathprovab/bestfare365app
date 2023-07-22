@@ -39,7 +39,7 @@ class SignUpWithTVCell: TableViewCell {
         btnHolderView.backgroundColor = .WhiteColor
         btnHolderView.addCornerRadiusWithShadow(color: .clear, borderColor: .BorderColor, cornerRadius: 4)
         gImage.image = UIImage(named: "google")
-        setuplabels(lbl: titlelbl, text: "Google", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 16), align: .left)
+        setuplabels(lbl: titlelbl, text: "Google", textcolor: .AppLabelColor, font: .SigvarRegular(size: 16), align: .left)
     }
     
     

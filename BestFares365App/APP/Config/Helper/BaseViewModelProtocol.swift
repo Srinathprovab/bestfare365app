@@ -44,7 +44,7 @@ extension UIViewController: BaseViewModelProtocol {
         
         ToastManager.shared.style = style
         ToastManager.shared.position = .bottom
-        self.view.makeToast(message, duration: 3)
+        self.view.makeToast(message, duration: 5)
     }
     
     func showPositionalToast(message: String, position: ToastPosition) {

@@ -39,7 +39,7 @@ extension UIColor {
     
     
     
-    public static var LabelTitleColor : UIColor {
+    public static var AppLabelColor : UIColor {
         get {
             return UIColor(named: "LabelTitleColor")!
         }
@@ -91,6 +91,30 @@ extension UIColor {
             return UIColor(named: "BorderColor")!
         }
     }
+    
+    
+    public static var LightBlueColor : UIColor {
+        get {
+            return UIColor(named: "LightBlueColor")!
+        }
+    }
+    
+    
+    public static var AppBorderColor : UIColor {
+        get {
+            return UIColor.lightGray.withAlphaComponent(0.5)
+        }
+    }
+    
+    
+    public static var AppHolderViewColor : UIColor {
+        get {
+            return UIColor.lightGray.withAlphaComponent(0.5)
+        }
+    }
+    
+    
+    
     
     
 }

@@ -55,11 +55,11 @@ class BookingConfirmedTVCell: TableViewCell {
         checkImg.image = UIImage(named: "bc")?.withRenderingMode(.alwaysOriginal)
         
         setupLabels(lbl: bclbl, text: "Booking Confirmed", textcolor: HexColor("#4AA449"), font: .sigvarbold(size: 22))
-        setupLabels(lbl: congratulationslbl, text: "Congratulations! your e-tickets  are successfuly booked.", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 14))
-        setupLabels(lbl: bookingIDlbl, text: "Booking id: 2548791", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
-        setupLabels(lbl: bookingDatelbl, text: "Booking Reference: HB14-25474-4975487", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
-        setupLabels(lbl: bookingReflbl, text: "Booking Date: 26-07-2022", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
-        setupLabels(lbl: pnrNolbl, text: "PNR No: MSD589", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 14))
+        setupLabels(lbl: congratulationslbl, text: "Congratulations! your e-tickets  are successfuly booked.", textcolor: .AppLabelColor, font: .SigvarRegular(size: 14))
+        setupLabels(lbl: bookingIDlbl, text: "Booking id: \(vocherdata?.booking_details?.first?.origin ?? "")", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
+        setupLabels(lbl: bookingDatelbl, text: "Booking Reference: \(vocherdata?.booking_details?.first?.app_reference ?? "")", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
+        setupLabels(lbl: bookingReflbl, text: "Booking Date: \(vocherdata?.booking_details?.first?.booked_date ?? "")", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
+        setupLabels(lbl: pnrNolbl, text: "PNR No: \(vocherdata?.booking_details?.first?.pnr ?? "")", textcolor: .AppLabelColor, font: .SigvarRegular(size: 14))
         
         
         

@@ -150,7 +150,11 @@
                                     <rect key="frame" x="151" y="0.0" width="30" height="30"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kle-cf-Tzg">
-                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="BKr-g8-FFr"/>
+                                                <constraint firstAttribute="width" constant="15" id="cHY-6s-t67"/>
+                                            </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLm-NO-r26">
                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -160,15 +164,13 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray4Color"/>
                                     <constraints>
-                                        <constraint firstItem="kle-cf-Tzg" firstAttribute="top" secondItem="Rjl-Me-yC0" secondAttribute="top" id="050-G2-2Ln"/>
                                         <constraint firstAttribute="width" constant="30" id="1ko-Il-MeT"/>
+                                        <constraint firstItem="kle-cf-Tzg" firstAttribute="centerY" secondItem="Rjl-Me-yC0" secondAttribute="centerY" id="2V7-2n-gMo"/>
                                         <constraint firstAttribute="trailing" secondItem="XLm-NO-r26" secondAttribute="trailing" id="7Nq-g9-Eay"/>
-                                        <constraint firstAttribute="bottom" secondItem="kle-cf-Tzg" secondAttribute="bottom" id="BXQ-pE-TXD"/>
-                                        <constraint firstItem="kle-cf-Tzg" firstAttribute="leading" secondItem="Rjl-Me-yC0" secondAttribute="leading" id="HOk-tT-xNJ"/>
                                         <constraint firstItem="XLm-NO-r26" firstAttribute="leading" secondItem="Rjl-Me-yC0" secondAttribute="leading" id="Q9v-SY-c1Q"/>
+                                        <constraint firstItem="kle-cf-Tzg" firstAttribute="centerX" secondItem="Rjl-Me-yC0" secondAttribute="centerX" id="Qzs-hA-268"/>
                                         <constraint firstItem="XLm-NO-r26" firstAttribute="top" secondItem="Rjl-Me-yC0" secondAttribute="top" id="Yj0-Sa-eVz"/>
                                         <constraint firstAttribute="height" constant="30" id="amf-Mz-MlB"/>
-                                        <constraint firstAttribute="trailing" secondItem="kle-cf-Tzg" secondAttribute="trailing" id="mEv-z3-9Mr"/>
                                         <constraint firstAttribute="bottom" secondItem="XLm-NO-r26" secondAttribute="bottom" id="qWK-zp-3gP"/>
                                     </constraints>
                                 </view>

@@ -29,9 +29,9 @@ class BookedAdultDetailsTVCell: UITableViewCell {
     func setupUI() {
         
         holderView.backgroundColor = .WhiteColor
-        setupLabels(lbl: travellerNamelbl, text: "", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
-        setupLabels(lbl: typelbl, text: "", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
-        setupLabels(lbl: seatlbl, text: "", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
+        setupLabels(lbl: travellerNamelbl, text: "aaaaa", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
+        setupLabels(lbl: typelbl, text: "bbbb", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
+        setupLabels(lbl: seatlbl, text: "ccccc", textcolor: HexColor("#5B5B5B"), font: .SigvarRegular(size: 14))
         
     }
     

@@ -26,7 +26,7 @@ enum TVCellType {
     case EmptyTVCell
     
     
-    //LOGIN
+    //MARK: - LOGIN
     case MenuBGTVCell
     case LoignOrSignupBtnsTVCell
     case TextfieldTVCell
@@ -37,16 +37,17 @@ enum TVCellType {
     case SelectGenderTVCell
     case DropDownTVCell
     
-    //Flights
+    //MARK: - Flights
     case FromViewTVCell
     case DepartDateViewTVCell
     case TravellersViewTVCell
     case AddAdultsTVCell
     case SelectCabinClassTVCell
     case LabelTVCell
+    case CharityTVCell
     
     
-    //FLIGHTS
+    //MARK: - FLIGHTS
     case FlightResultTVCell
     case PriceFilterTVCell
     case AirlinesFilterTVCell
@@ -64,8 +65,27 @@ enum TVCellType {
     case RoundTripTVCell
     case BookingConfirmedTVCell
     case BookedTravelDetailsTVCell
+    case FDTVCell
+    case SeatSelectionTVCell
+    case AddTravellerTVCell
+    case AboutUsLabelTVCell
+    case AddAdultTravellerTVCell
+    case AddChildTravellerTVCell
+    case AddInfantaTravellerTVCell
+    case OnboardFacTVcell
+    case SortByPriceTVCell
+    case CommonBookingItinearyTVCell
     
-    
+    //MARK: - Hotel
+    case HotelResultTVCell
+    case HotelImagesTVCell
+    case RoomsButtonsTVCell
+    case TravelDetailsTVCell
+    case AddRoomsGuestsTVCell
+    case HotelDetailsDescTVCell
+    case AmenitiesTVCell
+    case RoomTVCell
+    case StarRatingsFilterTVCell
     
     
 }
@@ -162,6 +182,19 @@ class TableRow {
     var travelTime:String?
     
     
+    var hotelName: String?
+    var hotelCode: String?
+    var hotelAddress: String?
+    var hotelratings: String?
+    var roomsLeft: String?
+    var hotelPrice :String?
+    var reviews: String?
+    var hotelImg: String?
+    
+    
+    
+    
+    
     init() {}
     
     init(title: String? = nil, subTitle: String? = nil,fromTime: String? = nil ,
@@ -176,6 +209,16 @@ class TableRow {
          baggage: String? = nil ,
          price: String? = nil ,
          travelTime: String? = nil ,
+         
+         hotelName: String? = nil,
+         hotelCode: String? = nil ,
+         hotelAddress: String? = nil ,
+         hotelratings: String? = nil ,
+         hotelPrice:String? = nil,
+         roomsLeft: String? = nil ,
+         reviews: String? = nil ,
+         hotelImg: String? = nil,
+         
          
          
          key: String? = nil, text: String? = nil, headerText: String? = nil, buttonTitle: String? = nil, keyboardType: UIKeyboardType = .default, data: Any? = nil, errormsg: String? = nil, key1: String? = nil, signInType: socialSignUpType? = nil , itemType: CVCellType? = nil, isSecure: Bool = false, isSelected: Bool = false,  needsBorder: Bool? = nil, needDoneButton: Bool? = nil, canGotoNextPage: Bool? = nil, image: String? = nil, imageSize: String? = nil, height: CGFloat? = nil, isOptional: Bool = true, moreData: Any? = nil, noInput: Bool = false, tempText: String? = nil, characterLimit: Int? = nil,characterLimit2: Int? = nil, hasHyperLink: Bool? = nil, disabled: Bool? = nil, disableLeftPortion: Bool? = nil, isEditable: Bool? = nil, lineSpace: CGFloat? = nil, shouldDoDualFieldValidations: Bool? = nil, cellUIUpdateCallback: ((_ cell: Any) -> Void)? = nil, cellActions: ((_ cell: Any, _ actionType: String, _ moreData: Any) -> Void)? = nil, autoCapitalization: UITextAutocapitalizationType? = nil, fontSize: CGFloat? = nil, borderSeq: BorderSeq? = nil, keyboardDistance: CGFloat? = nil, itemSize: CGSize? = nil,
@@ -199,6 +242,14 @@ class TableRow {
         self.price = price
         self.travelTime = travelTime
         
+        self.hotelName = hotelName
+        self.hotelCode = hotelCode
+        self.hotelAddress = hotelAddress
+        self.hotelratings = hotelratings
+        self.roomsLeft = roomsLeft
+        self.reviews = reviews
+        self.hotelImg = hotelImg
+        self.hotelPrice = hotelPrice
         
         self.key = key
         self.text = text
@@ -254,6 +305,9 @@ class TableRow {
         
         self.data1 = data1
         self.data2 = data2
+        
+        
+        
     }
     
 }

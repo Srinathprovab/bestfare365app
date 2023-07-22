@@ -17,7 +17,7 @@ class FromCityTVCell: TableViewCell {
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var closeView: UIView!
     
-    
+    var airportcity = String()
     var airportCode = String()
     var cityName = String()
     var cityShortName = String()
@@ -43,36 +43,11 @@ class FromCityTVCell: TableViewCell {
     func setupUI() {
         
         holderView.backgroundColor = .WhiteColor
-        setupLabels(lbl: titlelbl, text: "", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 16))
-        setupLabels(lbl: subTitlelbl, text: "", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14))
+        setuplabels(lbl: titlelbl, text: "", textcolor: .AppLabelColor, font: .SigvarRegular(size: 16), align: .left)
+        setuplabels(lbl: subTitlelbl, text: "", textcolor: .LabelSubTitleColor, font: .SigvarRegular(size: 14), align: .left)
         logoimg.image = UIImage(named: "from")?.withRenderingMode(.alwaysOriginal)
         closeimg.image = UIImage(named: "close")?.withRenderingMode(.alwaysOriginal)
         closeView.isHidden = true
     }
     
-    func setupLabels(lbl:UILabel,text:String,textcolor:UIColor,font:UIFont) {
-        lbl.text = text
-        lbl.textColor = textcolor
-        lbl.font = font
-        lbl.numberOfLines = 0
-    }
-    
-    
-    
-    //    func setAttributedString(str1:String,str2:String) {
-    //
-    //
-    //        let atter1 = [NSAttributedString.Key.foregroundColor:HexColor("#3E3E3E"),NSAttributedString.Key.font:UIFont.poppinsRegular(size: 15)] as [NSAttributedString.Key : Any]
-    //        let atter2 = [NSAttributedString.Key.foregroundColor:UIColor.LabelTitleColor,NSAttributedString.Key.font:UIFont.poppinsMedium(size: 15)] as [NSAttributedString.Key : Any]
-    //
-    //        let atterStr1 = NSMutableAttributedString(string: str1, attributes: atter1)
-    //        let atterStr2 = NSMutableAttributedString(string: str2, attributes: atter2)
-    //
-    //
-    //        let combination = NSMutableAttributedString()
-    //        combination.append(atterStr1)
-    //        combination.append(atterStr2)
-    //
-    //        titlelbl.attributedText = combination
-    //    }
 }

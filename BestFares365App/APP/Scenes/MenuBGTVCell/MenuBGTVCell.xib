@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +24,7 @@
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menubg" translatesAutoresizingMaskIntoConstraints="NO" id="EeV-ki-ddv">
                                 <rect key="frame" x="0.0" y="0.0" width="391" height="190"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-bk-Axu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-bk-Axu">
                                 <rect key="frame" x="16" y="76" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hEX-zA-2SF"/>
@@ -43,7 +43,7 @@
                                         <rect key="frame" x="0.0" y="39.5" width="90" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXn-zr-vTF">
-                                                <rect key="frame" x="24.5" y="4.5" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="4.5" width="90" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -59,8 +59,9 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="UXn-zr-vTF" firstAttribute="centerX" secondItem="62n-dA-B6M" secondAttribute="centerX" id="3Nl-pT-9e7"/>
+                                            <constraint firstItem="UXn-zr-vTF" firstAttribute="leading" secondItem="62n-dA-B6M" secondAttribute="leading" id="2lF-3U-abJ"/>
                                             <constraint firstItem="pUc-gT-OTv" firstAttribute="top" secondItem="62n-dA-B6M" secondAttribute="top" id="B6h-Xm-eSw"/>
+                                            <constraint firstAttribute="trailing" secondItem="UXn-zr-vTF" secondAttribute="trailing" id="Dwx-De-esu"/>
                                             <constraint firstItem="pUc-gT-OTv" firstAttribute="leading" secondItem="62n-dA-B6M" secondAttribute="leading" id="V9Z-DK-mCo"/>
                                             <constraint firstAttribute="height" constant="30" id="fHo-U6-NdY"/>
                                             <constraint firstAttribute="bottom" secondItem="pUc-gT-OTv" secondAttribute="bottom" id="nOY-LL-Yqe"/>
@@ -81,6 +82,7 @@
                             <constraint firstItem="DvT-bk-Axu" firstAttribute="leading" secondItem="E0W-st-kZg" secondAttribute="leading" constant="16" id="3x7-Ul-R7N"/>
                             <constraint firstItem="o3h-Wc-y7b" firstAttribute="leading" secondItem="DvT-bk-Axu" secondAttribute="trailing" constant="10" id="7ut-MT-i2C"/>
                             <constraint firstAttribute="bottom" secondItem="DvT-bk-Axu" secondAttribute="bottom" constant="14" id="EtF-2W-jIW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o3h-Wc-y7b" secondAttribute="trailing" constant="10" id="G2W-Nx-70V"/>
                             <constraint firstItem="o3h-Wc-y7b" firstAttribute="centerY" secondItem="DvT-bk-Axu" secondAttribute="centerY" id="LzT-Sb-bgf"/>
                             <constraint firstAttribute="height" constant="190" id="agB-PM-X5h"/>
                             <constraint firstAttribute="bottom" secondItem="EeV-ki-ddv" secondAttribute="bottom" id="bnp-RP-G0Z"/>

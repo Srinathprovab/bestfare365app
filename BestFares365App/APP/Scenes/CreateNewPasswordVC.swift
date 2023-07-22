@@ -7,12 +7,14 @@
 
 import UIKit
 
-class CreateNewPasswordVC: BaseTableVC {
+class CreateNewPasswordVC: BaseTableVC, ResetPasswordViewModelDelegate {
+    
     
     @IBOutlet weak var holderView: UIView!
     @IBOutlet weak var nav: NavBar!
     
     var tablerow = [TableRow]()
+    var payload = [String:Any]()
     static var newInstance: CreateNewPasswordVC? {
         let storyboard = UIStoryboard(name: Storyboard.Login.name,
                                       bundle: nil)
@@ -22,10 +24,16 @@ class CreateNewPasswordVC: BaseTableVC {
     var oldpass = String()
     var newPass = String()
     var confPass = String()
+    var vm : ResetPasswordViewModel?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        vm = ResetPasswordViewModel(self)
+        
     }
     
     func setupUI() {
@@ -77,12 +85,40 @@ class CreateNewPasswordVC: BaseTableVC {
         }else if newPass != confPass {
             showToast(message: "Password Did Not Match")
         }else {
-            print("Call API.....")
             
-            guard let vc = HomeVC.newInstance.self else {return}
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
+            payload["user_id"] = defaults.string(forKey: UserDefaultsKeys.userid)
+            payload["current_password"] = oldpass
+            payload["new_password"] = newPass
+            payload["confirm_password"] = confPass
+            vm?.CALL_RESET_PASSWORD_API(dictParam: payload)
         }
+    }
+    
+    
+    
+    func resetpasswordSucessdetails(response: ResetPasswordModel) {
+        
+        if response.status == false {
+            showToast(message: response.msg ?? "")
+        }else {
+            showToast(message: response.msg ?? "")
+            let seconds = 2.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                self.gotoHomeVC()
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
+    func gotoHomeVC() {
+        guard let vc = HomeVC.newInstance.self else {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.keyStr = "CreateNewPasswordVC"
+        present(vc, animated: true)
     }
     
     

@@ -176,8 +176,8 @@ extension MulticityTVCell:UITableViewDelegate,UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? MulticityFromTVCell {
             
             cell.delegate = self
-            cell.fromCityNamelbl.text = fromCityNameArray[indexPath.row]
             cell.fromCityCodelbl.text = fromCityShortNameArray[indexPath.row]
+            cell.fromCityNamelbl.text = fromCityNameArray[indexPath.row]
             cell.toCityNamelbl.text = toCityNameArray[indexPath.row]
             cell.toCityCodelbl.text = toCityShortNameArray[indexPath.row]
             cell.dateValuelbl.text = calDate[indexPath.row]
@@ -193,6 +193,16 @@ extension MulticityTVCell:UITableViewDelegate,UITableViewDataSource {
             cell.fromCityBtn.tag = indexPath.row
             cell.toCityBtn.tag = indexPath.row
             cell.selectDateBtn.tag = indexPath.row
+            
+//            if let journyType = defaults.string(forKey: UserDefaultsKeys.journeyType) {
+//                if journyType == "multicity" {
+//                    cell.fromCityCodelbl.text = mfromCityShortNameArray[indexPath.row]
+//                    cell.fromCityNamelbl.text = mfromCityNameArray[indexPath.row]
+//                    cell.toCityNamelbl.text = mtoCityNameArray[indexPath.row]
+//                    cell.toCityCodelbl.text = mtoCityShortNameArray[indexPath.row]
+//                }
+//                
+//            }
             
             
             

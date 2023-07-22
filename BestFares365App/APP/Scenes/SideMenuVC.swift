@@ -6,8 +6,15 @@
 //
 
 import UIKit
+var img1 = String()
 
-class SideMenuVC: BaseTableVC {
+
+class SideMenuVC: BaseTableVC, MyProfileViewModelDelegate {
+    
+    
+    @IBOutlet weak var logoutBtnView: UIView!
+    @IBOutlet weak var logoutlbl: UILabel!
+    @IBOutlet weak var logoutBtn: UIButton!
     
     static var newInstance: SideMenuVC? {
         let storyboard = UIStoryboard(name: Storyboard.Login.name,
@@ -16,37 +23,68 @@ class SideMenuVC: BaseTableVC {
         return vc
     }
     var tablerow = [TableRow]()
+    var payload = [String:Any]()
+    var vm:MyProfileViewModel?
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadmenu(_:)), name: NSNotification.Name(rawValue: "reloadmenu"), object: nil)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(callMenuApi(_:)), name: NSNotification.Name(rawValue: "callMenuApi"), object: nil)
+        
+    }
+    
+    @objc func callMenuApi(_ notify:NSNotification) {
+        callapi()
+    }
+    
+    
+    func callapi(){
+        payload["user_id"] = defaults.string(forKey: UserDefaultsKeys.userid)
+        vm?.CALL_GET_PROFILE_DETAILS_API(dictParam: payload)
+    }
+    
+    
+    
+    func profileDetails(response: MyProfileModel) {
+        profileDetailsArray = response
+        img1 = response.profile_image ?? ""
+        setupMenuTVCells()
+    }
+    
+    
+    @objc func reloadmenu(_ notify:NSNotification) {
+        logoutBtnView.isHidden = false
+        callapi()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .black.withAlphaComponent(0.5)
-        setupMenuTVCells()
         
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
+        vm = MyProfileViewModel(self)
         
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
-        swipeDown.direction = .left
-        self.view.addGestureRecognizer(swipeDown)
-        
-        
-        commonTableView.isScrollEnabled = true
-        commonTableView.registerTVCells(["MenuBGTVCell","MenuTVCell","EmptyTVCell"])
+        setupUI()
     }
     
-    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+    
+    func setupUI(){
         
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            
-            switch swipeGesture.direction {
-            case .left:
-                dismiss(animated: false)
-            default:
-                break
-            }
+        commonTableView.isScrollEnabled = false
+        logoutBtnView.backgroundColor = HexColor("#003399")
+        logoutBtnView.addCornerRadiusWithShadow(color: .clear, borderColor: .clear, cornerRadius: 5)
+        setuplabels(lbl: logoutlbl, text: "Logout", textcolor: .WhiteColor, font: .ProximaNovaBold(size: 18), align: .center)
+        logoutBtnView.isHidden = true
+        if defaults.bool(forKey: sessionMgrDefaults.loggedInStatus) == true {
+            logoutBtnView.isHidden = false
         }
+        commonTableView.registerTVCells(["MenuBGTVCell","MenuTVCell","EmptyTVCell"])
     }
     
     
@@ -57,41 +95,59 @@ class SideMenuVC: BaseTableVC {
         
         tablerow.append(TableRow(cellType:.MenuBGTVCell))
         tablerow.append(TableRow(height:30,cellType:.EmptyTVCell))
-        tablerow.append(TableRow(title:"My Bookings",key: "menu", image: "bookings",cellType:.MenuTVCell))
-        tablerow.append(TableRow(title:"Free Cancellation",key: "menu", image: "feecancel",cellType:.MenuTVCell))
-        tablerow.append(TableRow(title:"Customer Support",key: "menu", image: "customer",cellType:.MenuTVCell))
-        tablerow.append(TableRow(title:"Our Products",key: "ourproducts", image: "",cellType:.MenuTVCell))
-        tablerow.append(TableRow(title:"Flights",key: "menu", image: "bookings",cellType:.MenuTVCell))
-        tablerow.append(TableRow(title:"Hotels",key: "menu", image: "hotel",cellType:.MenuTVCell))
-        tablerow.append(TableRow(title:"Holiday",key: "menu", image: "insurence",cellType:.MenuTVCell))
-        tablerow.append(TableRow(height:200,cellType:.EmptyTVCell))
-        tablerow.append(TableRow(title:"Logout",key: "menu", image: "logout",cellType:.MenuTVCell))
-        tablerow.append(TableRow(height:30,cellType:.EmptyTVCell))
+        
+        if defaults.bool(forKey: sessionMgrDefaults.loggedInStatus) == true {
+            tablerow.append(TableRow(title:"My Account",key: "menu", image: "myprofile",cellType:.MenuTVCell))
+            tablerow.append(TableRow(title:"My Bookings",key: "menu", image: "mybookings",cellType:.MenuTVCell))
+            
+        }
+        tablerow.append(TableRow(title:"About Us",key: "menu", image: "mybookings",cellType:.MenuTVCell))
+        tablerow.append(TableRow(title:"Privacy Policy",key: "menu", image: "mybookings",cellType:.MenuTVCell))
+        tablerow.append(TableRow(title:"Terms & Conditions",key: "menu", image: "mybookings",cellType:.MenuTVCell))
+        tablerow.append(TableRow(title:"Refund Policy",key: "menu", image: "mybookings",cellType:.MenuTVCell))
+        tablerow.append(TableRow(title:"Cancellation & Refund Policy",key: "menu", image: "mybookings",cellType:.MenuTVCell))
+        
+        
         
         commonTVData = tablerow
         commonTableView.reloadData()
     }
     
     
-    
-    
-    //    override func didTapOnEditProfileBtn(cell: MenuBGTVCell) {
-    //        guard let vc = EditProfileVC.newInstance.self else {return}
-    //        vc.modalPresentationStyle = .overCurrentContext
-    //        present(vc, animated: true)
-    //    }
-    
     override func didTapOnLoginBtn(cell: MenuBGTVCell) {
         guard let vc = LoginVC.newInstance.self else {return}
         vc.modalPresentationStyle = .overCurrentContext
+        vc.isVcFrom = "sidemenu"
         present(vc, animated: true)
     }
     
     override func didTapOnEditProfileBtn(cell: MenuBGTVCell) {
-        print("")
+        gotoEditProfileVC(str: "edit")
     }
     
     
+    func gotoEditProfileVC(str:String) {
+        guard let vc = EditProfileVC.newInstance.self else {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.key = str
+        present(vc, animated: true)
+    }
+    
+    
+    func gotoAboutUsVC(str:String) {
+        guard let vc = AboutUsVC.newInstance.self else {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.key = str
+        present(vc, animated: true)
+    }
+    
+    
+    @IBAction func didTapOnLogoutBtn(_ sender: Any) {
+        defaults.set(false, forKey: sessionMgrDefaults.loggedInStatus)
+        defaults.setValue("0", forKey: UserDefaultsKeys.userid)
+        logoutBtnView.isHidden = true
+        setupMenuTVCells()
+    }
     
 }
 
@@ -103,31 +159,44 @@ extension SideMenuVC {
         if let cell = tableView.cellForRow(at: indexPath) as? MenuTVCell {
             print(cell.titlelbl.text)
             switch cell.titlelbl.text {
-            case "My Bookings":
                 
+            case "My Account":
+                gotoEditProfileVC(str: "show")
                 break
                 
-            case "Flights":
                 
+            case "About Us":
+                gotoAboutUsVC(str: "aboutus")
                 break
                 
-            case "Hotels":
-                
+            case "Privacy Policy":
+                gotoAboutUsVC(str: "privacy")
                 break
                 
-            case "Insurance":
                 
+            case "Terms & Conditions":
+                gotoAboutUsVC(str: "terms")
                 break
                 
-            case "Visa":
                 
+            case "Refund Policy":
+                gotoAboutUsVC(str: "refund")
                 break
+                
+            case "Cancellation & Refund Policy":
+                gotoAboutUsVC(str: "cancellation")
+                break
+                
+                
+                
                 
             default:
                 break
             }
         }
     }
+    
+    
     
     
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol BottomFilterTVCellDelegate {
+    func didTapOnFilterBtn(cell:SelectClassCVCell)
+}
+
 class BottomFilterTVCell: UITableViewCell {
     
     @IBOutlet weak var holderView: UIView!
@@ -14,8 +18,9 @@ class BottomFilterTVCell: UITableViewCell {
     @IBOutlet weak var titlelbl: UILabel!
     @IBOutlet weak var noOfStopsCV: UICollectionView!
     
-    
+    var delegate:BottomFilterTVCellDelegate?
     var noofstopsArray = ["Non Stop","1 Stop","1+ stop"]
+    var freecancellation = ["Refundable","Non Refundable"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,8 +35,8 @@ class BottomFilterTVCell: UITableViewCell {
     
     func setupUI() {
         filterBtn.setTitle("", for: .normal)
-        holderView.addCornerRadiusWithShadow(color: .LabelTitleColor.withAlphaComponent(0.16), borderColor: .BorderColor, cornerRadius: 5)
-        setupLabels(lbl: titlelbl, text: "no of stops", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 14))
+        holderView.addCornerRadiusWithShadow(color: .AppLabelColor.withAlphaComponent(0.16), borderColor: .BorderColor, cornerRadius: 5)
+        setupLabels(lbl: titlelbl, text: "no of stops", textcolor: .AppLabelColor, font: .SigvarRegular(size: 14))
         
         setupCV()
     }
@@ -67,14 +72,49 @@ class BottomFilterTVCell: UITableViewCell {
 extension BottomFilterTVCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return noofstopsArray.count
+        
+        
+        if let tabselect1 = defaults.string(forKey: UserDefaultsKeys.tabselect) {
+            
+            if tabselect1 == "Flight" {
+                return noofstopsArray.count
+            }else {
+                return freecancellation.count
+            }
+            
+        }else {
+            return 0
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var commonCell = UICollectionViewCell()
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SelectClassCVCell {
-            cell.titlelbl.text = noofstopsArray[indexPath.row]
-            cell.titlelbl.font = .SigvarRegular(size: 14)
+            
+            if let tabselect1 = defaults.string(forKey: UserDefaultsKeys.tabselect) {
+                
+                if tabselect1 == "Flight" {
+                    cell.titlelbl.text = noofstopsArray[indexPath.row]
+                    cell.titlelbl.font = .SigvarRegular(size: 14)
+                    
+                    if indexPath.row == noofStopsFilterIndex {
+                        collectionView.selectItem(at: IndexPath(item: noofStopsFilterIndex, section: 0), animated: true, scrollPosition: .left)
+                        cell.selected()
+                    }
+                }else {
+                    cell.titlelbl.text = freecancellation[indexPath.row]
+                    cell.titlelbl.font = .SigvarRegular(size: 14)
+                    
+                    if indexPath.row == noofStopsFilterIndex {
+                        collectionView.selectItem(at: IndexPath(item: noofStopsFilterIndex, section: 0), animated: true, scrollPosition: .left)
+                        cell.selected()
+                    }
+                }
+                
+            }
+            
+            
             commonCell = cell
         }
         return commonCell
@@ -82,10 +122,12 @@ extension BottomFilterTVCell:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? SelectClassCVCell {
+            delegate?.didTapOnFilterBtn(cell: cell)
+            noofStopsFilterIndex = indexPath.row
             cell.selected()
         }
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? SelectClassCVCell {
@@ -96,9 +138,20 @@ extension BottomFilterTVCell:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let label = UILabel(frame: CGRect.zero)
-        label.text = noofstopsArray[indexPath.item]
+        
+        if let tabselect1 = defaults.string(forKey: UserDefaultsKeys.tabselect) {
+            
+            if tabselect1 == "Flight" {
+                label.text = noofstopsArray[indexPath.item]
+            }else {
+                label.text = freecancellation[indexPath.item]
+            }
+            
+        }
         label.sizeToFit()
         return CGSize(width: label.frame.width + 20, height: 40)
+        
+        
     }
-
+    
 }

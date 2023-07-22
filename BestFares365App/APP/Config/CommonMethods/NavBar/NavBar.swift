@@ -64,13 +64,15 @@ class NavBar: UIView {
         setuplabels(lbl: datelbl, text: "", textcolor: .WhiteColor, font: .ProximaNovaRegular(size: 18), align: .center)
         setuplabels(lbl: travellerlbl, text: "", textcolor: .WhiteColor, font: .ProximaNovaRegular(size: 18), align: .center)
         setuplabels(lbl: subtitlelbl, text: "Book Your Flight", textcolor: .WhiteColor, font: .ProximaNovaBold(size: 30), align: .center)
-        setupLabels(lbl: donelbl, text: "Done", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 15))
+        setupLabels(lbl: donelbl, text: "Done", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 15))
         
         
         setupViews(v: editView, radius: 4, color: .ButtonColor)
         setupViews(v: filterView, radius: 4, color: .ButtonColor)
         setupViews(v: backView, radius: 17.5, color: .clear)
         setupViews(v: doneView, radius: 5, color: .WhiteColor)
+        editView.backgroundColor = .clear
+        editView.addCornerRadiusWithShadow(color: .clear, borderColor: .WhiteColor, cornerRadius: 15)
         
         backImg.image = UIImage(named: "leftarrow")?.withRenderingMode(.alwaysOriginal).withTintColor(.WhiteColor)
         bannerImg.image = UIImage(named: "flightbanner")?.withRenderingMode(.alwaysOriginal)
@@ -79,7 +81,7 @@ class NavBar: UIView {
         
         editView.isHidden = true
         filterView.isHidden = true
-        editImg.image = UIImage(named: "edit")
+        editImg.image = UIImage(named: "edit")?.withRenderingMode(.alwaysOriginal).withTintColor(.WhiteColor)
         filterImg.image = UIImage(named: "filter")
         
         titlelbl.isHidden = false

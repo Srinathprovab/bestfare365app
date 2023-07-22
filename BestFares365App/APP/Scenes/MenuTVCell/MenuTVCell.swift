@@ -13,7 +13,7 @@ class MenuTVCell: TableViewCell {
     @IBOutlet weak var holderView: UIView!
     @IBOutlet weak var menuImg: UIImageView!
     @IBOutlet weak var titlelbl: UILabel!
-    
+    @IBOutlet weak var rightarrow: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,15 +30,17 @@ class MenuTVCell: TableViewCell {
     
     override func updateUI() {
         titlelbl.text = cellInfo?.title
-        menuImg.image = UIImage(named: cellInfo?.image ?? "")?.withRenderingMode(.alwaysOriginal).withTintColor(.ButtonColor)
-        if cellInfo?.key == "ourproducts" {
-            holderView.backgroundColor = .BorderColor
+        menuImg.image = UIImage(named: cellInfo?.image ?? "")?.withRenderingMode(.alwaysOriginal)
+        if cellInfo?.key == "logout" {
+            rightarrow.isHidden = true
         }
     }
     
     func setupUI() {
         holderView.backgroundColor = .WhiteColor
-        setuplabels(lbl: titlelbl, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16), align: .left)
+        holderView.addCornerRadiusWithShadow(color: .clear, borderColor: .AppBorderColor, cornerRadius: 5)
+        setuplabels(lbl: titlelbl, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16), align: .left)
+        rightarrow.isHidden = false
     }
     
 }

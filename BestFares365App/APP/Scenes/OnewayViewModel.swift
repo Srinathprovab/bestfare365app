@@ -12,6 +12,8 @@ import Alamofire
 protocol OnewayViewModelDelegate : BaseViewModelProtocol {
     func getOneWayFlightList(response : OneWayModel)
     func getRoundTripFlightList(response : OneWayModel)
+    func getMulticityFlightList(response : OneWayModel)
+
 
 }
 
@@ -28,7 +30,7 @@ class OnewayViewModel {
         print("Parameters = \(parms)")
         
         self.view?.showLoader()
-        ServiceManager.postOrPutApiCall(endPoint: ApiEndpoints.mobilepreflightsearch , urlParams: parms as? Dictionary<String, String>, parameters: parms, resultType: OneWayModel.self, p:dictParam) { sucess, result, errorMessage in
+        ServiceManager.postOrPutApiCall(endPoint: "general/\(ApiEndpoints.mobilepreflightsearch)" , urlParams: parms as? Dictionary<String, String>, parameters: parms, resultType: OneWayModel.self, p:dictParam) { sucess, result, errorMessage in
             
             DispatchQueue.main.async {
                 self.view?.hideLoader()
@@ -36,8 +38,7 @@ class OnewayViewModel {
                     guard let response = result else {return}
                     self.view.getOneWayFlightList(response: response)
                 } else {
-                    // Show alert
-                    NotificationCenter.default.post(name: NSNotification.Name("nointernet"), object: errorMessage)
+                    
                     self.view.showToast(message: errorMessage ?? "")
                 }
             }
@@ -53,7 +54,7 @@ class OnewayViewModel {
         print("Parameters = \(parms)")
         
         self.view?.showLoader()
-        ServiceManager.postOrPutApiCall(endPoint: ApiEndpoints.mobilepreflightsearch , urlParams: parms as? Dictionary<String, String>, parameters: parms, resultType: OneWayModel.self, p:dictParam) { sucess, result, errorMessage in
+        ServiceManager.postOrPutApiCall(endPoint: "general/\(ApiEndpoints.mobilepreflightsearch)" , urlParams: parms as? Dictionary<String, String>, parameters: parms, resultType: OneWayModel.self, p:dictParam) { sucess, result, errorMessage in
             
             DispatchQueue.main.async {
                 self.view?.hideLoader()
@@ -61,13 +62,35 @@ class OnewayViewModel {
                     guard let response = result else {return}
                     self.view.getRoundTripFlightList(response: response)
                 } else {
-                    // Show alert
-                    NotificationCenter.default.post(name: NSNotification.Name("nointernet"), object: errorMessage)
                     self.view.showToast(message: errorMessage ?? "")
                 }
             }
         }
     }
+    
+    
+    
+    
+    
+    func CallMultiCitySearchFlightList(dictParam: [String: Any]){
+        let parms = NSDictionary(dictionary:dictParam)
+        print("Parameters = \(parms)")
+        
+        self.view?.showLoader()
+        ServiceManager.postOrPutApiCall(endPoint: "general/\(ApiEndpoints.mobilepreflightsearch)" , urlParams: parms as? Dictionary<String, String>, parameters: parms, resultType: OneWayModel.self, p:dictParam) { sucess, result, errorMessage in
+            
+            DispatchQueue.main.async {
+                self.view?.hideLoader()
+                if sucess {
+                    guard let response = result else {return}
+                    self.view.getMulticityFlightList(response: response)
+                } else {
+                    self.view.showToast(message: errorMessage ?? "")
+                }
+            }
+        }
+    }
+    
     
     
 }

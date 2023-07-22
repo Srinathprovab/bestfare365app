@@ -77,25 +77,47 @@ class CalenderVC: BaseTableVC {
     override func viewWillAppear(_ animated: Bool) {
         
         self.celltag = Int(defaults.string(forKey: UserDefaultsKeys.cellTag) ?? "0") ?? 0
-        
-        if screenHeight > 835 {
-            navHeight.constant = 140
+        if screenHeight < 835 {
+            navHeight.constant = 110
         }else {
-            navHeight.constant = 130
+            navHeight.constant = 180
         }
         
         
-        if let journyType = defaults.string(forKey: UserDefaultsKeys.journeyType) {
-            switch journyType {
-            case "oneway":
-                depDatelbl.text = defaults.string(forKey: UserDefaultsKeys.calDepDate)
-                break
-            case "circle":
-                depDatelbl.text = defaults.string(forKey: UserDefaultsKeys.rcalDepDate)
-                retDatelbl.text = defaults.string(forKey: UserDefaultsKeys.rcalRetDate)
-                break
-            case "multicity":
+        
+        
+        if let tabselect = defaults.string(forKey: UserDefaultsKeys.tabselect) {
+            switch tabselect {
+            case "Flight":
                 
+                if let journyType = defaults.string(forKey: UserDefaultsKeys.journeyType) {
+                    switch journyType {
+                    case "oneway":
+                        depDatelbl.text = defaults.string(forKey: UserDefaultsKeys.calDepDate)
+                        break
+                    case "circle":
+                        depDatelbl.text = defaults.string(forKey: UserDefaultsKeys.rcalDepDate)
+                        retDatelbl.text = defaults.string(forKey: UserDefaultsKeys.rcalRetDate)
+                        break
+                    case "multicity":
+                        depDatelbl.text = defaults.string(forKey: UserDefaultsKeys.mcalDate)
+                        calendarView.allowsMultipleSelection = false
+                        retView.isHidden = true
+                        break
+                    default:
+                        break
+                    }
+                }
+                break
+                
+                
+            case "Hotel":
+                deplbl.text = "CheckIn"
+                retlbl.text = "CheckOut"
+                depDatelbl.text = defaults.string(forKey: UserDefaultsKeys.checkin)
+                retDatelbl.text = defaults.string(forKey: UserDefaultsKeys.checkout)
+                calendarView.allowsMultipleSelection = true
+                retView.isHidden = false
                 break
             default:
                 break
@@ -123,18 +145,18 @@ class CalenderVC: BaseTableVC {
         setupViews(v: selectBtnView, radius: 4, color: .BtnUnselectedColor)
         setupLabels(lbl: selectlbl, text: "Done", textcolor: .WhiteColor, font: .sigvarbold(size: 20))
         
-        setupLabels(lbl: nav.titlelbl, text: "Choose a date", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 20))
+        setupLabels(lbl: nav.titlelbl, text: "Choose a date", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 20))
         nav.titlelbl.textAlignment = .center
         nav.backImg.image = UIImage(named: "leftarrow")?.withRenderingMode(.alwaysOriginal)
         nav.backBtn.addTarget(self, action: #selector(dismisVC(_:)), for: .touchUpInside)
         nav.contentView.backgroundColor = .WhiteColor
         depView.backgroundColor = .ViewLightBlueColor
         retView.backgroundColor = .ViewLightBlueColor
-        lineView.backgroundColor = .LabelTitleColor
-        setupLabels(lbl: deplbl, text: "Depart Date", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16))
-        setupLabels(lbl: retlbl, text: "Return Date", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 16))
-        setupLabels(lbl: depDatelbl, text: "", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18))
-        setupLabels(lbl: retDatelbl, text: "", textcolor: .LabelTitleColor, font: .SigvarRegular(size: 18))
+        lineView.backgroundColor = .AppLabelColor
+        setupLabels(lbl: deplbl, text: "Depart Date", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16))
+        setupLabels(lbl: retlbl, text: "Return Date", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 16))
+        setupLabels(lbl: depDatelbl, text: "", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18))
+        setupLabels(lbl: retDatelbl, text: "", textcolor: .AppLabelColor, font: .SigvarRegular(size: 18))
         depimg.image = UIImage(named: "caldate")?.withRenderingMode(.alwaysOriginal)
         retimg.image = UIImage(named: "caldate")?.withRenderingMode(.alwaysOriginal)
         
@@ -171,14 +193,14 @@ class CalenderVC: BaseTableVC {
         leftImg.image = UIImage(named: "leftarrow")?.withRenderingMode(.alwaysOriginal).withTintColor(.CalSelectedColor)
         rightImg.image = UIImage(named: "rightarrow")?.withRenderingMode(.alwaysOriginal).withTintColor(.CalSelectedColor)
         holderView.backgroundColor = .white
-        setupLabels(lbl: monthLabel, text: "", textcolor: .LabelTitleColor, font: .ProximaNovaRegular(size: 18))
-        setupLabels(lbl: sundayLabel, text: "SU", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
-        setupLabels(lbl: mondayLabel, text: "MO", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
-        setupLabels(lbl: tuesdayLabel, text: "TU", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
-        setupLabels(lbl: wednesdayLabel, text: "WE", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
-        setupLabels(lbl: thursdayLabel, text: "TH", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
-        setupLabels(lbl: fridayLabel, text: "FR", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
-        setupLabels(lbl: saturdayLabel, text: "SA", textcolor: .LabelTitleColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: monthLabel, text: "", textcolor: .AppLabelColor, font: .ProximaNovaRegular(size: 18))
+        setupLabels(lbl: sundayLabel, text: "SU", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: mondayLabel, text: "MO", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: tuesdayLabel, text: "TU", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: wednesdayLabel, text: "WE", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: thursdayLabel, text: "TH", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: fridayLabel, text: "FR", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
+        setupLabels(lbl: saturdayLabel, text: "SA", textcolor: .AppLabelColor, font: .InterRegular(size: 14))
         
     }
     
@@ -294,7 +316,7 @@ class CalenderVC: BaseTableVC {
             cell.selectedView.layer.maskedCorners = []
             cell.selectedView.isHidden = false
             cell.selectedView.backgroundColor = UIColor.CalMultiSelectedColor
-            cell.label.textColor = UIColor.LabelTitleColor
+            cell.label.textColor = UIColor.AppLabelColor
             break
         case .right:
             cell.selectedView.layer.cornerRadius = 0
@@ -330,15 +352,58 @@ class CalenderVC: BaseTableVC {
     
     @IBAction func selectDateBtnAction(_ sender: Any) {
         print(defaults.string(forKey: UserDefaultsKeys.calDepDate))
-        goToHomeVC()
+        
+        if let selectedTab = defaults.string(forKey: UserDefaultsKeys.tabselect) {
+            if selectedTab == "Flight" {
+                
+                if let selectedJourneyType = defaults.string(forKey: UserDefaultsKeys.journeyType) {
+                    if selectedJourneyType == "oneway" {
+                        if calstartDate == "" {
+                            showToast(message: "Please Select Departure Date")
+                        }else {
+                            goToHomeVC()
+                        }
+                    }else if selectedJourneyType == "circle" {
+                        
+                        if calendDate == calstartDate {
+                            showToast(message: "Please Select Departure And Return Dates")
+                        }else {
+                            goToHomeVC()
+                        }
+                        
+                    }else {
+                        if calstartDate == "" {
+                            showToast(message: "Please Select Date")
+                        }else {
+                            goToHomeVC()
+                        }
+                    }
+                }
+                
+                
+            }else {
+                if calendDate == calstartDate {
+                    showToast(message: "Please Select Checkin And Checkout Dates")
+                }else {
+                    goToHomeVC()
+                }
+                
+            }
+        }
+        
+        
     }
     
     func goToHomeVC() {
-        // NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+        self.dismiss(animated: true)
         
-        guard let vc = HomeVC.newInstance.self else {return}
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: false)
+        //        guard let vc = HomeVC.newInstance.self else {return}
+        //        vc.modalPresentationStyle = .fullScreen
+        //        vc.keyStr = "Cal"
+        //        vc.isformvc = "cal"
+        //        vc.defaultsclearKey = "dontclear"
+        //  present(vc, animated: false)
     }
 }
 
@@ -369,7 +434,7 @@ extension CalenderVC: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource
             //  leftImg.image = UIImage(named: "leftarrow")?.withRenderingMode(.alwaysOriginal).withTintColor(.BorderColor)
             cell.label.textColor = HexColor("#555555", alpha: 0.4)
         }else {
-            cell.label.textColor = .LabelTitleColor
+            cell.label.textColor = .AppLabelColor
         }
         
         return cell
@@ -407,6 +472,7 @@ extension CalenderVC: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource
                         print("mcalDepDate\(calstartDate)")
                         
                         defaults.set(calstartDate, forKey: UserDefaultsKeys.mcalDate)
+                        depDatelbl.text = calstartDate
                         calDate[self.celltag] = calstartDate
                         depatureDatesArray[self.celltag] = calstartDate
                     }
@@ -414,6 +480,9 @@ extension CalenderVC: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource
                 
                 
             }else {
+                
+                depDatelbl.text = calstartDate
+                retDatelbl.text = calendDate
                 defaults.set(calstartDate, forKey: UserDefaultsKeys.checkin)
                 defaults.set(calendDate, forKey: UserDefaultsKeys.checkout)
             }
@@ -481,16 +550,3 @@ extension CalenderVC: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource
     
 }
 
-
-func convertDateFormat(inputDate: String,f1:String,f2:String) -> String {
-    
-    let olDateFormatter = DateFormatter()
-    olDateFormatter.dateFormat = f1
-    
-    guard let oldDate = olDateFormatter.date(from: inputDate) else { return "" }
-    
-    let convertDateFormatter = DateFormatter()
-    convertDateFormatter.dateFormat = f2
-    
-    return convertDateFormatter.string(from: oldDate)
-}

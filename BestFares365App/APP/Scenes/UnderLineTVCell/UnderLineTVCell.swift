@@ -34,7 +34,7 @@ class UnderLineTVCell: TableViewCell {
         rightLineView.backgroundColor = HexColor("#A39797")
         
         titlelbl.text = "Or Sign Up With"
-        titlelbl.textColor = .LabelTitleColor
+        titlelbl.textColor = .AppLabelColor
         titlelbl.font = UIFont.SigvarRegular(size: 14)
         
     }

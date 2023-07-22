@@ -8,6 +8,7 @@ struct AirlineDetails : Codable {
     let fareClass : String?
     let flightImage : String?
 
+
     enum CodingKeys: String, CodingKey {
 
         case airlineCode = "AirlineCode"
@@ -15,6 +16,7 @@ struct AirlineDetails : Codable {
         case flightNumber = "FlightNumber"
         case fareClass = "FareClass"
         case flightImage = "flightImage"
+        
     }
 
     init(from decoder: Decoder) throws {
@@ -24,6 +26,7 @@ struct AirlineDetails : Codable {
         flightNumber = try values.decodeIfPresent(String.self, forKey: .flightNumber)
         fareClass = try values.decodeIfPresent(String.self, forKey: .fareClass)
         flightImage = try values.decodeIfPresent(String.self, forKey: .flightImage)
+
     }
 
 }

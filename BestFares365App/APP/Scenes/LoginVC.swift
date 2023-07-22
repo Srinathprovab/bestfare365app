@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class LoginVC: BaseTableVC {
+class LoginVC: BaseTableVC, LoginViewModelDelegate {
     
     
     @IBOutlet weak var holderView: UIView!
@@ -32,21 +32,25 @@ class LoginVC: BaseTableVC {
     var cpass = String()
     var showPwdBool = true
     var payload = [String:Any]()
-    //  var regViewModel: RegisterViewModel?
     var uname = String()
     var password = String()
+    var viewmodel:LoginViewModel?
+    var isVcFrom = String()
     
     
-    
+    //MARK: - LOADING FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .black.withAlphaComponent(0.5)
         setupTV()
+        viewmodel = LoginViewModel(self)
     }
     
     
+    
+    //MARK: - SETUP INITIAL UI
     func setupTV() {
         
         //   regViewModel = RegisterViewModel(self)
@@ -61,6 +65,9 @@ class LoginVC: BaseTableVC {
     }
     
     
+    
+    
+    //MARK: - APPEND LOGIN TABLE VIEW CELLS
     func appendLoginTvcells() {
         tablerow.removeAll()
         
@@ -77,13 +84,12 @@ class LoginVC: BaseTableVC {
     }
     
     
+    
+    //MARK: - SETUP SIGNUP TABLE VIEW CELLS
     func appendSignupTvcells() {
         tablerow.removeAll()
         
         tablerow.append(TableRow(cellType:.LoignOrSignupBtnsTVCell))
-        tablerow.append(TableRow(title:"First Name",key: "signup", text: "1", tempText: "First Name",cellType:.TextfieldTVCell))
-        tablerow.append(TableRow(title:"Last Name",key: "signup", text: "2", tempText: "Last Name",cellType:.TextfieldTVCell))
-        tablerow.append(TableRow(title:"Mobile Number",key: "signup", text: "3", tempText: "+961",cellType:.TextfieldTVCell))
         tablerow.append(TableRow(title:"Email address",key: "signup", text: "4", tempText: "Address",cellType:.TextfieldTVCell))
         tablerow.append(TableRow(title:"Password",key: "signuppwd", text: "5", tempText: "Password",cellType:.TextfieldTVCell))
         tablerow.append(TableRow(title:"Conform Password",key: "signuppwd", text: "6", tempText: "Password",cellType:.TextfieldTVCell))
@@ -106,58 +112,10 @@ class LoginVC: BaseTableVC {
         print("didTapOnGoogleBtn")
     }
     
-    override func btnAction(cell: ButtonTVCell) {
-        if loginKey == "reg" {
-            if fname == "" {
-                showToast(message: "Enter First name")
-            }else if lname == "" {
-                showToast(message: "Enter Last name")
-            }else if mobile == "" {
-                showToast(message: "Enter Mobile No")
-            }else if email == "" {
-                showToast(message: "Enter Email")
-            }
-            //            else if email.isValidEmail == false {
-            //                showToast(message: "Enter Valid Email ID")
-            //            }
-            else if pass == "" {
-                showToast(message: "Enter Password")
-            }else if cpass == "" {
-                showToast(message: "Enter Conform Password")
-            }else if pass != cpass {
-                showToast(message: "Password not same")
-            }else {
-                print("call register api")
-                
-                payload["first_name"] = fname
-                payload["last_name"] = lname
-                payload["email"] = email
-                payload["phone"] = mobile
-                payload["password"] = pass
-                payload["about_us"] = "Checking"
-                payload["tc"] = "on"
-                payload["register_subscription"] = "on"
-                //  regViewModel?.CallRegisterAPI(dictParam: payload)
-                
-            }
-        }else {
-            
-            if uname == "" {
-                showToast(message: "Enter Email")
-            }else if uname.isValidEmail() == false {
-                showToast(message: "Enter Valid Email")
-            }else if password == "" {
-                showToast(message: "Enter Password")
-            }else {
-                payload["username"] = uname
-                payload["password"] = password
-                //      regViewModel?.CallLoginAPI(dictParam: payload)
-                
-            }
-        }
-    }
     
     
+    
+    //MARK: - FORGET BUTTON TAP ACTION
     override func didTapOnForGetPassword(cell: TextfieldTVCell) {
         guard let vc = ResetPasswordVC.newInstance.self else {return}
         vc.modalPresentationStyle = .fullScreen
@@ -166,24 +124,14 @@ class LoginVC: BaseTableVC {
     
     
     
+    
+    //MARK: - TEXTFIELD EDITING
     override func editingTextField(tf: UITextField) {
         
         if loginKey == "reg" {
             switch tf.tag {
-            case 1:
-                fname = tf.text ?? ""
-                break
-                
-            case 2:
-                lname = tf.text ?? ""
-                break
-                
             case 4:
                 email = tf.text ?? ""
-                break
-                
-            case 3:
-                mobile = tf.text ?? ""
                 break
                 
             case 5:
@@ -193,6 +141,8 @@ class LoginVC: BaseTableVC {
             case 6:
                 cpass = tf.text ?? ""
                 break
+                
+           
             default:
                 break
             }
@@ -214,21 +164,24 @@ class LoginVC: BaseTableVC {
     }
     
     
+    //MARK: - LOGIN BUTTON ACTION
     override func didTapOnLoginBtn(cell: LoignOrSignupBtnsTVCell) {
         loginKey = "login"
         cell.loginView.backgroundColor = .ButtonColor
         cell.loginlbl.textColor = .WhiteColor
         
         cell.signUpView.backgroundColor = .WhiteColor
-        cell.signuplbl.textColor = .LabelTitleColor
+        cell.signuplbl.textColor = .AppLabelColor
         
         appendLoginTvcells()
     }
     
+    
+    //MARK: - SIGNUP BUTTON ACTION
     override func didTapOnSignUpBtn(cell: LoignOrSignupBtnsTVCell) {
         loginKey = "reg"
         cell.loginView.backgroundColor = .WhiteColor
-        cell.loginlbl.textColor = .LabelTitleColor
+        cell.loginlbl.textColor = .AppLabelColor
         
         cell.signUpView.backgroundColor = .ButtonColor
         cell.signuplbl.textColor = .WhiteColor
@@ -237,6 +190,7 @@ class LoginVC: BaseTableVC {
     }
     
     
+    //MARK: - DID TAP ON SHOW PASSWORD BUTTON ACTION
     override func didTapOnShowPasswordBtn(cell:TextfieldTVCell){
         
         if showPwdBool == true {
@@ -252,22 +206,98 @@ class LoginVC: BaseTableVC {
     }
     
     
+    //MARK: - Login or Register Button Action
+    override func btnAction(cell: ButtonTVCell) {
+        if loginKey == "reg" {
+           
+            if email == "" {
+                showToast(message: "Enter Email")
+            }
+            else if email.isValidEmail() == false {
+                showToast(message: "Enter Valid Email ID")
+            }
+            else if pass == "" {
+                showToast(message: "Enter Password")
+            }else if cpass == "" {
+                showToast(message: "Enter Conform Password")
+            }else if pass != cpass {
+                showToast(message: "Password not same")
+            }else {
+                print("call register api")
+                
+                payload["email"] = email
+                payload["password"] = pass
+                payload["confirm_password"] = cpass
+                viewmodel?.CALL_REGISTER_USER_API(dictParam: payload)
+            }
+        }else {
+            
+            if uname == "" {
+                showToast(message: "Enter Email")
+            }else if uname.isValidEmail() == false {
+                showToast(message: "Enter Valid Email")
+            }else if password == "" {
+                showToast(message: "Enter Password")
+            }else {
+                payload["username"] = uname
+                payload["password"] = password
+                viewmodel?.CALL_USER_LOGIN_API(dictParam: payload)
+                
+            }
+        }
+    }
     
-    //    func loginDetails(response: LoginModel) {
-    //        if response.status == false {
-    //            showToast(message: response.data ?? "")
-    //        }else {
-    //
-    //            defaults.set(true, forKey: UserDefaultsKeys.userLoggedIn)
-    //            defaults.set("2260", forKey: UserDefaultsKeys.userid)
-    //            print(response.user_id)
-    //        }
-    //    }
     
-    //    func RegisterDetails(response: RegisterModel) {
-    //        print(response)
-    //        showToast(message: "Register Sucess")
-    //    }
+    //MARK: - USER LOGIN RESPONSE
+    func loginDetails(response: LoginModel) {
+       
+        if response.status == false {
+            showToast(message: response.data ?? "")
+        }else {
+            defaults.set(true, forKey: sessionMgrDefaults.loggedInStatus)
+            defaults.set(response.user_id, forKey: UserDefaultsKeys.userid)
+            
+            showToast(message: response.data ?? "")
+          
+            let seconds = 1.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+              //  self.gotoHomeVC()
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadmenu"), object: nil)
+                self.dismiss(animated: true)
+            }
+        }
+        
+    }
     
+    
+    
+    //MARK: - USER REGISTER RESPONSE
+    func registerDetails(response: RegisterModel) {
+        
+        if response.status == false {
+            showToast(message: response.data ?? "")
+        }else {
+            
+            showToast(message: response.data ?? "")
+            let seconds = 2.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                //self.gotoHomeVC()
+                
+                self.appendLoginTvcells()
+            }
+            
+        }
+    }
+    
+    
+    
+    
+    func gotoHomeVC() {
+        guard let vc = HomeVC.newInstance.self else {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.keyStr = "HomeVc"
+        present(vc, animated: true)
+    }
     
 }

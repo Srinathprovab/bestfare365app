@@ -66,6 +66,8 @@ class ChoosePassengerVC: BaseTableVC {
                 
             }
         }
+        
+        setupTVCells()
     }
     
     
@@ -80,15 +82,19 @@ class ChoosePassengerVC: BaseTableVC {
     
     //MARK:- SETUP UI
     func setupUI() {
-        setupLabels(lbl: nav.titlelbl, text: "Choose a passenger", textcolor: .LabelTitleColor, font: .ProximaNovaBold(size: 20))
+        setupLabels(lbl: nav.titlelbl, text: "Choose a passenger", textcolor: .AppLabelColor, font: .ProximaNovaBold(size: 20))
         nav.titlelbl.textAlignment = .center
         nav.backImg.image = UIImage(named: "leftarrow")?.withRenderingMode(.alwaysOriginal)
         nav.backBtn.addTarget(self, action: #selector(dismisVC(_:)), for: .touchUpInside)
         nav.contentView.backgroundColor = .WhiteColor
-        
+        if screenHeight < 835 {
+            navHeight.constant = 150
+        }else {
+            navHeight.constant = 180
+        }
         //MARK:- REGISTER TABLE VIEW CALLS
         commonTableView.registerTVCells(["ButtonTVCell","AddAdultsTVCell","EmptyTVCell","SelectCabinClassTVCell","LabelTVCell"])
-        setupTVCells()
+       
     }
     
     
@@ -112,10 +118,10 @@ class ChoosePassengerVC: BaseTableVC {
         tablerow.removeAll()
         
         tablerow.append((TableRow(title:"Add Number Of Travellers",cellType: .LabelTVCell)))
-        tablerow.append((TableRow(title:"Adults",subTitle: "+12 yrs",text: String(adultsCount),cellType: .AddAdultsTVCell)))
-        tablerow.append((TableRow(title:"Children",subTitle: "+2-12 yrs",text: String(childCount),cellType: .AddAdultsTVCell)))
-        tablerow.append((TableRow(title:"Seat Infants ",subTitle: "Under 2",text: String(seatinfantsCount),cellType: .AddAdultsTVCell)))
-        tablerow.append((TableRow(title:"Lap Infants ",subTitle: "Under 2",text: String(lapinfantsCount),cellType: .AddAdultsTVCell)))
+        tablerow.append((TableRow(title:"Adults",subTitle: "+12 yrs",buttonTitle: String(adultsCount),cellType: .AddAdultsTVCell)))
+        tablerow.append((TableRow(title:"Children",subTitle: "+2-12 yrs",buttonTitle: String(childCount),cellType: .AddAdultsTVCell)))
+        tablerow.append((TableRow(title:"Seat Infants ",subTitle: "Under 2",buttonTitle: String(seatinfantsCount),cellType: .AddAdultsTVCell)))
+        tablerow.append((TableRow(title:"Lap Infants ",subTitle: "Under 2",buttonTitle: String(lapinfantsCount),cellType: .AddAdultsTVCell)))
         tablerow.append((TableRow(title:"Cabin Class",cellType: .SelectCabinClassTVCell)))
         tablerow.append((TableRow(height:50,cellType: .EmptyTVCell)))
         tablerow.append((TableRow(title:"Done",bgColor: .ButtonColor,cellType: .ButtonTVCell)))
@@ -139,7 +145,8 @@ class ChoosePassengerVC: BaseTableVC {
             showAlertOnWindow(title: "", message: "Adults Count Not More Than 9", titles: ["OK"], completionHanlder: nil)
         }else  {
             if cell.count >= 0 {
-                cell.count += 1
+                
+                cell.count = cell.count + 1
                 cell.countlbl.text = "\(cell.count)"
             }
             
@@ -208,8 +215,9 @@ class ChoosePassengerVC: BaseTableVC {
             if journeyType == "oneway" {
                 let totaltraverlers = "\(defaults.string(forKey: UserDefaultsKeys.adultCount) ?? "") Adults | \(defaults.string(forKey: UserDefaultsKeys.childCount) ?? "") Children | \(defaults.string(forKey: UserDefaultsKeys.seatinfants) ?? "") Infants | \(defaults.string(forKey: UserDefaultsKeys.selectClass) ?? "")"
                 defaults.set(totaltraverlers, forKey: UserDefaultsKeys.travellerDetails)
+                
             }else if journeyType == "circle" {
-                let totaltraverlers = "\(defaults.string(forKey: UserDefaultsKeys.radultCount) ?? "") Adults | \(defaults.string(forKey: UserDefaultsKeys.rchildCount) ?? "") Children | \(defaults.string(forKey: UserDefaultsKeys.rseatinfants) ?? "") Infants | \(defaults.string(forKey: UserDefaultsKeys.rDepclass) ?? ""),\(defaults.string(forKey: UserDefaultsKeys.rRetclass) ?? "")"
+                let totaltraverlers = "\(defaults.string(forKey: UserDefaultsKeys.radultCount) ?? "") Adults | \(defaults.string(forKey: UserDefaultsKeys.rchildCount) ?? "") Children | \(defaults.string(forKey: UserDefaultsKeys.rseatinfants) ?? "") Infants | \(defaults.string(forKey: UserDefaultsKeys.rselectClass) ?? "")"
                 defaults.set(totaltraverlers, forKey: UserDefaultsKeys.rtravellerDetails)
             }else{
                 let totaltraverlers = "\(defaults.string(forKey: UserDefaultsKeys.madultCount) ?? "") Adults | \(defaults.string(forKey: UserDefaultsKeys.mchildCount) ?? "") Children | \(defaults.string(forKey: UserDefaultsKeys.mseatinfants) ?? "") Infants | \(defaults.string(forKey: UserDefaultsKeys.mselectClass) ?? "")"
@@ -219,7 +227,10 @@ class ChoosePassengerVC: BaseTableVC {
         
         
         guard let vc = HomeVC.newInstance.self else {return}
-        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalPresentationStyle = .fullScreen
+        vc.keyStr = "choose"
+        vc.isformvc = "traveller"
+        vc.defaultsclearKey = "dontclear"
         self.present(vc, animated: false)
     }
     
