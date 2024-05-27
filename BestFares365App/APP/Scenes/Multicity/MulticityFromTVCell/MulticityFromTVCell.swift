@@ -108,7 +108,6 @@ class MulticityFromTVCell: UITableViewCell {
         delegate?.didTapOnDateBtn(cell: self)
     }
     
-    
     @objc func didTapOnDeleteCityBtn(_ sender:UIButton) {
         delegate?.didTapOnDeleteCityBtn(cell: self)
     }
